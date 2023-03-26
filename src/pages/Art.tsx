@@ -2,11 +2,10 @@ import React from 'react';
 import Carousel from '../components/Carousel';
 import './Art.css';
 import Header from '../components/Header';
+import { useTranslation } from 'react-i18next';
 
-function Art({title, text}:{
-	title: string;
-	text: string;
-  }){
+function Art(){
+    const { t, i18n } = useTranslation();
     const origamiSlideImages = [
         { src: './content/kunst/origami/1.jpg' },
         { src: 'content/kunst/origami/2.jpg' },
@@ -79,35 +78,35 @@ function Art({title, text}:{
     return(
 		<>
 		<Header
-		  title={title}
-		  text={text}
-		  />
+            title={t('art_title')}
+            text={t('art_description')}
+        />
         <div className="art">
             <div className="art_origami section">
-                <div className="section_title"><h2>Origami</h2></div>
+                <div className="section_title"><h2>{t('art_origami_title')}</h2></div>
                 <Carousel 
-                    title="In meiner Kindheit war ich fasziniert vom Basteln von Origami. Bis heute falte ich noch verschiedenste Kusudamas"
+                    title={t('art_origami_description')}
                     slides={origamiSlideImages}
                 />
             </div>
             <div className="art_paint section">
-                <div className="section_title"><h2>Zeichnungen</h2></div>
+                <div className="section_title"><h2>{t('art_drawings_title')}</h2></div>
                 <Carousel
-                    title="Zeichnen ist eines meiner Lieblingshobbys, da dies sehr meditativ wirkt und ich dabei meine Kreativität entfalten lassen kann"
+                    title={t('art_drawings_decription')}
                     slides={paintSlideImages}
                 />
             </div>
             <div className="art_spray section">
-                <div className="section_title"><h2>Grafitti</h2></div>
+                <div className="section_title"><h2>{t('art_spraypaint_title')}</h2></div>
                 <Carousel
-                    title="Seit ich dieses Medium ausprobiert hatte, fing ich an jeden Sommer an legalen Orten zu Sprayen, da mir diese einzigartige Technik vieles Neues ermöglicht"
+                    title={t('art_spraypaint_description')}
                     slides={spraySlideImages}
                 />
             </div>
             <div className="art_other section">
-                <div className="section_title"><h2>Weitere Kunstwerke</h2></div>
+                <div className="section_title"><h2>{t('art_other_title')}</h2></div>
                 <Carousel
-                    title="Abgesehen von den oberen Kategorien, befasse ich mich gern mit anderen Bereichen der Kunst"
+                    title={t('art_other_description')}
                     slides={otherSlideImages}
                 />
             </div>

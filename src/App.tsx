@@ -16,35 +16,12 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-          <Navbar />
+        <Navbar />
         <Routes>
-          <Route path="/" element={
-            <Home
-              title={t('home_title')}
-              text={t('home_description')}
-              />
-            }
-          />
-          <Route path="/career" element={
-            <Career 
-            title={t('career_title')}
-            text={t('career_description')}
-              />
-            }
-          />
-          <Route path="/projects" element={
-            <Projects 
-            title={t('projects_title')}
-            text={t('projects_description')}
-              />}
-          />
-          <Route path="/art" element={
-              <Art 
-              title={t('art_title')}
-              text={t('art_description')}
-              />
-            }
-          />
+          <Route path="/" element={<Home />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/art" element={<Art />} />
         </Routes>
         <Footer />
       </BrowserRouter>

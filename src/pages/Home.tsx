@@ -2,54 +2,74 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import './Home.css';
 import Header from '../components/Header';
+import FamilyBox from '../components/FamilyBox';
+import SimpleBox from '../components/SimpleBox';
+import SimpleBox2 from '../components/SimpleBox2';
+import { useTranslation } from 'react-i18next';
 
-function Home({title, text}:{
-	title: string;
-	text: string;
-  }){
+function Home(){
+	const { t, i18n } = useTranslation();
+	const family = [
+		[t('home_family_dad'), "Alexey Shevoroshkin", "08.05.1966", "Entwicklungsleiter UBS", "Schweiz, U.S.A."],
+		[t('home_family_mom'), "Tatiana Chirokikh", "14.04.1967", "Ernährungsberaterin", "Schweiz, Russland"],
+		[t('home_family_brother'), "Michail Shevoroshkin", "22.11.2004", "Tiermedizinischer Praxisassistent", "Schweiz, Russland, U.S.A."],
+		[t('home_family_brother'), "Nikolay Shevoroshkin", "05.08.2006", "Schüler, FMS", "Schweiz, Russland, U.S.A."]
+	];
+	const hobbies = [
+		[t('home_hobbies_music'), t('home_hobbies_musictext')],
+		[t('home_hobbies_art'), t('home_hobbies_arttext')],
+		[t('home_hobbies_cevi'), t('home_hobbies_cevitext')],
+		[t('home_hobbies_sport'), t('home_hobbies_sporttext')],
+	];
+	const schools = [
+		[t('home_school_ims'), "Hottingen", "2017 - 2020", "https://www.ksh.ch/angebot/informatikmittelschule"],
+		[t('home_school_sek'), "Herzogenmühle", "2016 - 2017", "https://www.stadt-zuerich.ch/schulen/de/herzogenmuehle.html"],
+		[t('home_school_gym'), "Hohe Promenade", "2014 - 2016", "https://www.kshp.ch/hohe-promenade-gymnasium-zuerich"],
+		[t('home_school_pri'), "Probstei", "2008 - 2014", "https://www.stadt-zuerich.ch/schulen/de/probstei.html"],
+	];
     return(
 		<>
 		<Header
-		  title={title}
-		  text={text}
-		  />
+            title={t('home_title')}
+            text={t('home_description')}
+        />
         <div className="home">
             <div className="home_about section">
 				<div className="box">
 					<div className="box_title">
-						<h4>Über mich</h4>
+						<h4>{t('home_about_title')}</h4>
 					</div>
 					<div className="box_content">
 						<img src="content/profilepic/profilepic.jpg" alt="Portrait"/> 
-						<button type="submit" className="dwnld">Lebenslauf PDF</button>
+						<button type="submit" className="dwnld">{t('home_about_pdf')}</button>
 					</div>
 				</div>
 				<div className="box">
 					<div className="box_title">
-						<h4>Infos</h4>
+						<h4>{t('home_about_infos')}</h4>
 					</div>
 					<div className="box_content">
 						<table>	
 							<thead>
 								<tr>
-									<th colSpan={2}><h4>Personalien</h4></th>
+									<th colSpan={2}><h4>{t('home_about_me')}</h4></th>
 								</tr>
 							</thead>
 							<tbody>		
 								<tr>			
-									<td><b>Geburtsdatum</b></td>			
+									<td><b>{t('home_about_birthdate')}</b></td>			
 									<td>18.06.2002</td>			
 								</tr>	
 								<tr>			
-									<td><b>Nationalität</b></td>			
+									<td><b>{t('home_about_nationality')}</b></td>			
 									<td>Schweiz, Russland, U.S.A.</td>			
 								</tr>
 								<tr>
-									<td><b>Wohnort</b></td>			
+									<td><b>{t('home_about_address')}</b></td>			
 									<td>Stettbachstr. 129g</td>			
 								</tr>			
 								<tr>			
-									<td><b>PLZ/Ort</b></td>			
+									<td><b>{t('home_about_city')}</b></td>			
 									<td>8051 Zürich</td>			
 								</tr>
 							</tbody>				
@@ -57,16 +77,16 @@ function Home({title, text}:{
 						<table>	
 							<thead>
 								<tr>
-									<th colSpan={2}><h4>Kontakt</h4></th>
+									<th colSpan={2}><h4>{t('home_about_contact')}</h4></th>
 								</tr>
 							</thead>
 							<tbody>		
 								<tr>			
-									<td><b>Telefon</b></td>					
+									<td><b>{t('home_about_phone')}</b></td>					
 									<td>076 271 93 38</td>						
 								</tr>
 								<tr>
-									<td><b>Email</b></td>		
+									<td><b>{t('home_about_email')}</b></td>		
 									<td>gshevoroshkin@gmail.com</td>					
 								</tr>	
 							</tbody>			
@@ -76,11 +96,11 @@ function Home({title, text}:{
 			</div>
 
 			<div className="home_skills section">
-			<div className="section_title"><h2>Skills</h2></div>
+			<div className="section_title"><h2>{t('home_skills_title')}</h2></div>
 				
 				<div className="box">
 					<div className="box_title">
-						<h4>Webentwicklung</h4>
+						<h4>{t('home_skills_web')}</h4>
 					</div>
 					<div className="box_content">
 						<p>HTML</p>
@@ -91,7 +111,7 @@ function Home({title, text}:{
 						<div className="skills css">
 							<div>90%</div>
 						</div>
-						<p>JAVASCRIPT</p>
+						<p>JavaScript</p>
 						<div className="skills js">
 							<div>60%</div>
 						</div>
@@ -104,14 +124,14 @@ function Home({title, text}:{
 				
 				<div className="box">
 					<div className="box_title">
-						<h4>Applikationsentwicklung</h4>
+						<h4>{t('home_skills_dev')}</h4>
 					</div>
 					<div className="box_content">
 						<p>Python</p>
 						<div className="skills py">
 							<div>80%</div>
 						</div>
-						<p>JAVA</p>
+						<p>Java</p>
 						<div className="skills java">
 							<div>70%</div>
 						</div>
@@ -128,22 +148,22 @@ function Home({title, text}:{
 				
 				<div className="box">
 					<div className="box_title">
-						<h4>Persönlich</h4>
+						<h4>{t('home_skills_pers')}</h4>
 					</div>
 					<div className="box_content">
-						<p>Einzelarbeit</p>
+						<p>{t('home_skills_solo')}</p>
 						<div className="skills one">
 							<div>100%</div>
 						</div>
-						<p>Teamwork</p>
+						<p>{t('home_skills_team')}</p>
 						<div className="skills two">
 							<div>90%</div>
 						</div>
-						<p>Logisches Denken</p>
+						<p>{t('home_skills_logic')}</p>
 						<div className="skills three">
 							<div>90%</div>
 						</div>
-						<p>Kreativität</p>
+						<p>{t('home_skills_creativity')}</p>
 						<div className="skills four">
 							<div>100%</div>
 						</div>
@@ -152,22 +172,22 @@ function Home({title, text}:{
 				
 				<div className="box">
 					<div className="box_title">
-						<h4>Sprachen</h4>
+						<h4>{t('home_skills_languages')}</h4>
 					</div>
 					<div className="box_content">
-						<p>Deutsch</p>
+						<p>{t('home_skills_german')}</p>
 						<div className="skills de">
 							<div>100%</div>
 						</div>
-						<p>Englisch</p>
+						<p>{t('home_skills_english')}</p>
 						<div className="skills en">
 							<div>90%</div>
 						</div>
-						<p>Russisch</p>
+						<p>{t('home_skills_russian')}</p>
 						<div className="skills rus">
 							<div>90%</div>
 						</div>
-						<p>Französisch</p>
+						<p>{t('home_skills_french')}</p>
 						<div className="skills fr">
 							<div>60%</div>
 						</div>
@@ -176,22 +196,22 @@ function Home({title, text}:{
 				
 				<div className="box">
 					<div className="box_title">
-						<h4>Office</h4>
+						<h4>{t('home_skills_office')}</h4>
 					</div>
 					<div className="box_content">
-						<p>Word</p>
+						<p>{t('home_skills_word')}</p>
 						<div className="skills word">
 							<div>100%</div>
 						</div>
-						<p>Powerpoint</p>
+						<p>{t('home_skills_powerpoint')}</p>
 						<div className="skills pp">
 							<div>100%</div>
 						</div>
-						<p>Excel</p>
+						<p>{t('home_skills_excel')}</p>
 						<div className="skills excel">
 							<div>80%</div>
 						</div>
-						<p>Access</p>
+						<p>{t('home_skills_access')}</p>
 						<div className="skills access">
 							<div>50%</div>
 						</div>
@@ -200,195 +220,38 @@ function Home({title, text}:{
 			</div>
 
 			<div className="home_family section">
-				<div className="section_title"><h2>Familie</h2></div>
-				
-				<div className="box">
-					<div className="box_title">
-						<h4>Vater</h4>
-					</div>
-					<div className="box_content">
-						<table>	
-							<tbody>	
-								<tr>			
-								<td><b>Name</b></td>			
-								<td>Alexey Shevoroshkin</td>			
-								</tr>		
-								<tr>			
-								<td><b>Geburtsdatum</b></td>			
-								<td>08.05.1966</td>			
-								</tr>
-								<tr>			
-								<td><b>Beruf</b></td>			
-								<td>Entwicklungsleiter UBS</td>			
-								</tr>						
-								<tr>			
-								<td><b>Nationalität</b></td>			
-								<td>Schweiz, U.S.A.</td>			
-								</tr>	
-							</tbody>			
-						</table>
-					</div>
-				</div>
-				
-				<div className="box">
-					<div className="box_title">
-						<h4>Mutter</h4>
-					</div>
-					<div className="box_content">
-						<table>	
-							<tbody>
-								<tr>			
-								<td><b>Name</b></td>			
-								<td>Tatiana Chirokikh</td>			
-								</tr>					
-								<tr>			
-								<td><b>Geburtsdatum</b></td>			
-								<td>14.04.1967</td>			
-								</tr>
-								<tr>			
-								<td><b>Beruf</b></td>			
-								<td>Ernährungsberaterin</td>			
-								</tr>						
-								<tr>			
-								<td><b>Nationalität</b></td>			
-								<td>Schweiz, Russland</td>			
-								</tr>
-							</tbody>				
-						</table>
-					</div>
-				</div>
-				
-				<div className="box">
-					<div className="box_title">
-						<h4>Bruder</h4>
-					</div>
-					<div className="box_content">
-						<table>	
-							<tbody>	
-								<tr>			
-								<td><b>Name</b></td>			
-								<td>Michail Shevoroshkin</td>			
-								</tr>		
-								<tr>			
-								<td><b>Geburtsdatum</b></td>			
-								<td>22.11.2004</td>			
-								</tr>
-								<tr>			
-								<td><b>Beruf</b></td>			
-								<td>Schüler, Sekundar</td>			
-								</tr>	
-							</tbody>		
-						</table>
-					</div>
-				</div>	
-				
-				<div className="box">
-					<div className="box_title">
-						<h4>Bruder</h4>
-					</div>
-					<div className="box_content">
-						<table>
-							<tbody>			
-								<tr>			
-								<td><b>Name</b></td>			
-								<td>Nikolay Shevoroshkin</td>			
-								</tr>		
-								<tr>			
-								<td><b>Geburtsdatum</b></td>			
-								<td>05.08.2006</td>			
-								</tr>
-								<tr>			
-								<td><b>Beruf</b></td>			
-								<td>Schüler, Gymnasium</td>			
-								</tr>
-							</tbody>			
-						</table>
-					</div>
-				</div>	
-				
+				<div className="section_title"><h2>{t('home_family_title')}</h2></div>
+				{family.map((member,index)=>{
+					return <FamilyBox
+							relation={member[0]}
+							name={member[1]}
+							birthdate={member[2]}
+							job={member[3]}
+							nationality={member[4]}
+							/>
+				})}
+			</div>
+
+			<div className="home_hobbies section">
+				<div className="section_title"><h2>{t('home_hobbies_title')}</h2></div>
+				{hobbies.map((hobby,index)=>{
+					return <SimpleBox
+							title={hobby[0]}
+							text={hobby[1]}
+							/>
+				})}
 			</div>
 			
-			<div className="home_hobbies section">
-				<div className="section_title"><h2>Hobbies</h2></div>		
-				<div className="box">
-					<div className="box_title">
-						<h4>Musik</h4>
-					</div>
-					<div className="box_content">
-						<p>Seit meinem 7. Lebensjahr ging ich in den Gitarrenunterricht. Musik spielte in meinem Leben andauernd eine sehr wichtige Rolle. Heutzutage besuche ich die Kurse zwar nicht mehr aber musiziere noch in einer kleinen Band, lerne Schlagzeug spielen und produziere für mich elektronische Musik oder HipHop Beats auf meinem PC.</p>
-					</div>
-				</div>
-				
-				<div className="box">
-					<div className="box_title">
-						<h4>Kunst</h4>
-					</div>
-					<div className="box_content">
-						<p>Nicht nur durch Musik, sondern auch durch die Kunst kann ich meine Gefühle wiedergeben und mich stundenlang damit befassen. Sei es skizzieren auf Papier, malen auf der Leinwand, sprayen oder designen einer Webseite, ich verspüre dabei immer eine Euphorie, die mit keiner anderen Tätigkeit vergleichbar ist.</p>
-					</div>
-				</div>	
-
-				<div className="box">
-					<div className="box_title">
-						<h4>CEVI</h4>
-					</div>
-					<div className="box_content">
-						<p>Seit dem Jahr 2006 besuche ich regelmässig die CEVI Schwamendingen. Vor ungefähr 5 Jahren hatte ich meinen zweiten Abschluss als Gruppenleiter absolviert. Leider konnte ich in den letzten Jahren aufgrund der Schule und des Prüfungsstress nicht jeden Samstag dabei sein. Aber da ich mich mit Kindern gut verstehe und mir die Natur sehr wichtig ist, bin ich immer noch Teil unserer Gruppe.</p>
-					</div>
-				</div>
-
-				<div className="box">
-					<div className="box_title">
-						<h4>Sport</h4>
-					</div>
-					<div className="box_content">
-						<p>In meiner Freizeit bin ich nicht nur mit Kreativem beschäftigt, sondern treibe auch gern Sport. Dazu gehört Leichtathletik, Velofahren, Skateboarden und Tischtennis spielen. Vor allem gefällt es mir, im Wald joggen zu gehen und mit Freunden im Skatepark oder auf der Strasse Skateboard fahren und dabei neue Tricks versuchen zu meistern.</p>
-					</div>
-				</div>
-				
-			</div>
-
 			<div className="home_school section">
-				<div className="section_title"><h2>Besuchte Schulen</h2></div>
-				<div className="box">
-					<div className="box_title">
-						<h4>Informatikmittelschule</h4>
-					</div>
-						<div className="box_content">
-						<p><b>Hottingen</b></p>
-						<p>2017 - 2020</p>
-					</div>
-				</div>
-				
-				<div className="box">
-					<div className="box_title">
-						<h4>Sekundarschule</h4>
-					</div>
-					<div className="box_content">
-						<p><b>Herzogenmühle</b></p>
-						<p>2016 - 2017</p>
-					</div>
-				</div>
-
-				<div className="box">
-					<div className="box_title">
-						<h4>Gymnasium</h4>
-					</div>
-					<div className="box_content">
-						<p><b>Hohe Promenade</b></p>
-						<p>2014 - 2016</p>
-					</div>
-				</div>
-				
-				<div className="box">
-					<div className="box_title">
-						<h4>Primarschule</h4>
-					</div>
-					<div className="box_content">
-						<p><b>Probstei</b></p>
-						<p>2008 - 2014</p>
-					</div>
-				</div>
+				<div className="section_title"><h2>{t('home_school_title')}</h2></div>
+				{schools.map((school,index)=>{
+					return <SimpleBox2
+							title={school[0]}
+							text={school[1]}
+							text2={school[2]}
+							link={school[3]}
+							/>
+				})}
 			</div>
         </div>
 		</>
