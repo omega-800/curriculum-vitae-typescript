@@ -1,9 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Career.css';
+import Header from '../components/Header';
 
-function Career(){
+function Career({title, text}:{
+	title: string;
+	text: string;
+  }){
     return(
+		<>
+		<Header
+		  title={title}
+		  text={text}
+		  />
         <div className="career">
             <div className="career_web section">
                 <div className="section_title"><h2>Webdevelopment</h2></div>
@@ -67,6 +76,7 @@ function Career(){
                 <div className="section_title"><h2>Java</h2></div>
             </div>
         </div>
+        </>
     )
 }
 

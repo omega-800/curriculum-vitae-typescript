@@ -1,8 +1,12 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
 import './Art.css';
+import Header from '../components/Header';
 
-function Art(){
+function Art({title, text}:{
+	title: string;
+	text: string;
+  }){
     const origamiSlideImages = [
         { src: './content/kunst/origami/1.jpg' },
         { src: 'content/kunst/origami/2.jpg' },
@@ -73,6 +77,11 @@ function Art(){
         { src: 'content/kunst/other/9.jpg' }
     ];
     return(
+		<>
+		<Header
+		  title={title}
+		  text={text}
+		  />
         <div className="art">
             <div className="art_origami section">
                 <div className="section_title"><h2>Origami</h2></div>
@@ -103,6 +112,7 @@ function Art(){
                 />
             </div>
         </div>
+        </>
     )
 }
 

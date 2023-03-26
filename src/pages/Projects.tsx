@@ -2,8 +2,12 @@ import React from 'react';
 import ImageBox from '../components/ImageBox';
 import Carousel from '../components/Carousel';
 import './Projects.css';
+import Header from '../components/Header';
 
-function Projects(){
+function Projects({title, text}:{
+	title: string;
+	text: string;
+  }){
     const glassfishSlideImages = [
         { src: 'content/projekte/glassfish_books.png' },
         { src: 'content/projekte/glassfish_books2.png' },
@@ -19,6 +23,11 @@ function Projects(){
     ];
     
     return(
+		<>
+		<Header
+		  title={title}
+		  text={text}
+		  />
         <div className="projects">
             <div className="projects_react section">
                 <div className="section_title"><h2>React</h2></div>
@@ -102,6 +111,7 @@ function Projects(){
                 />
             </div>
         </div>
+        </>
     )
 }
 

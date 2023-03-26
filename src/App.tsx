@@ -4,49 +4,46 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Header from './components/Header';
 import Home from './pages/Home';
 import Career from './pages/Career';
 import Projects from './pages/Projects';
 import Art from './pages/Art';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="App">
       <BrowserRouter>
           <Navbar />
         <Routes>
-          <Route path="/" element={<>
-            <Header
-              title="Guten Tag! Ich bin Georgiy Shevoroshkin"
-              text="ein motivierter Schüler und leidenschaftlicher Programmierer aus der IMS Hottingen. Auf dieser Webseite sind mein Lebenslauf, meine Attestate und Projekte zu sehen. Sie finden auch viele weitere Informationen über meine Freizeitbeschäftigungen, Interessen und Fakten über mich, die auf den Bewerbungsunterlagen nicht zu sehen sind"
+          <Route path="/" element={
+            <Home
+              title={t('home_title')}
+              text={t('home_description')}
               />
-            <Home />
-            </>}
+            }
           />
-          <Route path="/career" element={<>
-            <Header
-              title="Karriere"
-              text="Währenddessen ich diese Aufträge erledigte oder bei den Firmen arbeitete, sammelte ich in verschiedensten Bereichen Wissen"
+          <Route path="/career" element={
+            <Career 
+            title={t('career_title')}
+            text={t('career_description')}
               />
-            <Career />
-            </>}
+            }
           />
-          <Route path="/projects" element={<>
-            <Header
-              title="Projekte"
-              text="Dies sind einige der Projekte, welche ich über die letzten Jahre programmiert habe"
-              />
-            <Projects />
-            </>}
+          <Route path="/projects" element={
+            <Projects 
+            title={t('projects_title')}
+            text={t('projects_description')}
+              />}
           />
-          <Route path="/art" element={<>
-            <Header
-              title="Kunst"
-              text="Kunst oder besser gesagt Kreativität ist ein riesiger Bestandteil meines Lebens. Ich verbringe viel Zeit, mithilfe von verschiedenen Medien meine Ideen zu manifestieren und der Inspiration und Kreativität freien Lauf zu lassen"
+          <Route path="/art" element={
+              <Art 
+              title={t('art_title')}
+              text={t('art_description')}
               />
-              <Art />
-            </>}
+            }
           />
         </Routes>
         <Footer />

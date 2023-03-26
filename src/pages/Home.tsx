@@ -1,9 +1,18 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import './Home.css';
+import Header from '../components/Header';
 
-function Home(){
+function Home({title, text}:{
+	title: string;
+	text: string;
+  }){
     return(
+		<>
+		<Header
+		  title={title}
+		  text={text}
+		  />
         <div className="home">
             <div className="home_about section">
 				<div className="box">
@@ -382,6 +391,7 @@ function Home(){
 				</div>
 			</div>
         </div>
+		</>
     )
 }
 
