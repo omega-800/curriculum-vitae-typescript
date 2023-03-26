@@ -1,0 +1,22 @@
+.footer{
+    background-color:var(--lighter);
+    color:var(--darkest);
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-around;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding:5%;
+}
+.footer h2{
+    margin-top: 0;
+}
+.footer a{
+    background-color:var(--darker);
+    color:var(--lightest);
+}
+.footer a:hover{
+    background-color:var(--darkest);
+    color:var(--lightest);
+}

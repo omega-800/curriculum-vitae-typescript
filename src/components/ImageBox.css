@@ -1,0 +1,30 @@
+.imgbox{
+  background-color: var(--darker);
+  color: var(--lightest);
+  display:flex;
+  width:80%;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  margin: .5em;
+}
+.imgbox_content{
+  width:90%;
+  padding:5%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
+.imgbox_content{
+  text-align: center;
+}
+.imgbox_content img{
+  object-fit:contain;
+  width:100%;
+}
+@media (max-width:660px) {
+  .imgbox{
+    width:98%;
+  }
+}
