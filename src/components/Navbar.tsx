@@ -12,16 +12,16 @@ function Navbar(){
         <div className="navbar">
             <div className="navbar_top show_navbar_top">
                 <Link to="/" className="navbar_top_link">
-                    <h4>Home</h4>
+                    <h4>{t("home_title")}</h4>
                 </Link>
                 <Link to="/career" className="navbar_top_link">
-                    <h4>Karriere</h4>
+                    <h4>{t("career_title")}</h4>
                 </Link>
                 <Link to="/projects" className="navbar_top_link">
-                    <h4>Projekte</h4>
+                    <h4>{t("projects_title")}</h4>
                 </Link>
                 <Link to="/art" className="navbar_top_link">
-                    <h4>Kunst</h4>
+                    <h4>{t("art_title")}</h4>
                 </Link>
                 <button name="English" value="en" onClick={onClickChangeLanguage}>EN</button>
                 <button name="Deutsch" value="de" onClick={onClickChangeLanguage}>DE</button>
