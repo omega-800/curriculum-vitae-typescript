@@ -17,7 +17,8 @@
         "description":"",
         "thumbnail":"",
         "image":"",
-        "relation":"",
+        "relation":"myself",
+        "address_id":"A01",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Stettbachstrasse 129g",
@@ -25,7 +26,14 @@
             "addressRegion": "ZH",
             "postalCode": "8051",
             "addressCountry": "CH"
-         }
+        },
+        "url" : "http://www.your-site.com",
+        "sameAs" : [
+            "http://www.facebook.com/your-profile",
+            "http://instagram.com/yourProfile",
+            "http://www.linkedin.com/in/yourprofile",
+            "http://plus.google.com/your_profile"
+        ]
     },
     "mom" : {
         "@context": "https://schema.org/",
@@ -44,7 +52,8 @@
         "description":"",
         "thumbnail":"",
         "image":"",
-        "relation":"",
+        "relation":"Mother",
+        "address_id":"A01",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Stettbachstrasse 129g",
@@ -52,7 +61,8 @@
             "addressRegion": "ZH",
             "postalCode": "8051",
             "addressCountry": "CH"
-         }
+        },
+        "worksFor":""
     },
     "dad" : {
         "@context": "https://schema.org/",
@@ -71,7 +81,8 @@
         "description":"",
         "thumbnail":"",
         "image":"",
-        "relation":"",
+        "relation":"Father",
+        "address_id":"A01",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Stettbachstrasse 129g",
@@ -79,7 +90,8 @@
             "addressRegion": "ZH",
             "postalCode": "8051",
             "addressCountry": "CH"
-         }
+        },
+        "worksFor":""
     },
     "niki" : {
         "@context": "https://schema.org/",
@@ -98,7 +110,8 @@
         "description":"",
         "thumbnail":"",
         "image":"",
-        "relation":"",
+        "relation":"Brother",
+        "address_id":"A01",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Stettbachstrasse 129g",
@@ -106,7 +119,8 @@
             "addressRegion": "ZH",
             "postalCode": "8051",
             "addressCountry": "CH"
-         }
+        },
+        "worksFor":""
     },
     "michi" : {
         "@context": "https://schema.org/",
@@ -125,7 +139,8 @@
         "description":"",
         "thumbnail":"",
         "image":"",
-        "relation":"",
+        "relation":"Brother",
+        "address_id":"A01",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Stettbachstrasse 129g",
@@ -133,6 +148,7 @@
             "addressRegion": "ZH",
             "postalCode": "8051",
             "addressCountry": "CH"
-         }
+        },
+        "worksFor":""
     }
 }

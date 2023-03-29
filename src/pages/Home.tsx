@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import './Home.css';
 import Header from '../components/Header';
 import FamilyBox from '../components/FamilyBox';
 import SimpleBox from '../components/SimpleBox';

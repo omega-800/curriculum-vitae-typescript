@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './ImageBox.css';
 const {Component} = React;
 const {render} = ReactDOM;
 

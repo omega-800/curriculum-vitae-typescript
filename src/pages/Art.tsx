@@ -1,6 +1,5 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
-import './Art.css';
 import Header from '../components/Header';
 import { useTranslation } from 'react-i18next';
 

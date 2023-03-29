@@ -31,4 +31,4 @@ function getFileStructure(dir: string): FileStructure {
 const fileStructure = getFileStructure(rootDirectory);
 fs.writeFileSync(outputFilePath, JSON.stringify(fileStructure, null, 2));
 
-console.log(`File structure written to ${outputFilePath}`);
+export {};

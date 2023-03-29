@@ -68,5 +68,15 @@
         "url": "https://www.mysql.com/",
         "name": "MySQL",
         "image":""
+    },
+    "PHP":{
+        "@context": "https://schema.org",
+        "@type": "ComputerLanguage",
+        "@id": "T08",
+        "alternateName": "Hypertext Preprocessor",
+        "description": "",
+        "url": "https://www.php.net/",
+        "name": "PHP",
+        "image":""
     }
 }
