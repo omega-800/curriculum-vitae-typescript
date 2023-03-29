@@ -1,0 +1,189 @@
+{
+  "0": "favicon.ico",
+  "1": "fileStructure.json",
+  "2": "index.html",
+  "3": "logo192.png",
+  "4": "logo512.png",
+  "5": "manifest.json",
+  "6": "robots.txt",
+  "7": "sunrise-icon.svg",
+  "content": {
+    "diplome": {
+      "0": "0_1_ECDL.jpg",
+      "1": "0_2_Abacus.jpg",
+      "2": "0_3_Multicheck.jpg",
+      "3": "1_ECDL.jpg",
+      "4": "2_Abacus.jpg",
+      "5": "3_Multicheck_1.jpg",
+      "6": "3_Multicheck_2.jpg",
+      "7": "3_Multicheck_3.jpg",
+      "8": "3_Multicheck_4.jpg"
+    },
+    "img": {
+      "0": "back.png",
+      "1": "bild.png",
+      "2": "cv.svg",
+      "3": "facebook.png",
+      "4": "instagram.png",
+      "5": "mail.png",
+      "6": "next.png",
+      "7": "phone.png",
+      "8": "share.png",
+      "9": "twitter.png"
+    },
+    "kunst": {
+      "origami": {
+        "0": "1.jpg",
+        "1": "10.jpg",
+        "2": "11.jpg",
+        "3": "12.jpg",
+        "4": "13.jpg",
+        "5": "14.jpg",
+        "6": "2.jpg",
+        "7": "3.jpg",
+        "8": "4.jpg",
+        "9": "5.jpg",
+        "10": "6.jpg",
+        "11": "7.jpg",
+        "12": "8.jpg",
+        "13": "9.jpg"
+      },
+      "other": {
+        "0": "1.jpg",
+        "1": "2.jpg",
+        "2": "3.jpg",
+        "3": "4.jpg",
+        "4": "5.jpg",
+        "5": "6.jpg",
+        "6": "7.jpg",
+        "7": "8.jpg",
+        "8": "9.jpg"
+      },
+      "paint": {
+        "0": "1.jpg",
+        "1": "10.jpg",
+        "2": "11.jpg",
+        "3": "2.jpg",
+        "4": "3.jpg",
+        "5": "4.jpg",
+        "6": "4_1.jpg",
+        "7": "5.jpg",
+        "8": "6.jpg",
+        "9": "7.jpg",
+        "10": "8.jpg",
+        "11": "9.jpg"
+      },
+      "spray": {
+        "0": "1.jpg",
+        "1": "10.jpg",
+        "2": "11.jpg",
+        "3": "12.jpg",
+        "4": "13.jpg",
+        "5": "14.jpg",
+        "6": "15.jpg",
+        "7": "16.jpg",
+        "8": "17.jpg",
+        "9": "18.jpg",
+        "10": "19.jpg",
+        "11": "2.jpg",
+        "12": "20.jpg",
+        "13": "21.jpg",
+        "14": "22.jpg",
+        "15": "23.jpg",
+        "16": "24.jpg",
+        "17": "25.jpg",
+        "18": "26.jpg",
+        "19": "3.jpg",
+        "20": "4.jpg",
+        "21": "5.jpg",
+        "22": "6.jpg",
+        "23": "7.jpg",
+        "24": "8.jpg",
+        "25": "9.jpg"
+      }
+    },
+    "profilepic": {
+      "0": "Bewerbungsbild.jpg",
+      "1": "Bewerbungsbild_web.jpg",
+      "2": "photo_0.jpg",
+      "3": "photo_1.jpg",
+      "4": "photo_1.psd",
+      "5": "profilepic.jpg"
+    },
+    "projekte": {
+      "0": "btc.png",
+      "1": "cSharp_dungeon.png",
+      "2": "cSharp_rocket.png",
+      "3": "glassfish_byod.png",
+      "4": "html_avocado.png",
+      "5": "html_dad.png",
+      "6": "html_drugpedia.png",
+      "7": "html_jukebox.png",
+      "8": "html_rus.png",
+      "9": "html_vallora.png",
+      "10": "java_game.png",
+      "11": "java_klassen.png",
+      "12": "java_klassen2.png",
+      "13": "java_konverter.png",
+      "14": "java_sort.png",
+      "15": "java_swing.png",
+      "16": "java_uno.png",
+      "17": "php_galerie.png",
+      "18": "php_karten.png",
+      "19": "python_ernestovargas.png",
+      "glassfish_books": {
+        "0": "glassfish_books.png",
+        "1": "glassfish_books2.png",
+        "2": "glassfish_books3.png"
+      },
+      "php_forms": {
+        "0": "php_formulare.png",
+        "1": "php_formulare2.png"
+      },
+      "react_shirtshop": {
+        "0": "react_shirtshop1.png",
+        "1": "react_shirtshop2.png"
+      }
+    },
+    "sprachen": {
+      "0": "0_1_Französisch.jpg",
+      "1": "0_2_Russisch.jpg",
+      "2": "1_Französisch_1.jpg",
+      "3": "1_Französisch_2.jpg",
+      "4": "2_Russisch_1.jpg",
+      "5": "2_Russisch_2.jpg"
+    },
+    "zeugnisse": {
+      "0": "0_1_Berufsschule.jpg",
+      "1": "0_2_Kantonsschule.jpg",
+      "2": "0_3_Sekundarschule.jpg",
+      "3": "0_4_Gymnasium.jpg",
+      "4": "1_0_bzz.jpg",
+      "5": "1_0_zli.jpg",
+      "6": "2_1_18-19_f.jpg",
+      "7": "2_2_18-19_h.jpg",
+      "8": "2_3_17-18_f.jpg",
+      "9": "2_4_17-18_h.jpg",
+      "10": "3_1_16-17_h.jpg",
+      "11": "3_2_16-17_h.jpg",
+      "12": "4_1_15-16_h.jpg",
+      "13": "4_2_15-16_f.jpg",
+      "14": "4_3_14-15_h.jpg",
+      "15": "4_4_14-15_f.jpg"
+    }
+  },
+  "locales": {
+    "de": {
+      "0": "translation.json"
+    },
+    "en": {
+      "0": "translation.json"
+    },
+    "fr": {
+      "0": "translation.json"
+    },
+    "ru": {
+      "0": "translation.json"
+    }
+  }
+}

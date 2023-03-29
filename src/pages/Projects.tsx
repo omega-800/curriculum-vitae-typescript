@@ -1,7 +1,6 @@
 import React from 'react';
 import ImageBox from '../components/ImageBox';
 import Carousel from '../components/Carousel';
-import './Projects.css';
 import Header from '../components/Header';
 import { useTranslation } from 'react-i18next';
 

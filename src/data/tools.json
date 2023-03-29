@@ -1,0 +1,82 @@
+{
+    "html":{
+        "@context": "https://schema.org",
+        "@type": "ComputerLanguage",
+        "@id": "T01",
+        "alternateName": "HyperText Markup Language",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        "name": "HTML",
+        "image":""
+    },
+    "css":{
+        "@context": "https://schema.org",
+        "@type": "ComputerLanguage",
+        "@id": "T02",
+        "alternateName": "Cascading Style Sheets",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        "name": "CSS",
+        "image":""
+    },
+    "js":{
+        "@context": "https://schema.org",
+        "@type": "ComputerLanguage",
+        "@id": "T03",
+        "alternateName": "JavaScript",
+        "description": "",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "name": "JS",
+        "image":""
+    },
+    "java":{
+        "@context": "https://schema.org",
+        "@type": "ComputerLanguage",
+        "@id": "T04",
+        "alternateName": "Java",
+        "description": "",
+        "url": "https://www.java.com/en/",
+        "name": "Java",
+        "image":""
+    },
+    "python":{
+        "@context": "https://schema.org",
+        "@type": "ComputerLanguage",
+        "@id": "T05",
+        "alternateName": "Python",
+        "description": "",
+        "url": "https://www.python.org/",
+        "name": "Python",
+        "image":""
+    },
+    "C#":{
+        "@context": "https://schema.org",
+        "@type": "ComputerLanguage",
+        "@id": "T06",
+        "alternateName": "C-Sharp",
+        "description": "",
+        "url": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+        "name": "C#",
+        "image":""
+    },
+    "MySQL":{
+        "@context": "https://schema.org",
+        "@type": "ComputerLanguage",
+        "@id": "T07",
+        "alternateName": "MySQL",
+        "description": "",
+        "url": "https://www.mysql.com/",
+        "name": "MySQL",
+        "image":""
+    },
+    "PHP":{
+        "@context": "https://schema.org",
+        "@type": "ComputerLanguage",
+        "@id": "T08",
+        "alternateName": "Hypertext Preprocessor",
+        "description": "",
+        "url": "https://www.php.net/",
+        "name": "PHP",
+        "image":""
+    }
+}

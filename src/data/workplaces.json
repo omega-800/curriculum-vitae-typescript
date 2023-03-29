@@ -1,0 +1,53 @@
+{
+    "inteco" :  { 
+        "@context": "https://schema.org/",
+        "@type": "Organization",
+        "@id": "W01",
+        "description":"",
+        "name": "Inteco",
+        "legalName" : "inteco edv ag",
+        "url": "https://www.inteco.ch/",
+        "logo": "https://u.jimcdn.com/cms/o/s2be375c9b7b44441/userlayout/img/logo.png",
+        "foundingDate": "1978",
+        "founders": [
+            {
+            "@type": "Person",
+            "name": "Walter Tuchschmid"
+            }
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Barzloostrasse 20",
+            "addressLocality": "Pfäffikon",
+            "addressRegion": "ZH",
+            "postalCode": "8330",
+            "addressCountry": "CH"
+        },
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "contactType": "info point",
+                "telephone": "+41 55 256 5758",
+                "email": "info@inteco.ch"
+            },
+            {
+                "@type": "ContactPoint",
+                "contactType": "Web support",
+                "email": "webmaster@inteco.ch"
+            },
+            {
+                "@type": "ContactPoint",
+                "contactType": "Technik support",
+                "email": "support@inteco.ch"
+            },
+            {
+                "@type": "ContactPoint",
+                "contactType": "WEGAS support",
+                "email": "wegas@inteco.ch"
+            }
+        ],
+        "sameAs": [ 
+            "https://ch.linkedin.com/company/inteco-edv-ag"
+        ]
+    }
+}

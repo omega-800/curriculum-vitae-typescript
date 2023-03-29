@@ -1,0 +1,20 @@
+{
+    "projectName":{
+        "@context": "http://schema.org/",
+        "@type": "SoftwareSourceCode",
+        "identifier": "@yourname/YourProject",
+        "name": "YourProject",
+        "programmingLanguage": {
+            "@type": "ComputerLanguage",
+            "name": "Swift",
+            "url": "https://swift.org"
+        },
+        "author": {
+            "@type": "Person",
+            "@id": "https://github.com/yourname",
+            "givenName": "First Name",
+            "middleName": "Middle Name",
+            "familyName": "Last Name"
+        }
+    }
+}

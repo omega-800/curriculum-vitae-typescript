@@ -1,0 +1,11 @@
+{
+    "home":{
+        "@id":"A01",
+        "@type": "PostalAddress",
+        "streetAddress": "Stettbachstrasse 129g",
+        "addressLocality": "Zürich",
+        "addressRegion": "ZH",
+        "postalCode": "8051",
+        "addressCountry": "CH"
+    }
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
 import { useTranslation } from 'react-i18next';
 
 function Navbar(){

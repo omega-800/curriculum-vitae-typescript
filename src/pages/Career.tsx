@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Career.css';
 import Header from '../components/Header';
 import { useTranslation } from 'react-i18next';
 import CareerBox from '../components/CareerBox';

@@ -1,0 +1,57 @@
+# db
+
+*if string preceeded by $# then translate*
+(json)
+- it_project
+  - id : int
+  - name : string
+  - description : string
+  - imageDir : string
+  - image : string
+  - thumbnail : string
+  - category_id : int
+  - tools_id : int[]
+  - github : string
+  - active : bool
+  - date : string
+  - place_id : int (eg school/work)
+  - person_id : int (eg dad)
+- category
+  - id : int
+  - name : string
+  - description : string
+  - thumbnail : string
+  - image : string
+- tool
+  - id : int
+  - name : string
+  - description : string
+  - link : string
+- person
+  - id : int
+  - firstname : string
+  - lastname : string
+  - description : string
+  - thumbnail : string
+  - image : string
+  - relation : string
+  - workplace_id : string
+  - birthdate : string
+  - nationality : string
+  - email : string
+  - phone : string
+  - address_id : int
+- address
+  - id : int
+  - name : string
+  - street : string
+  - addition : string
+  - zip : int
+  - city : string
+  - country : string
+- workplace
+  - id : int
+  - name : string
+  - description : string
+  - link : string
+  - address_id : int
