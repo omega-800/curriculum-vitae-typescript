@@ -1,0 +1,42 @@
+{
+    "de":{
+        "@context": "https://schema.org/",
+        "@type": "Language",
+        "@id": "L01",
+        "name": "German",
+        "alternateName": "Deutsch",
+        "speakingOf": "Germany, Austria, Switzerland, and other countries",
+        "sameAs": ["https://en.wikipedia.org/wiki/German_language",
+                   "https://www.ethnologue.com/language/deu"]
+    },
+    "en":{
+        "@context": "https://schema.org/",
+        "@type": "Language",
+        "@id": "L02",
+        "name": "English",
+        "alternateName": "English",
+        "speakingOf": "United Kingdom, United States, Canada, Australia, and other countries",
+        "sameAs": ["https://en.wikipedia.org/wiki/English_language",
+                   "https://www.ethnologue.com/language/eng"]
+    },
+    "ru":{
+        "@context": "https://schema.org/",
+        "@type": "Language",
+        "@id": "L03",
+        "name": "Russian",
+        "alternateName": "русский язык",
+        "speakingOf": "Russia, Belarus, Kazakhstan, and other countries",
+        "sameAs": ["https://en.wikipedia.org/wiki/Russian_language",
+                   "https://www.ethnologue.com/language/rus"]
+    },
+    "fr":{
+        "@context": "https://schema.org/",
+        "@type": "Language",
+        "@id": "L04",
+        "name": "French",
+        "alternateName": "Français",
+        "speakingOf": "France, Canada, Switzerland, and other countries",
+        "sameAs": ["https://en.wikipedia.org/wiki/French_language",
+                   "https://www.ethnologue.com/language/fra"]
+    }
+}
