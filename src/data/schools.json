@@ -1,0 +1,147 @@
+{
+    "probstei":{
+        "@context": "https://schema.org/",
+        "@type": "School",
+        "@id": "S01",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Stettbachstrasse 88",
+            "addressLocality": "Zürich",
+            "addressRegion": "ZH",
+            "postalCode": "8051",
+            "addressCountry": "CH"
+        },
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "contactType": "Sekretariat",
+                "telephone": "+41 44 413 3080"
+            }
+        ],
+        "description":"",
+        "image":"",
+        "logo":"",
+        "name":"Probstei",
+        "url":"https://www.stadt-zuerich.ch/schulen/de/probstei.html",
+        "fromto":"2008 - 2014",
+        "type":"primarschule"
+    },
+    "hopro":{
+        "@context": "https://schema.org/",
+        "@type": "School",
+        "@id": "S02",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Promenadengasse 11",
+            "addressLocality": "Zürich",
+            "addressRegion": "ZH",
+            "postalCode": "8001",
+            "addressCountry": "CH"
+        },
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "contactType": "Sekretariat",
+                "telephone": "+41 44 244 6464",
+                "email": "sekretariat@kshp.ch"
+            }
+        ],
+        "description":"",
+        "email":"",
+        "image":"",
+        "logo":"",
+        "name":"Hohe Promenade",
+        "url":"https://www.kshp.ch/",
+        "fromto":"2014 - 2016",
+        "type":"gymnasium"
+    },
+    "sek":{
+        "@context": "https://schema.org/",
+        "@type": "School",
+        "@id": "S03",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Herzogenmühlestrasse 60",
+            "addressLocality": "Zürich",
+            "addressRegion": "ZH",
+            "postalCode": "8051",
+            "addressCountry": "CH"
+        },
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "contactType": "Schulleitung",
+                "telephone": "+41 44 413 3100",
+                "email": "kurt.bauer@schulen.zuerich.ch"
+            }
+        ],
+        "description":"",
+        "email":"",
+        "image":"",
+        "logo":"",
+        "name":"Herzogenmühle",
+        "url":"https://www.schule-herzli.ch/",
+        "sameAs" : [
+            "https://www.stadt-zuerich.ch/schulen/de/herzogenmuehle.html"
+        ],
+        "fromto":"2016 - 2017",
+        "type":"sekundarschule"
+    },
+    "ims":{
+        "@context": "https://schema.org/",
+        "@type": "School",
+        "@id": "S04",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Minervastrasse 14",
+            "addressLocality": "Zürich",
+            "addressRegion": "ZH",
+            "postalCode": "8090",
+            "addressCountry": "CH"
+        },
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "contactType": "Sekretariat",
+                "telephone": "+41 44 266 5757",
+                "email": "hottingen@ksh.ch"
+            }
+        ],
+        "description":"",
+        "email":"",
+        "image":"",
+        "logo":"",
+        "name":"Hottingen",
+        "url":"https://www.ksh.ch/angebot/informatikmittelschule",
+        "fromto":"2017 - 2020",
+        "type":"Informatikmittelschule"
+    },
+    "bzz":{
+        "@context": "https://schema.org/",
+        "@type": "School",
+        "@id": "S05",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Seestrasse 110",
+            "addressLocality": "Horgen",
+            "addressRegion": "ZH",
+            "postalCode": "8810",
+            "addressCountry": "CH"
+        },
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "contactType": "Sekretariat",
+                "telephone": "+41 44 727 46 00"
+            }
+        ],
+        "description":"",
+        "email":"",
+        "image":"",
+        "logo":"",
+        "name":"Berufsbildungszentrum Zürichsee",
+        "url":"https://www.bzz.ch/berufslehre/informatik-mediamatik/informatikerin-efz-informatiker-in-efz-ims/",
+        "fromto":"2017 - 2020",
+        "type":"Informatikmittelschule"
+    }
+}
