@@ -91,7 +91,7 @@ function Art(){
             <div className="art_paint section">
                 <div className="section_title"><h2>{t('art_drawings_title')}</h2></div>
                 <Carousel
-                    title={t('art_drawings_decription')}
+                    title={t('art_drawings_description')}
                     slides={paintSlideImages}
                 />
             </div>
