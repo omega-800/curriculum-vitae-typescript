@@ -1,7 +1,10 @@
-# db
+# plan
 
-*if string preceeded by $# then translate*
+## db
+
+*if string preceeded by !t! then translate*
 (json)
+
 - it_project
   - id : int
   - name : string
@@ -55,3 +58,18 @@
   - description : string
   - link : string
   - address_id : int
+
+## site
+
+- home
+  - about
+  - skills
+  - 
+- career
+  - schools
+  - jobs
+- it
+  - projects
+- art
+  - projects
+- other hobbies
