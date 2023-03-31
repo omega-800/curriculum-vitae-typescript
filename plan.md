@@ -55,3 +55,73 @@
   - description : string
   - link : string
   - address_id : int
+
+*oknewplan*
+
+- personalinfo
+  - name
+  - birthdate
+  - nationalities[]
+  - birthplace
+  - _experience[]
+  - knowledge[]
+    - _generalskills
+    - _coding
+    - _software
+    - _languages
+    - _art
+  - _projects[]
+  - _referencecontacts[]
+
+- _referencecontact_
+  - @id
+  - name
+  - description
+  - email
+  - phone
+  - 
+
+- _category_
+  - @id
+  - name
+  - description
+  - image
+  - thumbnail
+  - link?
+
+- _experienceitem_
+  - @id
+  - name
+  - description
+  - _categoryid
+  - image
+  - thumbnail
+  - yearfrom
+  - yearto
+  - link
+  - documents[]?
+  - _referencecontact[]?
+
+- _knowledgeitem_
+  - @id
+  - name
+  - description
+  - _categoryid
+  - skillpercent
+  - proficiency
+  - image
+  - thumbnail
+  - timeknown?
+  - link?
+
+- _projectitem_
+  - @id
+  - name
+  - description
+  - timefrom
+  - timeto
+  - _knowledgeid[]
+  - category
+  - _link?
+  - image[]
+  - thumbnail
