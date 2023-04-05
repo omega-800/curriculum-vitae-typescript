@@ -1,0 +1,59 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "SoftwareApplication",
+    "@id":"T02",
+    "name": "Microsoft Office",
+    "applicationCategory": "Productivity Suite",
+    "operatingSystem": "Windows, macOS, iOS, Android",
+    "description": "Microsoft Office is a suite of productivity software applications developed and published by Microsoft.",
+    "keywords": "Microsoft Office, Productivity Suite, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft Access",
+    "url": "https://www.microsoft.com/en-us/microsoft-365/office-365-home",
+    "version": "Microsoft Office 2021",
+    "hasPart": [
+        {
+        "@type": "SoftwareApplication",
+        "@id":"T02A01",
+        "name": "Microsoft Word",
+        "applicationCategory": "Word Processor",
+        "operatingSystem": "Windows, macOS, iOS, Android",
+        "description": "Microsoft Word is a word processing software application developed and published by Microsoft.",
+        "keywords": "Microsoft Word, Word Processor, Text Editor",
+        "url": "https://www.microsoft.com/en-us/microsoft-365/word",
+        "version": "Microsoft Word 2021"
+        },
+        {
+        "@type": "SoftwareApplication",
+        "@id":"T02A02",
+        "name": "Microsoft Excel",
+        "applicationCategory": "Spreadsheet",
+        "operatingSystem": "Windows, macOS, iOS, Android",
+        "description": "Microsoft Excel is a spreadsheet software application developed and published by Microsoft.",
+        "keywords": "Microsoft Excel, Spreadsheet, Calculation, Data Analysis",
+        "url": "https://www.microsoft.com/en-us/microsoft-365/excel",
+        "version": "Microsoft Excel 2021"
+        },
+        {
+        "@type": "SoftwareApplication",
+        "@id":"T02A03",
+        "name": "Microsoft PowerPoint",
+        "applicationCategory": "Presentation",
+        "operatingSystem": "Windows, macOS, iOS, Android",
+        "description": "Microsoft PowerPoint is a presentation software application developed and published by Microsoft.",
+        "keywords": "Microsoft PowerPoint, Presentation, Slideshow",
+        "url": "https://www.microsoft.com/en-us/microsoft-365/powerpoint",
+        "version": "Microsoft PowerPoint 2021"
+        },
+        {
+        "@type": "SoftwareApplication",
+        "@id":"T02A04",
+        "name": "Microsoft Access",
+        "applicationCategory": "Database Management System",
+        "operatingSystem": "Windows",
+        "description": "Microsoft Access is a database management system developed and published by Microsoft.",
+        "keywords": "Microsoft Access, Database Management System, Relational Database",
+        "url": "https://www.microsoft.com/en-us/microsoft-365/access",
+        "version": "Microsoft Access 2021"
+        }
+    ]
+}
+

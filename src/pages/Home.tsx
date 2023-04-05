@@ -9,19 +9,21 @@ import people from '../data/people.json';
 import schools from '../data/schools.json';
 import addresses from '../data/addresses.json';
 import skills from '../data/skills.json';
-import tools from '../data/tools.json'
 import TranslateIfNeeded from '../tools/TranslateIfNeeded';
 import Skill from '../components/Skill';
+import {SkillList} from '../interfaces/ISkill';
+
 
 function Home(){
 	const { t, i18n } = useTranslation();
 	const me = people.me;
 	const my_address = addresses[me.address_name as keyof typeof addresses];
 	const family = people.family;
-	const programminglanguages = tools.languages;
-	const itskills = skills.it.itemListElement.map((skill,index)=>{
-		return programminglanguages[skill.language_name as keyof typeof programminglanguages];
-	})
+
+	const it_skills : SkillList = skills.it;
+	const lang_skills : SkillList = skills.languages;
+	const office_skills : SkillList = skills.office;
+	const personal_skills : SkillList = skills.personal;
 
 	const hobbies = [
 		[t('home_hobbies_music'), t('home_hobbies_musictext')],
@@ -112,138 +114,11 @@ function Home(){
 			<div className="home_skills section">
 			<div className="section_title"><h2>{t('home_skills_title')}</h2></div>
 		
-			
-			{Object.keys(skills).map((skillset:string,index:number)=>{
-				return (
-					<div className="box">{skills[skillset as keyof typeof skills].name}
-					{skills[skillset as keyof typeof skills].itemListElement.map((member,index)=>{
-					return <p>{member.knowledgePercent + member.description}</p>
-				})}
-					</div>
+			<Skill skills={it_skills}></Skill>
+			<Skill skills={lang_skills}></Skill>
+			<Skill skills={office_skills}></Skill>
+			<Skill skills={personal_skills}></Skill>
 
-				)
-			})}
-			
-				<div className="box">
-					<div className="box_title">
-						<h4>{t('home_skills_web') + skills.it.name}</h4>
-					</div>
-					
-					<div className="box_content">
-						<p>HTML</p>
-						<div className="skills html">
-							<div>90%</div>
-						</div>
-						<p>CSS</p>
-						<div className="skills css">
-							<div>90%</div>
-						</div>
-						<p>JavaScript</p>
-						<div className="skills js">
-							<div>60%</div>
-						</div>
-						<p>PHP</p>
-						<div className="skills php">
-							<div>45%</div>
-						</div>
-					</div>
-				</div>
-				
-				<div className="box">
-					<div className="box_title">
-						<h4>{t('home_skills_dev')}</h4>
-					</div>
-					<div className="box_content">
-						<p>Python</p>
-						<div className="skills py">
-							<div>80%</div>
-						</div>
-						<p>Java</p>
-						<div className="skills java">
-							<div>70%</div>
-						</div>
-						<p>C#</p>
-						<div className="skills cs">
-							<div>60%</div>
-						</div>
-						<p>SQL</p>
-						<div className="skills sql">
-							<div>90%</div>
-						</div>
-					</div>
-				</div>
-				
-				<div className="box">
-					<div className="box_title">
-						<h4>{t('home_skills_pers')}</h4>
-					</div>
-					<div className="box_content">
-						<p>{t('home_skills_solo')}</p>
-						<div className="skills one">
-							<div>100%</div>
-						</div>
-						<p>{t('home_skills_team')}</p>
-						<div className="skills two">
-							<div>90%</div>
-						</div>
-						<p>{t('home_skills_logic')}</p>
-						<div className="skills three">
-							<div>90%</div>
-						</div>
-						<p>{t('home_skills_creativity')}</p>
-						<div className="skills four">
-							<div>100%</div>
-						</div>
-					</div>
-				</div>
-				
-				<div className="box">
-					<div className="box_title">
-						<h4>{t('home_skills_languages')}</h4>
-					</div>
-					<div className="box_content">
-						<p>{t('home_skills_german')}</p>
-						<div className="skills de">
-							<div>100%</div>
-						</div>
-						<p>{t('home_skills_english')}</p>
-						<div className="skills en">
-							<div>90%</div>
-						</div>
-						<p>{t('home_skills_russian')}</p>
-						<div className="skills rus">
-							<div>90%</div>
-						</div>
-						<p>{t('home_skills_french')}</p>
-						<div className="skills fr">
-							<div>60%</div>
-						</div>
-					</div>
-				</div>
-				
-				<div className="box">
-					<div className="box_title">
-						<h4>{t('home_skills_office')}</h4>
-					</div>
-					<div className="box_content">
-						<p>{t('home_skills_word')}</p>
-						<div className="skills word">
-							<div>100%</div>
-						</div>
-						<p>{t('home_skills_powerpoint')}</p>
-						<div className="skills pp">
-							<div>100%</div>
-						</div>
-						<p>{t('home_skills_excel')}</p>
-						<div className="skills excel">
-							<div>80%</div>
-						</div>
-						<p>{t('home_skills_access')}</p>
-						<div className="skills access">
-							<div>50%</div>
-						</div>
-					</div>
-				</div>
 			</div>
 
 			<div className="home_family section">
