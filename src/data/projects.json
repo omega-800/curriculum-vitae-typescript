@@ -1,20 +1,25 @@
 {
-    "projectName":{
-        "@context": "http://schema.org/",
-        "@type": "SoftwareSourceCode",
-        "identifier": "@yourname/YourProject",
-        "name": "YourProject",
-        "programmingLanguage": {
-            "@type": "ComputerLanguage",
-            "name": "Swift",
-            "url": "https://swift.org"
-        },
-        "author": {
-            "@type": "Person",
-            "@id": "https://github.com/yourname",
-            "givenName": "First Name",
-            "middleName": "Middle Name",
-            "familyName": "Last Name"
+    "@context": "https://schema.org/",
+    "@type": "ItemList",
+    "name": "IT Projects",
+    "description": "A collection of IT projects i have developed",
+    "keywords": "Software Development, Projects",
+    "itemListElement": [
+        {
+            "@context": "http://schema.org/",
+            "@type": "SoftwareSourceCode",
+            "@id":"X01",
+            "name": "YourProject",
+            "description":"",
+            "category":"",
+            "url":"",
+            "thumbnail":"",
+            "images":[ "" ],
+            "github":"",
+            "programmingLanguage": [ "","" ],
+            "author": "me",
+            "from":2020,
+            "to":2022
         }
-    }
+    ]
 }

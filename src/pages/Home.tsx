@@ -31,18 +31,6 @@ function Home(){
 		[t('home_hobbies_cevi'), t('home_hobbies_cevitext')],
 		[t('home_hobbies_sport'), t('home_hobbies_sporttext')],
 	];
-	const family_infos = [
-		[t('home_family_dad'), "Alexey Shevoroshkin", "08.05.1966", "Entwicklungsleiter UBS", "Schweiz, U.S.A."],
-		[t('home_family_mom'), "Tatiana Chirokikh", "14.04.1967", "Ernährungsberaterin", "Schweiz, Russland"],
-		[t('home_family_brother'), "Michail Shevoroshkin", "22.11.2004", "Tiermedizinischer Praxisassistent", "Schweiz, Russland, U.S.A."],
-		[t('home_family_brother'), "Nikolay Shevoroshkin", "05.08.2006", "Schüler, FMS", "Schweiz, Russland, U.S.A."]
-	];
-	const schools_infos = [
-		[t('home_school_ims'), "Hottingen", "2017 - 2020", "https://www.ksh.ch/angebot/informatikmittelschule"],
-		[t('home_school_sek'), "Herzogenmühle", "2016 - 2017", "https://www.stadt-zuerich.ch/schulen/de/herzogenmuehle.html"],
-		[t('home_school_gym'), "Hohe Promenade", "2014 - 2016", "https://www.kshp.ch/hohe-promenade-gymnasium-zuerich"],
-		[t('home_school_pri'), "Probstei", "2008 - 2014", "https://www.stadt-zuerich.ch/schulen/de/probstei.html"],
-	];
     return(
 		<>
 		<Header
@@ -112,7 +100,7 @@ function Home(){
 			</div>
 
 			<div className="home_skills section">
-			<div className="section_title"><h2>{t('home_skills_title')}</h2></div>
+			<h2  className="section_title">{t('home_skills_title')}</h2>
 		
 			<Skill skills={it_skills}></Skill>
 			<Skill skills={lang_skills}></Skill>
@@ -122,7 +110,7 @@ function Home(){
 			</div>
 
 			<div className="home_family section">
-				<div className="section_title"><h2>{t('home_family_title')}</h2></div>
+				<h2 className="section_title">{t('home_family_title')}</h2>
 				{Object.keys(family).map((member:string,index:number)=>{
 					return <FamilyBox
 							key={index}
@@ -136,7 +124,7 @@ function Home(){
 			</div>
 
 			<div className="home_hobbies section">
-				<div className="section_title"><h2>{t('home_hobbies_title')}</h2></div>
+				<h2 className="section_title">{t('home_hobbies_title')}</h2>
 				{hobbies.map((hobby,index)=>{
 					return <SimpleBox
 							title={hobby[0]}
@@ -146,13 +134,13 @@ function Home(){
 			</div>
 			
 			<div className="home_school section">
-				<div className="section_title"><h2>{t('home_school_title')}</h2></div>
+				<h2 className="section_title">{t('home_school_title')}</h2>
 				{Object.keys(schools).map((school,index)=>{
 					return <SimpleBox2
 							key={index}
 							title={schools[school as keyof typeof schools].type}
 							text={schools[school as keyof typeof schools].name}
-							text2={schools[school as keyof typeof schools].fromto}
+							text2={schools[school as keyof typeof schools].from +" - "+ schools[school as keyof typeof schools].to}
 							link={schools[school as keyof typeof schools].url}
 							/>
 				})}

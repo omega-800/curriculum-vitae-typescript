@@ -1,0 +1,44 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "ItemList",
+    "name": "Software Development Project Categories",
+    "description": "List of software development project categories",
+    "numberOfItems": 5,
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Frontend Web Development",
+            "description": "Creating user-facing websites or web applications using technologies such as HTML, CSS, and JavaScript.",
+            "@id": "C01"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Backend Web Development",
+            "description": "Creating server-side logic and database integration for web applications.",
+            "@id": "C02"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Mobile App Development",
+            "description": "Creating applications for mobile devices such as smartphones and tablets.",
+            "@id": "C03"
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Game Development",
+            "description": "Creating video games for consoles, PC, or mobile devices using various programming languages and game engines.",
+            "@id": "C04"
+        },
+        {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Database Development",
+            "description": "Designing and implementing databases for storing and organizing large amounts of data.",
+            "@id": "C05"
+        }
+    ]
+}

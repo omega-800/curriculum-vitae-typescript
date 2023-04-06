@@ -22,9 +22,11 @@ function Navbar(){
                 <Link to="/art" className="navbar_top_link">
                     <h4>Kunst</h4>
                 </Link>
-                <button name="English" value="en" onClick={onClickChangeLanguage}>EN</button>
-                <button name="Deutsch" value="de" onClick={onClickChangeLanguage}>DE</button>
-                <button name="Русский" value="ru" onClick={onClickChangeLanguage}>RU</button>
+                <div id="lang_select">
+                    <button name="English" value="en" onClick={onClickChangeLanguage}>EN</button>
+                    <button name="Deutsch" value="de" onClick={onClickChangeLanguage}>DE</button>
+                    <button name="Русский" value="ru" onClick={onClickChangeLanguage}>RU</button>
+                </div>
             </div>
         </div>
     )

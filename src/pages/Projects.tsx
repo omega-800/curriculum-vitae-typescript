@@ -27,6 +27,9 @@ function Projects(){
             text={t('projects_description')}
         />
         <div className="projects">
+            <div className="box">
+            <h1>filter projects by: language, category, date, etc</h1>
+            </div>
             <div className="projects_react section">
                 <div className="section_title"><h2>React</h2></div>
                 <Carousel

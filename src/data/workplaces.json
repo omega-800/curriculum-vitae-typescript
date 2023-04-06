@@ -49,5 +49,41 @@
         "sameAs": [ 
             "https://ch.linkedin.com/company/inteco-edv-ag"
         ]
+    },
+    "ernestovargas" :  { 
+        "@context": "https://schema.org/",
+        "@type": "Organization",
+        "@id": "W02",
+        "description":"",
+        "name": "Ernesto Vargas",
+        "legalName" : "Ernesto Vargas®",
+        "url": "www.ernesto-vargas.com",
+        "logo": "https://www.ernesto-vargas.com/shop/wp-content/uploads/2017/03/ev-logo2.png",
+        "founders": [
+            {
+            "@type": "Person",
+            "name": "Bernd Schoop"
+            }
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Lochackerstrasse 4",
+            "addressLocality": "Embrach",
+            "addressRegion": "ZH",
+            "postalCode": "8424",
+            "addressCountry": "CH"
+        },
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "contactType": "info point",
+                "telephone": "+41 52 550 2773",
+                "email": "swissoffice@ernesto-vargas.com"
+            }
+        ],
+        "sameAs": [ 
+            "https://www.instagram.com/ernestovargasclothing/"
+        ]
     }
+    
 }

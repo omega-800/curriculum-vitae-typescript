@@ -125,3 +125,9 @@
   - _link?
   - image[]
   - thumbnail
+
+- projects_categories
+  - web
+  - game
+  - seo
+  - teaching

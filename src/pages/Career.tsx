@@ -3,9 +3,14 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import { useTranslation } from 'react-i18next';
 import CareerBox from '../components/CareerBox';
+import { Schools, School } from '../interfaces/ISchool';
+import schools_json from '../data/schools.json'
 
 function Career(){
     const { t, i18n } = useTranslation();
+
+    const schools_arr : School[] = [schools_json.probstei, schools_json.hopro, schools_json.sek, schools_json.ims, schools_json.bzz]
+
     const webdev = [
         [t("career_scraping_title"), "Ernesto Vargas", t("career_scraping_description"), "Python, Selenium, HTML, Photoshop", ""],
         [t("career_immob_title"), t("home_family_dad"), t("career_immob_description"), "HTML, CSS, PHP, JavaScript", ""],
@@ -20,6 +25,9 @@ function Career(){
             text={t('career_description')}
         />
         <div className="career">
+            <div className="box career_school section">
+                <h1>create a career timeline like git</h1>
+            </div>
             <div className="career_web section">
                 <div className="section_title"><h2>{t("career_webdev_title")}</h2></div>
                 
