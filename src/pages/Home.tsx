@@ -20,8 +20,8 @@ function Home(){
 	const my_address = addresses[me.address_name as keyof typeof addresses];
 	const family = people.family;
 
-	const it_skills : SkillList = skills.it;
-	const lang_skills : SkillList = skills.languages;
+	const it_skills : SkillList = skills.languages;
+	const lang_skills : SkillList = skills.spoken_languages;
 	const office_skills : SkillList = skills.office;
 	const personal_skills : SkillList = skills.personal;
 

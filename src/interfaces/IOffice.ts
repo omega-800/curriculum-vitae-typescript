@@ -1,7 +1,6 @@
 export interface Office {
   '@context': string;
   '@type': string;
-  '@id': string;
   name: string;
   applicationCategory: string;
   operatingSystem: string;

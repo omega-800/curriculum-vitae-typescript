@@ -1,7 +1,6 @@
 export interface Languages {
   '@context': string;
   '@type': string;
-  '@id': string;
   name: string;
   description: string;
   keywords: string;

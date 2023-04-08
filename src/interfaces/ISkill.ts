@@ -12,14 +12,12 @@ export interface SkillList {
   '@id': string;
   name: string;
   description: string;
-  numberOfItems: number;
   itemListElement: Skill[];
 }
 
 export interface Skill {
   '@type': string;
   '@id': string;
-  position: number;
   name?: string;
   description: string;
   proficiencyLevel: string;

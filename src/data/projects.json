@@ -9,17 +9,64 @@
             "@context": "http://schema.org/",
             "@type": "SoftwareSourceCode",
             "@id":"X01",
-            "name": "YourProject",
+            "name": "Finance Planner",
             "description":"",
-            "category":"",
+            "category":"C06",
             "url":"",
             "thumbnail":"",
             "images":[ "" ],
             "github":"",
-            "programmingLanguage": [ "","" ],
-            "author": "me",
-            "from":2020,
-            "to":2022
+            "skills": [ 
+                "K02L08",
+                "K03L03" 
+            ],
+            "author": ["me"],
+            "from":2023,
+            "to":2023
+        },
+        {
+            "@context": "http://schema.org/",
+            "@type": "SoftwareSourceCode",
+            "@id":"X02",
+            "name": "ID age verification",
+            "description":"",
+            "category":"C06",
+            "url":"",
+            "thumbnail":"",
+            "images":[ "" ],
+            "github":"",
+            "skills": [ 
+                "K02L01",
+                "K02L02", 
+                "K02L04", 
+                "K02L07", 
+                "K02L13"
+            ],
+            "author": ["me"],
+            "from":2023,
+            "to":2023
+        },
+        {
+            "@context": "http://schema.org/",
+            "@type": "SoftwareSourceCode",
+            "@id":"X03",
+            "name": "Dungeon roguelike",
+            "description":"!t!projects_unity_dungeon",
+            "category":"C06",
+            "url":"",
+            "thumbnail":"",
+            "images":[ "" ],
+            "github":"",
+            "skills": [ 
+                "K02L01",
+                "K02L02", 
+                "K02L04", 
+                "K02L07", 
+                "K02L13"
+            ],
+            "author": ["me"],
+            "from":2023,
+            "to":2023
         }
     ]
 }

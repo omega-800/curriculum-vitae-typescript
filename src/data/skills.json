@@ -1,16 +1,14 @@
 {
-    "languages":{
+    "spoken_languages":{
         "@context": "https://schema.org/",
         "@type": "ItemList",
         "@id":"K01",
         "name": "Languages",
         "description": "Languages i can speak",
-        "numberOfItems": 4,
         "itemListElement": [
             {
                 "@type": "ListItem",
                 "@id": "K01L01",
-                "position": 1,
                 "slanguage_id": "L01",
                 "slanguage_name": "de",
                 "description": "Proficient in German",
@@ -21,7 +19,6 @@
             {
                 "@type": "ListItem",
                 "@id": "K01L02",
-                "position": 2,
                 "slanguage_id": "L02",
                 "slanguage_name": "en",
                 "description": "Proficient in English",
@@ -32,7 +29,6 @@
             {
                 "@type": "ListItem",
                 "@id": "K01L03",
-                "position": 3,
                 "slanguage_id": "L03",
                 "slanguage_name": "ru",
                 "description": "Proficient in Russian",
@@ -43,7 +39,6 @@
             {
                 "@type": "ListItem",
                 "@id": "K01L04",
-                "position": 4,
                 "slanguage_id": "L04",
                 "slanguage_name": "fr",
                 "description": "Proficient in French",
@@ -53,20 +48,17 @@
             }
         ]
     },
-    "it":{
+    "languages":{
         "@context": "https://schema.org/",
         "@type": "ItemList",
         "@id":"K02",
         "name": "Programming Languages",
         "description": "Programming Languages i know",
-        "numberOfItems": 12,
         "itemListElement": [
             {
                 "@type": "ListItem",
-                "@id": "K02L01",
-                "position": 1,
-                "language_id": "T01L01",
-                "language_name": "html",
+                "@id": "K02Y01",
+                "language_id": "Y01",
                 "description": "Proficient in HTML",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 20,
@@ -74,10 +66,8 @@
             },
             {
                 "@type": "ListItem",
-                "@id": "K02L02",
-                "position": 2,
-                "language_id": "T01L02",
-                "language_name": "css",
+                "@id": "K02Y02",
+                "language_id": "Y02",
                 "description": "Proficient in CSS",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 20,
@@ -85,10 +75,8 @@
             },
             {
                 "@type": "ListItem",
-                "@id": "K02L03",
-                "position": 3,
-                "language_id": "T01L03",
-                "language_name": "scss",
+                "@id": "K02Y03",
+                "language_id": "Y03",
                 "description": "Proficient in SCSS",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 15,
@@ -96,10 +84,8 @@
             },
             {
                 "@type": "ListItem",
-                "@id": "K02L04",
-                "position": 4,
-                "language_id": "T01L04",
-                "language_name": "js",
+                "@id": "K02Y04",
+                "language_id": "Y04",
                 "description": "Proficient in JavaScript",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 10,
@@ -107,10 +93,8 @@
             },
             {
                 "@type": "ListItem",
-                "@id": "K02L05",
-                "position": 5,
-                "language_id": "T01L05",
-                "language_name": "ts",
+                "@id": "K02Y05",
+                "language_id": "Y05",
                 "description": "Proficient in TypeScript",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 5,
@@ -118,10 +102,8 @@
             },
             {
                 "@type": "ListItem",
-                "@id": "K02L06",
-                "position": 6,
-                "language_id": "T01L06",
-                "language_name": "php",
+                "@id": "K02Y06",
+                "language_id": "Y06",
                 "description": "Proficient in PHP",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 15,
@@ -129,10 +111,8 @@
             },
             {
                 "@type": "ListItem",
-                "@id": "K02L07",
-                "position": 7,
-                "language_id": "T01L07",
-                "language_name": "java",
+                "@id": "K02Y07",
+                "language_id": "Y07",
                 "description": "Proficient in Java",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 10,
@@ -140,10 +120,8 @@
             },
             {
                 "@type": "ListItem",
-                "@id": "K02L08",
-                "position": 8,
-                "language_id": "T01L08",
-                "language_name": "python",
+                "@id": "K02Y08",
+                "language_id": "Y08",
                 "description": "Proficient in Python",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 8,
@@ -151,10 +129,8 @@
             },
             {
                 "@type": "ListItem",
-                "@id": "K02L09",
-                "position": 9,
-                "language_id": "T01L09",
-                "language_name": "mysql",
+                "@id": "K02Y09",
+                "language_id": "Y09",
                 "description": "Proficient in MySQL",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 8,
@@ -162,21 +138,17 @@
             },
             {
                 "@type": "ListItem",
-                "@id": "K02L10",
-                "position": 10,
-                "language_id": "T01L10",
-                "language_name": "python",
-                "description": "Proficient in Python",
+                "@id": "K02Y10",
+                "language_id": "Y10",
+                "description": "Proficient in C#",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 8,
                 "knowledgePercent": 80
             },
             {
                 "@type": "ListItem",
-                "@id": "K02L11",
-                "position": 11,
-                "language_id": "T01L11",
-                "language_name": "bash",
+                "@id": "K02Y11",
+                "language_id": "Y11",
                 "description": "Proficient in Bash",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 8,
@@ -184,11 +156,9 @@
             },
             {
                 "@type": "ListItem",
-                "@id": "K02L12",
-                "position": 12,
-                "language_id": "T01L12",
-                "language_name": "vim",
-                "description": "Proficient in vim",
+                "@id": "K02Y12",
+                "language_id": "Y12",
+                "description": "Proficient in freemarker",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 8,
                 "knowledgePercent": 80
@@ -201,14 +171,11 @@
         "@id": "K03",
         "name": "Office Applications",
         "description": "Office Applications I know",
-        "numberOfItems": 4,
         "itemListElement": [
           {
             "@type": "ListItem",
             "@id": "K03L01",
-            "position": 1,
             "application_id": "T02A01",
-            "application_name": "word",
             "description": "Proficient in Microsoft Word",
             "proficiencyLevel": "Expert",
             "yearsOfExperience": 10,
@@ -217,9 +184,7 @@
           {
             "@type": "ListItem",
             "@id": "K03L02",
-            "position": 2,
             "application_id": "T02A02",
-            "application_name": "powerpoint",
             "description": "Proficient in Microsoft PowerPoint",
             "proficiencyLevel": "Expert",
             "yearsOfExperience": 10,
@@ -228,9 +193,7 @@
           {
             "@type": "ListItem",
             "@id": "K03L03",
-            "position": 3,
             "application_id": "T02A03",
-            "application_name": "excel",
             "description": "Proficient in Microsoft Excel",
             "proficiencyLevel": "Expert",
             "yearsOfExperience": 10,
@@ -239,9 +202,7 @@
           {
             "@type": "ListItem",
             "@id": "K03L04",
-            "position": 4,
             "application_id": "T02A04",
-            "application_name": "access",
             "description": "Proficient in Microsoft Access",
             "proficiencyLevel": "Expert",
             "yearsOfExperience": 10,
@@ -253,14 +214,12 @@
         "@context": "https://schema.org/",
         "@type": "ItemList",
         "@id": "K04",
-        "name": "Office Applications",
-        "description": "Office Applications I know",
-        "numberOfItems": 4,
+        "name": "Personal skills",
+        "description": "Personal skills",
         "itemListElement": [
             {
                 "@type": "ListItem",
                 "@id": "K04L01",
-                "position": 1,
                 "name": "!t!home_skills_solo",
                 "description": "!t!home_skills_solo",
                 "proficiencyLevel": "Expert",
@@ -270,7 +229,6 @@
             {
                 "@type": "ListItem",
                 "@id": "K04L02",
-                "position": 2,
                 "name": "!t!home_skills_team",
                 "description": "!t!home_skills_team",
                 "proficiencyLevel": "Expert",
@@ -280,7 +238,6 @@
             {
                 "@type": "ListItem",
                 "@id": "K04L03",
-                "position": 3,
                 "name": "!t!home_skills_logic",
                 "description": "!t!home_skills_logic",
                 "proficiencyLevel": "Expert",
@@ -290,12 +247,119 @@
             {
                 "@type": "ListItem",
                 "@id": "K04L04",
-                "position": 4,
                 "name": "!t!home_skills_creativity",
                 "description": "!t!home_skills_creativity",
                 "proficiencyLevel": "Expert",
                 "yearsOfExperience": 10,
                 "knowledgePercent": 100
+            }
+        ]
+    },
+    "tools":{
+        "@context": "https://schema.org/",
+        "@type": "ItemList",
+        "@id": "K05",
+        "name": "IT Tools",
+        "description": "Programming Languages and Frameworks",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "@id": "K05Z01",
+                "tool_id": "Z01",
+                "description": "Proficient in",
+                "proficiencyLevel": "Expert",
+                "yearsOfExperience": 20,
+                "knowledgePercent": 100
+            },
+            {
+                "@type": "ListItem",
+                "@id": "K05Z02",
+                "tool_id": "Z02",
+                "description": "Proficient in",
+                "proficiencyLevel": "Expert",
+                "yearsOfExperience": 20,
+                "knowledgePercent": 100
+            },
+            {
+                "@type": "ListItem",
+                "@id": "K05Z03",
+                "tool_id": "Z03",
+                "description": "Proficient in",
+                "proficiencyLevel": "Expert",
+                "yearsOfExperience": 15,
+                "knowledgePercent": 90
+            },
+            {
+                "@type": "ListItem",
+                "@id": "K05Z04",
+                "tool_id": "Z04",
+                "description": "Proficient in",
+                "proficiencyLevel": "Expert",
+                "yearsOfExperience": 10,
+                "knowledgePercent": 90
+            },
+            {
+                "@type": "ListItem",
+                "@id": "K05Z05",
+                "tool_id": "Z05",
+                "description": "Proficient in",
+                "proficiencyLevel": "Expert",
+                "yearsOfExperience": 5,
+                "knowledgePercent": 80
+            },
+            {
+                "@type": "ListItem",
+                "@id": "K05Z06",
+                "tool_id": "Z06",
+                "description": "Proficient in",
+                "proficiencyLevel": "Expert",
+                "yearsOfExperience": 15,
+                "knowledgePercent": 90
+            },
+            {
+                "@type": "ListItem",
+                "@id": "K05Z07",
+                "tool_id": "Z07",
+                "description": "Proficient in",
+                "proficiencyLevel": "Expert",
+                "yearsOfExperience": 10,
+                "knowledgePercent": 80
+            },
+            {
+                "@type": "ListItem",
+                "@id": "K05Z08",
+                "tool_id": "Z08",
+                "description": "Proficient in",
+                "proficiencyLevel": "Expert",
+                "yearsOfExperience": 8,
+                "knowledgePercent": 80
+            },
+            {
+                "@type": "ListItem",
+                "@id": "K05Z09",
+                "tool_id": "Z09",
+                "description": "Proficient in",
+                "proficiencyLevel": "Expert",
+                "yearsOfExperience": 8,
+                "knowledgePercent": 80
+            },
+            {
+                "@type": "ListItem",
+                "@id": "K05Z10",
+                "tool_id": "Z10",
+                "description": "Proficient in ",
+                "proficiencyLevel": "Expert",
+                "yearsOfExperience": 8,
+                "knowledgePercent": 80
+            },
+            {
+                "@type": "ListItem",
+                "@id": "K05Z11",
+                "tool_id": "Z11",
+                "description": "Proficient in ",
+                "proficiencyLevel": "Expert",
+                "yearsOfExperience": 8,
+                "knowledgePercent": 80
             }
         ]
     }

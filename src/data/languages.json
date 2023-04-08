@@ -1,7 +1,6 @@
 {
     "@context": "https://schema.org/",
     "@type": "ItemList",
-    "@id":"T01",
     "name": "Programming Languages",
     "description": "A collection of programming languages i have learned",
     "keywords": "Programming Languages, Software Development",
@@ -9,7 +8,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "SoftwareApplication",
-            "@id":"T01L01",
+            "@id":"Y01",
             "name": "HTML",
             "alternateName": "Hypertext Markup Language",
             "applicationCategory": "Programming Language",
@@ -22,7 +21,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "SoftwareApplication",
-            "@id":"T01L02",
+            "@id":"Y02",
             "name": "CSS",
             "alternateName": "Cascading Style Sheets",
             "applicationCategory": "Styling Language",
@@ -35,7 +34,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "SoftwareApplication",
-            "@id":"T01L03",
+            "@id":"Y03",
             "name": "SCSS",
             "alternateName": "Syntactically Awesome Style Sheets",
             "applicationCategory": "Styling Language",
@@ -48,7 +47,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "SoftwareApplication",
-            "@id":"T01L04",
+            "@id":"Y04",
             "name": "JavaScript",
             "alternateName": "JS",
             "applicationCategory": "Programming Language",
@@ -62,7 +61,7 @@
             "@context": "https://schema.org/",
             "@type": "SoftwareApplication",
             "name": "TypeScript",
-            "@id":"T01L05",
+            "@id":"Y05",
             "alternateName": "TS",
             "applicationCategory": "Programming Language",
             "operatingSystem": "Cross-platform",
@@ -74,7 +73,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "SoftwareApplication",
-            "@id":"T01L06",
+            "@id":"Y06",
             "name": "PHP",
             "alternateName": "Hypertext Preprocessor",
             "applicationCategory": "Programming Language",
@@ -87,7 +86,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "SoftwareApplication",
-            "@id":"T01L07",
+            "@id":"Y07",
             "name": "Java",
             "alternateName": "Java SE",
             "applicationCategory": "Programming Language",
@@ -100,7 +99,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "SoftwareApplication",
-            "@id":"T01L08",
+            "@id":"Y08",
             "name": "Python",
             "alternateName": "Python 3",
             "applicationCategory": "Programming Language",
@@ -113,7 +112,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "SoftwareApplication",
-            "@id":"T01L09",
+            "@id":"Y09",
             "name": "MySQL",
             "alternateName": "Structured Query Language",
             "applicationCategory": "Database Management System",
@@ -126,7 +125,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "SoftwareApplication",
-            "@id":"T01L10",
+            "@id":"Y10",
             "name": "C#",
             "alternateName": "C Sharp",
             "applicationCategory": "Programming Language",
@@ -139,7 +138,7 @@
         {
             "@context": "https://schema.org/",
             "@type": "SoftwareApplication",
-            "@id":"T01L11",
+            "@id":"Y11",
             "name": "Bash",
             "alternateName": "Bourne-Again SHell",
             "applicationCategory": "Shell",
@@ -152,15 +151,16 @@
         {
             "@context": "https://schema.org/",
             "@type": "SoftwareApplication",
-            "@id":"T01L12",
-            "name": "Vim",
-            "alternateName": "Vi IMproved",
-            "applicationCategory": "Text Editor",
-            "operatingSystem": "Unix-like",
-            "description": "Vim is a text editor program for Unix-like operating systems that provides powerful editing capabilities and supports many programming languages.",
-            "keywords": "Vim, Text Editor, Command Line Interface, CLI, Unix-like",
-            "url": "https://www.vim.org/",
-            "version": "Vim 8.2"
-        }
+            "@id": "Y12",
+            "name": "FreeMarker",
+            "alternateName": "Apache FreeMarker",
+            "applicationCategory": "Template Engine",
+            "description": "FreeMarker is a template engine that enables the creation of dynamic web pages by generating text output based on templates.",
+            "keywords": "FreeMarker, Template Engine, Java",
+            "url": "https://freemarker.apache.org/",
+            "operatingSystem": "Cross-platform",
+            "version": "2.3.31"
+          }
+          
     ]
 }
