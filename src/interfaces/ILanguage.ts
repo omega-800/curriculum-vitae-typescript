@@ -1,13 +1,13 @@
-export interface Languages {
+export interface ILanguages {
   '@context': string;
   '@type': string;
   name: string;
   description: string;
   keywords: string;
-  itemListElement: Language[];
+  itemListElement: ILanguage[];
 }
 
-export interface Language {
+export interface ILanguage {
   '@context': string;
   '@type': string;
   '@id': string;

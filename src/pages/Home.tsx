@@ -6,12 +6,11 @@ import SimpleBox from '../components/SimpleBox';
 import SimpleBox2 from '../components/SimpleBox2';
 import { useTranslation } from 'react-i18next';
 import people from '../data/people.json';
-import schools from '../data/schools.json';
 import addresses from '../data/addresses.json';
 import skills from '../data/skills.json';
 import TranslateIfNeeded from '../tools/TranslateIfNeeded';
 import Skill from '../components/Skill';
-import {SkillList} from '../interfaces/ISkill';
+import {ISkillList} from '../interfaces/ISkill';
 
 
 function Home(){
@@ -20,10 +19,10 @@ function Home(){
 	const my_address = addresses[me.address_name as keyof typeof addresses];
 	const family = people.family;
 
-	const it_skills : SkillList = skills.languages;
-	const lang_skills : SkillList = skills.spoken_languages;
-	const office_skills : SkillList = skills.office;
-	const personal_skills : SkillList = skills.personal;
+	const it_skills : ISkillList = skills.languages;
+	const lang_skills : ISkillList = skills.spoken_languages;
+	const office_skills : ISkillList = skills.office;
+	const personal_skills : ISkillList = skills.personal;
 
 	const hobbies = [
 		[t('home_hobbies_music'), t('home_hobbies_musictext')],
@@ -45,7 +44,7 @@ function Home(){
 					</div>
 					<div className="box_content">
 						<img src={me.image} alt={""+t('home_about_portrait')}/> 
-						<button type="submit" className="dwnld">{t('home_about_pdf')}</button>
+						{/*<button type="submit" className="dwnld">{t('home_about_pdf')}</button>*/}
 					</div>
 				</div>
 				<div className="box">
@@ -109,6 +108,17 @@ function Home(){
 
 			</div>
 
+			<div className="home_hobbies section">
+				<h2 className="section_title">{t('home_hobbies_title')}</h2>
+				{hobbies.map((hobby,index)=>{
+					return <SimpleBox
+							title={hobby[0]}
+							text={hobby[1]}
+							/>
+				})}
+			</div>
+
+			{/*
 			<div className="home_family section">
 				<h2 className="section_title">{t('home_family_title')}</h2>
 				{Object.keys(family).map((member:string,index:number)=>{
@@ -122,29 +132,7 @@ function Home(){
 							/>
 				})}
 			</div>
-
-			<div className="home_hobbies section">
-				<h2 className="section_title">{t('home_hobbies_title')}</h2>
-				{hobbies.map((hobby,index)=>{
-					return <SimpleBox
-							title={hobby[0]}
-							text={hobby[1]}
-							/>
-				})}
-			</div>
-			
-			<div className="home_school section">
-				<h2 className="section_title">{t('home_school_title')}</h2>
-				{Object.keys(schools).map((school,index)=>{
-					return <SimpleBox2
-							key={index}
-							title={schools[school as keyof typeof schools].type}
-							text={schools[school as keyof typeof schools].name}
-							text2={schools[school as keyof typeof schools].from +" - "+ schools[school as keyof typeof schools].to}
-							link={schools[school as keyof typeof schools].url}
-							/>
-				})}
-			</div>
+			*/}
         </div>
 		</>
     )

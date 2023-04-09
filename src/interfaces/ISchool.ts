@@ -1,41 +1,26 @@
-export interface Schools {
-  probstei: School;
-  hopro: School;
-  sek: School;
-  ims: School;
-  bzz: School;
+import { IContactPoint } from "./IContactPoint";
+import { IAddress } from "./IAddress";
+
+export interface ISchools {
+  probstei: ISchool;
+  hopro: ISchool;
+  sek: ISchool;
+  ims: ISchool;
+  bzz: ISchool;
 }
 
-export interface School {
+export interface ISchool {
   '@context': string;
   '@type': string;
   '@id': string;
-  address: Address;
-  contactPoint: ContactPoint[];
+  address: IAddress;
+  contactPoint: IContactPoint[];
   description: string;
   email?: string;
   image: string;
   logo: string;
   name: string;
   url: string;
-  from: number;
-  to:number;
   type: string;
   sameAs?: string[];
-}
-
-export interface ContactPoint {
-  '@type': string;
-  contactType: string;
-  telephone: string;
-  email?: string;
-}
-
-export interface Address {
-  '@type': string;
-  streetAddress: string;
-  addressLocality: string;
-  addressRegion: string;
-  postalCode: string;
-  addressCountry: string;
 }

@@ -175,7 +175,7 @@
           {
             "@type": "ListItem",
             "@id": "K03L01",
-            "application_id": "T02A01",
+            "application_id": "O01",
             "description": "Proficient in Microsoft Word",
             "proficiencyLevel": "Expert",
             "yearsOfExperience": 10,
@@ -184,7 +184,7 @@
           {
             "@type": "ListItem",
             "@id": "K03L02",
-            "application_id": "T02A02",
+            "application_id": "O02",
             "description": "Proficient in Microsoft PowerPoint",
             "proficiencyLevel": "Expert",
             "yearsOfExperience": 10,
@@ -193,7 +193,7 @@
           {
             "@type": "ListItem",
             "@id": "K03L03",
-            "application_id": "T02A03",
+            "application_id": "O03",
             "description": "Proficient in Microsoft Excel",
             "proficiencyLevel": "Expert",
             "yearsOfExperience": 10,
@@ -202,7 +202,7 @@
           {
             "@type": "ListItem",
             "@id": "K03L04",
-            "application_id": "T02A04",
+            "application_id": "O04",
             "description": "Proficient in Microsoft Access",
             "proficiencyLevel": "Expert",
             "yearsOfExperience": 10,

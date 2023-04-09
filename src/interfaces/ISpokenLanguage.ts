@@ -1,11 +1,11 @@
-export interface SpokenLanguages {
-  de: SpokenLanguage;
-  en: SpokenLanguage;
-  ru: SpokenLanguage;
-  fr: SpokenLanguage;
+export interface ISpokenLanguages {
+  de: ISpokenLanguage;
+  en: ISpokenLanguage;
+  ru: ISpokenLanguage;
+  fr: ISpokenLanguage;
 }
 
-export interface SpokenLanguage {
+export interface ISpokenLanguage {
   '@context': string;
   '@type': string;
   '@id': string;

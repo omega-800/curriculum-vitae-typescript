@@ -1,9 +1,12 @@
-export interface Workplaces {
-  inteco: Workplace;
-  ernestovargas: Workplace;
+import { IContactPoint } from "./IContactPoint";
+import { IAddress } from "./IAddress";
+
+export interface IWorkplaces {
+  inteco: IWorkplace;
+  ernestovargas: IWorkplace;
 }
 
-export interface Workplace {
+export interface IWorkplace {
   '@context': string;
   '@type': string;
   '@id': string;
@@ -13,29 +16,13 @@ export interface Workplace {
   url: string;
   logo: string;
   foundingDate?: string;
-  founders: Founder[];
-  address: Address;
-  contactPoint: ContactPoint[];
+  founders: IFounder[];
+  address: IAddress;
+  contactPoint: IContactPoint[];
   sameAs: string[];
 }
 
-export interface ContactPoint {
-  '@type': string;
-  contactType: string;
-  telephone?: string;
-  email: string;
-}
-
-export interface Address {
-  '@type': string;
-  streetAddress: string;
-  addressLocality: string;
-  addressRegion: string;
-  postalCode: string;
-  addressCountry: string;
-}
-
-export interface Founder {
+export interface IFounder {
   '@type': string;
   name: string;
 }

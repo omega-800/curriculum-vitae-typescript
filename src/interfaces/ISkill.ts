@@ -1,21 +1,20 @@
-
-export interface SkillsList {
-  languages: SkillList;
-  it: SkillList;
-  office: SkillList;
-  personal: SkillList;
+export interface ISkillsList {
+  languages: ISkillList;
+  it: ISkillList;
+  office: ISkillList;
+  personal: ISkillList;
 }
 
-export interface SkillList {
+export interface ISkillList {
   '@context': string;
   '@type': string;
   '@id': string;
   name: string;
   description: string;
-  itemListElement: Skill[];
+  itemListElement: ISkill[];
 }
 
-export interface Skill {
+export interface ISkill {
   '@type': string;
   '@id': string;
   name?: string;

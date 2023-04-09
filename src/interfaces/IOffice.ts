@@ -1,4 +1,4 @@
-export interface Office {
+export interface IOffice {
   '@context': string;
   '@type': string;
   name: string;
@@ -8,10 +8,10 @@ export interface Office {
   keywords: string;
   url: string;
   version: string;
-  hasPart: Application[];
+  hasPart: IApplication[];
 }
 
-export interface Application {
+export interface IApplication {
   '@type': string;
   '@id': string;
   name: string;

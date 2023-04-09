@@ -1,0 +1,12 @@
+.skills{
+    background-color: $darker;
+    width:100%;
+    & .skill_name{
+
+    }
+    & .skill_percent{
+        background-color: $lighter;
+        color: $darkest;
+
+    }
+}
