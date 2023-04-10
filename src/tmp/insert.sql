@@ -3,21 +3,29 @@ INSERT INTO skillCategory (name, description) VALUES
 ('Entwicklung',NULL),
 ('Allgemeinbildung',NULL),
 ('Persönlich',NULL);
-/*
-INSERT INTO skill (name, description, knowledgePercent, proficiencyLevel, yearsOfExperience, skillCategory_id, application_id, hobby_id, language_id) VALUES
-();
-*/
+
+INSERT INTO skill (name, description, knowledgePercent, skillCategory_id) VALUES
+('Selbstständigkeit', NULL, 100, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Persönlich')),
+('Teamwork', NULL, 80, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Persönlich')),
+('Logisches Denken', NULL, 90, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Persönlich')),
+('Kritikfähigkeit', NULL, 95, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Persönlich')),
+('Kreativität', NULL, 100, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Persönlich')),
+('Kommunikation', NULL, 75, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Persönlich')),
+('Lernfähigkeit', NULL, 90, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Persönlich')),
+('Organisation', NULL, 65, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Persönlich')),
+('Empathie', NULL, 95, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Persönlich'));
+
 INSERT INTO country(name, shortName) VALUES 
 ('Schweiz', 'CH'), 
 ('Amerika', 'US'), 
 ('Russland', 'RU'), 
 ('Frankreich', 'FR');
 
-INSERT INTO language (name, shortName, knowledgePercent, proficiencyLevel, skillCategory_id) VALUES
-('Deutsch', 'DE', 100, 'C2', (SELECT skillCategory_id FROM skillCategory WHERE name = 'Sprachen')),
-('Englisch', 'EN', 90, 'C1', (SELECT skillCategory_id FROM skillCategory WHERE name = 'Sprachen')),
-('Russisch', 'RU', 75, 'B2', (SELECT skillCategory_id FROM skillCategory WHERE name = 'Sprachen')),
-('Französisch', 'FR', 50, 'B1', (SELECT skillCategory_id FROM skillCategory WHERE name = 'Sprachen'));
+INSERT INTO language (name, description, shortName, knowledgePercent, proficiencyLevel, skillCategory_id) VALUES
+('Deutsch', 'Seit Geburt', 'DE', 100, 'C2', (SELECT skillCategory_id FROM skillCategory WHERE name = 'Sprachen')),
+('Englisch', 'Vatersprache', 'EN', 90, 'C1', (SELECT skillCategory_id FROM skillCategory WHERE name = 'Sprachen')),
+('Russisch', 'Muttersprache', 'RU', 75, 'B2', (SELECT skillCategory_id FROM skillCategory WHERE name = 'Sprachen')),
+('Französisch', 'Schulwissen', 'FR', 50, 'B1', (SELECT skillCategory_id FROM skillCategory WHERE name = 'Sprachen'));
 
 INSERT INTO country_language (language_id, country_id) VALUES 
 ((SELECT language_id from language WHERE shortName = 'DE'), (SELECT country_id from country WHERE shortName = 'CH')),
@@ -237,3 +245,6 @@ INSERT INTO hobby_hobbyCategory (hobby_id, hobbyCategory_id) VALUES
 ((SELECT hobby_id FROM hobby WHERE name = 'Spielentwicklung'), (SELECT hobbyCategory_id FROM hobbyCategory WHERE name = 'Informatik')),
 ((SELECT hobby_id FROM hobby WHERE name = 'Bildbearbeitung'), (SELECT hobbyCategory_id FROM hobbyCategory WHERE name = 'Informatik')),
 ((SELECT hobby_id FROM hobby WHERE name = 'Bildbearbeitung'), (SELECT hobbyCategory_id FROM hobbyCategory WHERE name = 'Kunst'));
+
+INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id) VALUES
+();
