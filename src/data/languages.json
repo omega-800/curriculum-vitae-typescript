@@ -160,7 +160,19 @@
             "url": "https://freemarker.apache.org/",
             "operatingSystem": "Cross-platform",
             "version": "2.3.31"
+        },
+        {
+            "@context": "https://schema.org/",
+            "@type": "SoftwareApplication",
+            "@id":"Y13",
+            "name": "PostgreSQL",
+            "alternateName": "Postgres",
+            "applicationCategory": "Database Management System",
+            "operatingSystem": "Cross-platform",
+            "description": "PostgreSQL is a powerful open-source relational database management system.",
+            "keywords": "PostgreSQL, Postgres, Structured Query Language, Database Management System, Software Development",
+            "url": "https://www.postgresql.org/",
+            "version": "14.0"
           }
-          
     ]
 }

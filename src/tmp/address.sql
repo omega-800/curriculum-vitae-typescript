@@ -50,10 +50,10 @@ INSERT INTO school_contactPoint (school_id, contactPoint_id) VALUES
 ((SELECT school_id FROM school WHERE name = 'Berufsbildungszentrum Zürichsee'),(SELECT contactPoint_id FROM contactPoint WHERE phone = 0447274600));
 
 INSERT INTO career (name, description, yearfrom, yearto, workplace_id, school_id) VALUES 
-('inteco','','2022','2023',(SELECT workplace_id FROM workplace WHERE name = 'Inteco'),''),
-('ernesto vargas','','2020','2021',(SELECT workplace_id FROM workplace WHERE name = 'Ernesto Vargas'),''),
-('bzz','','2017','2020','',(SELECT school_id FROM school WHERE name = 'Berufsbildungszentrum Zürichsee')),
-('ims','','2017','2020','',(SELECT school_id FROM school WHERE name = 'Hottingen')),
-('sek','','2016','2017','',(SELECT school_id FROM school WHERE name = 'Herzogenmühle')),
-('hopro','','2014','2016','',(SELECT school_id FROM school WHERE name = 'Hohe Promenade')),
-('probstei','','2008','2014','',(SELECT school_id FROM school WHERE name = 'Probsteis'));
+('inteco','',2022,2023,(SELECT workplace_id FROM workplace WHERE name = 'Inteco'),''),
+('ernesto vargas','',2020,2021,(SELECT workplace_id FROM workplace WHERE name = 'Ernesto Vargas'),''),
+('bzz','',2017,2020,'',(SELECT school_id FROM school WHERE name = 'Berufsbildungszentrum Zürichsee')),
+('ims','',2017,2020,'',(SELECT school_id FROM school WHERE name = 'Hottingen')),
+('sek','',2016,2017,'',(SELECT school_id FROM school WHERE name = 'Herzogenmühle')),
+('hopro','',2014,2016,'',(SELECT school_id FROM school WHERE name = 'Hohe Promenade')),
+('probstei','',2008,2014,'',(SELECT school_id FROM school WHERE name = 'Probsteis'));
