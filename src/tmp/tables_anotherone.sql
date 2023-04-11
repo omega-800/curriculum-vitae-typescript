@@ -57,6 +57,10 @@ CREATE TABLE IF NOT EXISTS skillSubCategory (
     skillCategory_id UUID NOT NULL REFERENCES skillCategory(skillCategory_id)
 ) INHERITS (category);
 
+CREATE TABLE IF NOT EXISTS applicationType(
+    applicationType_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
+) INHERITS (category);
+
 CREATE TABLE IF NOT EXISTS skill (
     skill_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     hobby BOOLEAN NOT NULL,
@@ -73,7 +77,17 @@ CREATE TABLE IF NOT EXISTS skill (
     description_r VARCHAR,
     thumbnail VARCHAR,
     image VARCHAR,
-    url VARCHAR
+    url VARCHAR,
+    type VARCHAR NOT NULL,
+    alternateName VARCHAR,
+    alternateName_e VARCHAR,
+    alternateName_r VARCHAR,
+    keywords VARCHAR,
+    keywords_e VARCHAR,
+    keywords_r VARCHAR,
+    version VARCHAR,
+    shortName VARCHAR,
+    applicationType_id UUID REFERENCES applicationType(applicationType_id)
 );
 
 CREATE TABLE IF NOT EXISTS skill_skillSubCategory (
@@ -82,49 +96,20 @@ CREATE TABLE IF NOT EXISTS skill_skillSubCategory (
     skill_id UUID NOT NULL REFERENCES skill(skill_id)
 );
 
-CREATE TABLE IF NOT EXISTS knowledge (
-    knowledge_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
-) INHERITS (skill);
-
-CREATE TABLE IF NOT EXISTS activity (
-    activity_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
-) INHERITS (skill);
-
-CREATE TABLE IF NOT EXISTS applicationType(
-    applicationType_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
-) INHERITS (category);
-
 CREATE TABLE IF NOT EXISTS operatingSystem(
     operatingSystem_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     url VARCHAR
 ) INHERITS (category);
 
-CREATE TABLE IF NOT EXISTS application (
-    application_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    alternateName VARCHAR,
-    alternateName_e VARCHAR,
-    alternateName_r VARCHAR,
-    keywords VARCHAR,
-    keywords_e VARCHAR,
-    keywords_r VARCHAR,
-    version VARCHAR,
-    applicationType_id UUID REFERENCES applicationType(applicationType_id)
-) INHERITS (skill);
-
 CREATE TABLE IF NOT EXISTS application_operatingSystem (
     application_operatingSystem_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     operatingSystem_id UUID NOT NULL REFERENCES operatingSystem(operatingSystem_id),
-    application_id UUID NOT NULL REFERENCES application(application_id)
+    application_id UUID NOT NULL REFERENCES skill(skill_id)
 );
-
-CREATE TABLE IF NOT EXISTS language (
-    language_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    shortName VARCHAR
-) INHERITS (skill);
 
 CREATE TABLE IF NOT EXISTS country_language(
     country_language_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    language_id UUID NOT NULL REFERENCES language(language_id),
+    language_id UUID NOT NULL REFERENCES skill(skill_id),
     country_id UUID NOT NULL REFERENCES country(country_id)
 );
 
