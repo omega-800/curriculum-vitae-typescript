@@ -79,7 +79,6 @@
   - description
   - email
   - phone
-  - 
 
 - _category_
   - @id
@@ -131,3 +130,24 @@
   - game
   - seo
   - teaching
+
+- informatik
+  - web_front
+  - web_back
+  - db
+  - office
+- kunst
+  - musik
+  - zeichnen etc
+- pädagogik
+  - aushilfe
+  - hort
+  - einzelunterricht
+- gesundheit
+  - sport
+  - natur
+  - kochen
+- allgemein
+  - persönlich
+  - sprachen
+  - schulwissen

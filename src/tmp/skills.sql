@@ -13,7 +13,7 @@ INSERT INTO skillSubCategory (name, description, skillCategory_id) VALUES
     ('Schule', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Pädagogik')),
     ('Verein', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Pädagogik')),
     ('Einzelunterricht', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Pädagogik')),
-    ('Natur', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Gesundheit')),
+    ('Natur', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Gesundheit'))
     ('Sport', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Gesundheit')),
     ('Ernährung', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Gesundheit')),
     ('Geist', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Gesundheit')),
@@ -91,18 +91,6 @@ INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'Englisch'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen')),
     ((SELECT skill_id FROM skill WHERE name = 'Russisch'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen')),
     ((SELECT skill_id FROM skill WHERE name = 'Französisch'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen'));
-
-INSERT INTO country(name, shortName) VALUES 
-    ('Schweiz', 'CH'), 
-    ('Amerika', 'US'), 
-    ('Russland', 'RU'), 
-    ('Frankreich', 'FR');
-
-INSERT INTO country_language (language_id, country_id) VALUES 
-    ((SELECT language_id from language WHERE shortName = 'DE'), (SELECT country_id from country WHERE shortName = 'CH')),
-    ((SELECT language_id from language WHERE shortName = 'EN'), (SELECT country_id from country WHERE shortName = 'US')),
-    ((SELECT language_id from language WHERE shortName = 'RU'), (SELECT country_id from country WHERE shortName = 'RU')),
-    ((SELECT language_id from language WHERE shortName = 'FR'), (SELECT country_id from country WHERE shortName = 'FR'));
 
 INSERT INTO applicationType (name, name_e, description) VALUES
     ('Programmiersprache', 'Programming language',NULL),
@@ -246,98 +234,5 @@ INSERT INTO skill_skillSubCategory (skill_id, skillSubsCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'CEVI'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Verein')),
     ((SELECT skill_id FROM skill WHERE name = 'Wandern'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sport'));
 
-INSERT INTO address(street, city, zip, country_id) VALUES
-    ('Stettbachstrasse 129G','Zürich',8051,(SELECT country_id FROM country WHERE shortName = 'CH')),
-    ('Barzloostrasse 20','Pfäffikon ZH',8033,(SELECT country_id FROM country WHERE shortName = 'CH')),
-    ('Lochackerstrasse 4','Embrach',8424,(SELECT country_id FROM country WHERE shortName = 'CH')),
-    ('Stettbachstrasse 88','Zürich',8051,(SELECT country_id FROM country WHERE shortName = 'CH')),
-    ('Promenadengasse 11','Zürich',8001,(SELECT country_id FROM country WHERE shortName = 'CH')),
-    ('Herzogenmühlestrasse 60','Zürich',8051,(SELECT country_id FROM country WHERE shortName = 'CH')),
-    ('Minervastrasse 14','Zürich',8090,(SELECT country_id FROM country WHERE shortName = 'CH')),
-    ('Seestrasse 110','Horgen',8810,(SELECT country_id FROM country WHERE shortName = 'CH'));
-
-INSERT INTO contactPoint(name, phone, email) VALUES 
-    ('info point', 0552565758, 'info@inteco.ch'),
-    ('Web support', NULL, 'webmaster@inteco.ch'),
-    ('Technik support', NULL, 'support@inteco.ch'),
-    ('WEGAS support', NULL, 'wegas@inteco.ch'),
-    ('info point', 0525502773, 'swissoffice@ernesto-vargas.com'),
-    ('Sekretariat', 0444133080, NULL),
-    ('Sekretariat', 0442446464, 'sekretariat@kshp.ch'),
-    ('Schulleitung', 0444133100, 'kurt.bauer@schulen.zuerich.ch'),
-    ('Sekretariat', 0442665757, 'hottingen@ksh.ch'),
-    ('Sekretariat', 0447274600, NULL),
-    ('me', 0772156436, 'gshevoroshkin@gmail.com'),
-    ('mom', 0762240414, NULL),
-    ('dad', 0786081068, 'alexshev@yahoo.com'),
-    ('niki', 0787280585, NULL),
-    ('michi', 0786237232, NULL),
-    ('betina', NULL, 'betina.hiestand@inteco.ch');
-
-INSERT INTO workplace (description, name, legalName, url, logo, foundingDate, founder, address_id) VALUES 
-    (NULL, 'Inteco', 'inteco edv ag', 'https://www.inteco.ch/', 'https://u.jimcdn.com/cms/o/s2be375c9b7b44441/userlayout/img/logo.png', '1978-01-01','Walter Tuchschmid', (SELECT address_id from address WHERE street = 'Barzloostrasse 20')),
-    (NULL, 'Ernesto Vargas', 'Ernesto Vargas®', 'https://www.ernesto-vargas.com', 'https://www.ernesto-vargas.com/shop/wp-content/uploads/2017/03/ev-logo2.png', '1978-01-01','Bernd Schoop', (SELECT address_id from address WHERE street = 'Lochackerstrasse 4'));
-
-INSERT INTO workplace_contactPoint (workplace_id, contactPoint_id) VALUES
-    ((SELECT workplace_id FROM workplace WHERE name = 'Inteco'),(SELECT contactPoint_id FROM contactPoint WHERE email = 'info@inteco.ch')),
-    ((SELECT workplace_id FROM workplace WHERE name = 'Inteco'),(SELECT contactPoint_id FROM contactPoint WHERE email = 'webmaster@inteco.ch')),
-    ((SELECT workplace_id FROM workplace WHERE name = 'Inteco'),(SELECT contactPoint_id FROM contactPoint WHERE email = 'support@inteco.ch')),
-    ((SELECT workplace_id FROM workplace WHERE name = 'Inteco'),(SELECT contactPoint_id FROM contactPoint WHERE email = 'wegas@inteco.ch')),
-    ((SELECT workplace_id FROM workplace WHERE name = 'Ernesto Vargas'),(SELECT contactPoint_id FROM contactPoint WHERE email = 'swissoffice@ernesto-vargas.com'));
-
-INSERT INTO school (description, name, url, logo, image, type, address_id) VALUES (NULL, 'Probstei', 'https://www.stadt-zuerich.ch/schulen/de/probstei.html', NULL, NULL, 'primarschule', (SELECT address_id from address WHERE street = 'Stettbachstrasse 88')),
-    (NULL, 'Hohe Promenade', 'https://www.kshp.ch/', NULL, NULL, 'gymnasium', (SELECT address_id from address WHERE street = 'Promenadengasse 11')),
-    (NULL, 'Herzogenmühle', 'https://www.schule-herzli.ch/', NULL, NULL, 'sekundarschule', (SELECT address_id from address WHERE street = 'Herzogenmühlestrasse 60')),
-    (NULL, 'Hottingen', 'https://www.ksh.ch/angebot/informatikmittelschule', NULL, NULL, 'Informatikmittelschule', (SELECT address_id from address WHERE street = 'Minervastrasse 14')),
-    (NULL, 'Berufsbildungszentrum Zürichsee', 'https://www.bzz.ch/berufslehre/informatik-mediamatik/informatikerin-efz-informatiker-in-efz-ims/', NULL, NULL, 'Informatikmittelschule', (SELECT address_id from address WHERE street = 'Seestrasse 110'));
-
-INSERT INTO school_contactPoint (school_id, contactPoint_id) VALUES
-    ((SELECT school_id FROM school WHERE name = 'Probstei'),(SELECT contactPoint_id FROM contactPoint WHERE phone = 0444133080)),
-    ((SELECT school_id FROM school WHERE name = 'Hohe Promenade'),(SELECT contactPoint_id FROM contactPoint WHERE phone = 0442446464)),
-    ((SELECT school_id FROM school WHERE name = 'Herzogenmühle'),(SELECT contactPoint_id FROM contactPoint WHERE phone = 0444133100)),
-    ((SELECT school_id FROM school WHERE name = 'Hottingen'),(SELECT contactPoint_id FROM contactPoint WHERE phone = 0442665757)),
-    ((SELECT school_id FROM school WHERE name = 'Berufsbildungszentrum Zürichsee'),(SELECT contactPoint_id FROM contactPoint WHERE phone = 0447274600));
-
-INSERT INTO career (name, description, yearfrom, yearto, workplace_id, school_id) VALUES 
-    ('inteco',NULL,2022,2023,(SELECT workplace_id FROM workplace WHERE name = 'Inteco'),NULL),
-    ('ernesto vargas',NULL,2020,2021,(SELECT workplace_id FROM workplace WHERE name = 'Ernesto Vargas'),NULL),
-    ('bzz',NULL,2017,2020,NULL,(SELECT school_id FROM school WHERE name = 'Berufsbildungszentrum Zürichsee')),
-    ('ims',NULL,2017,2020,NULL,(SELECT school_id FROM school WHERE name = 'Hottingen')),
-    ('sek',NULL,2016,2017,NULL,(SELECT school_id FROM school WHERE name = 'Herzogenmühle')),
-    ('hopro',NULL,2014,2016,NULL,(SELECT school_id FROM school WHERE name = 'Hohe Promenade')),
-    ('probstei',NULL,2008,2014,NULL,(SELECT school_id FROM school WHERE name = 'Probsteis'));
-
-INSERT INTO personCategory (name, description) VALUES 
-    ('me', NULL),
-    ('familie',NULL),
-    ('berufsbildner',NULL),
-    ('lehrer',NULL);
- 
-INSERT INTO person (firstName, lastName, birthDate, birthPlace, jobTitle, gender, image, thumbnail, relation, description, address_id, workplace_id, school_id, personCategory_id, contactPoint_id) VALUES
-    ('Georgiy', 'Shevoroshkin', '2002-06-18', 'Zürich, ZH', 'Applikationsentwickler', 'M', 'content/profilepic/profilepic.jpg', NULL, 'myself', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'),(SELECT workplace_id FROM workplace WHERE name = 'Inteco'), NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'me'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'me')),
-    ('Tatiana', 'Chirokikh', '1967-04-14', 'St. Petersburg', 'Ernährungsberaterin', 'F', NULL, NULL, 'Mutter', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'), NULL, NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'familie'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'mom')),
-    ('Alexey', 'Shevoroshkin', '1966-05-08', 'Moscow', 'Applikationsentwickler', 'M', NULL, NULL, 'Vater', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'), NULL, NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'familie'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'dad')),
-    ('Nikolay', 'Shevoroshkin', '2006-08-05', 'Zürich, ZH', 'Schüler', 'M', NULL, NULL, 'Bruder', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'), NULL, NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'familie'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'niki')),
-    ('Michail', 'Shevoroshkin', '2004-11-22', 'Zürich, ZH', 'Tiermedizinischer Praxisassistent', 'M', NULL, NULL, 'Bruder', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'), NULL, NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'familie'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'michi')),
-    ('Betina', 'Hiestand', NULL, NULL, 'Applikationsentwicklerin', 'F', NULL, NULL, 'Berufsbildnerin', NULL, NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco'), NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'berufsbildner'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'betina'));
-
-INSERT INTO person_country (person_id, country_id) VALUES
-    ((SELECT person_id FROM person WHERE firstName = 'Georgiy'),(SELECT country_id FROM country WHERE shortName = 'CH')),
-    ((SELECT person_id FROM person WHERE firstName = 'Georgiy'),(SELECT country_id FROM country WHERE shortName = 'US')),
-    ((SELECT person_id FROM person WHERE firstName = 'Georgiy'),(SELECT country_id FROM country WHERE shortName = 'RU')),
-    ((SELECT person_id FROM person WHERE firstName = 'Nikolay'),(SELECT country_id FROM country WHERE shortName = 'CH')),
-    ((SELECT person_id FROM person WHERE firstName = 'Nikolay'),(SELECT country_id FROM country WHERE shortName = 'US')),
-    ((SELECT person_id FROM person WHERE firstName = 'Nikolay'),(SELECT country_id FROM country WHERE shortName = 'RU')),
-    ((SELECT person_id FROM person WHERE firstName = 'Michail'),(SELECT country_id FROM country WHERE shortName = 'CH')),
-    ((SELECT person_id FROM person WHERE firstName = 'Michail'),(SELECT country_id FROM country WHERE shortName = 'US')),
-    ((SELECT person_id FROM person WHERE firstName = 'Michail'),(SELECT country_id FROM country WHERE shortName = 'RU')),
-    ((SELECT person_id FROM person WHERE firstName = 'Alexey'),(SELECT country_id FROM country WHERE shortName = 'CH')),
-    ((SELECT person_id FROM person WHERE firstName = 'Alexey'),(SELECT country_id FROM country WHERE shortName = 'US')),
-    ((SELECT person_id FROM person WHERE firstName = 'Alexey'),(SELECT country_id FROM country WHERE shortName = 'RU')),
-    ((SELECT person_id FROM person WHERE firstName = 'Tatiana'),(SELECT country_id FROM country WHERE shortName = 'CH')),
-    ((SELECT person_id FROM person WHERE firstName = 'Tatiana'),(SELECT country_id FROM country WHERE shortName = 'RU'));
-
-
-
-/*INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id) VALUES
-();*/
+INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id) VALUES
+();
