@@ -528,3 +528,26 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'RusFrauenTreff Webseite'),(SELECT skill_id FROM skill WHERE name = 'CSS'));
     ((SELECT project_id FROM project WHERE name = 'RusFrauenTreff Webseite'),(SELECT skill_id FROM skill WHERE name = 'JavaScript'));
 
+INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, workplace_id) VALUES
+    ('Teddy',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+
+/*INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, workplace_id) VALUES
+    ('Kusudama',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Origami',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Graffiti',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Zeichnen',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Malen',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Nähen',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Holzarbeiten',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Mosaik',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Gitarre',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Bass',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Schlagzeug',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Ableton',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('FL Studio',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Katzenbaum',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Fahrrad',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('CEVI',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Campen',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Wandern',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Kochen',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);*/
