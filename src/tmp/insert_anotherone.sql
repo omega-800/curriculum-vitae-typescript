@@ -10,6 +10,7 @@ INSERT INTO skillSubCategory (name, description, skillCategory_id) VALUES
     ('Gestalten', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Kunst')),
     ('Werken', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Kunst')),
     ('Nähen', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Kunst')),
+    ('Modellieren', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Kunst')),
     ('Schule', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Pädagogik')),
     ('Verein', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Pädagogik')),
     ('Einzelunterricht', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Pädagogik')),
@@ -152,7 +153,10 @@ INSERT INTO skill (hobby, type, name, description, alternateName, keywords, url,
     (TRUE, 'Applikation', 'FL Studio', 'FL Studio ist eine digitale Audio-Workstation für Windows. Es wird hauptsächlich zum Erstellen und Produzieren von Musik verwendet.', 'FruityLoops', 'FL Studio, FruityLoops, DAW, Musikproduktion, Audio-Workstation', 'https://www.image-line.com/flstudio/', '20.8.4', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 60),
     (FALSE, 'Applikation', 'Magnolia', '', 'Magnolia CMS', '', '', '', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 85),
     (FALSE, 'Applikation', 'JCR', '', 'Java Content Repositories', '', '', '', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 80),
-    (FALSE, 'Applikation', 'Docker', '', 'Docker', '', '', '', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 25);
+    (FALSE, 'Applikation', 'Docker', '', 'Docker', '', '', '', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 25),
+    (FALSE, 'Applikation', 'Schema Markup', '', 'Structured Data', '', '', '', (SELECT applicationType_id FROM applicationType WHERE name = 'Bibliothek'), 85),
+    (TRUE, 'Applikation', 'Firebase', '', 'Google Firebase', '', '', '', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 60),
+    (TRUE, 'Applikation', 'Blender', '', 'Blender', '', '', '', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 30);
 
 /*INSERT INTO application_operatingSystem (application_id, operatingSystem_id) VALUES
     ((SELECT application_id FROM application WHERE name = 'Vim'), (SELECT operatingSystem_id FROM operatingSystem WHERE name = 'Windows'));*/
@@ -201,7 +205,11 @@ INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'FL Studio'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Musik')),
     ((SELECT skill_id FROM skill WHERE name = 'Magnolia'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Inhaltsverwaltungssystem')),
     ((SELECT skill_id FROM skill WHERE name = 'JCR'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Datenbankentwicklung')),
-    ((SELECT skill_id FROM skill WHERE name = 'Docker'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend'));
+    ((SELECT skill_id FROM skill WHERE name = 'Docker'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend')),
+    ((SELECT skill_id FROM skill WHERE name = 'Schema Markup'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'SEO')),
+    ((SELECT skill_id FROM skill WHERE name = 'Schema Markup'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Frontend')),
+    ((SELECT skill_id FROM skill WHERE name = 'Firebase'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend')),
+    ((SELECT skill_id FROM skill WHERE name = 'Blender'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Modellieren'));
 
 INSERT INTO skill (name, knowledgePercent, hobby, type) VALUES
     ('Origami', 90, TRUE, 'Aktivität'),
@@ -290,7 +298,8 @@ INSERT INTO workplace_contactPoint (workplace_id, contactPoint_id) VALUES
     ((SELECT workplace_id FROM workplace WHERE name = 'Inteco'),(SELECT contactPoint_id FROM contactPoint WHERE email = 'wegas@inteco.ch')),
     ((SELECT workplace_id FROM workplace WHERE name = 'Ernesto Vargas'),(SELECT contactPoint_id FROM contactPoint WHERE email = 'swissoffice@ernesto-vargas.com'));
 
-INSERT INTO school (description, name, url, logo, image, type, address_id) VALUES (NULL, 'Probstei', 'https://www.stadt-zuerich.ch/schulen/de/probstei.html', NULL, NULL, 'primarschule', (SELECT address_id from address WHERE street = 'Stettbachstrasse 88')),
+INSERT INTO school (description, name, url, logo, image, type, address_id) VALUES 
+    (NULL, 'Probstei', 'https://www.stadt-zuerich.ch/schulen/de/probstei.html', NULL, NULL, 'primarschule', (SELECT address_id from address WHERE street = 'Stettbachstrasse 88')),
     (NULL, 'Hohe Promenade', 'https://www.kshp.ch/', NULL, NULL, 'gymnasium', (SELECT address_id from address WHERE street = 'Promenadengasse 11')),
     (NULL, 'Herzogenmühle', 'https://www.schule-herzli.ch/', NULL, NULL, 'sekundarschule', (SELECT address_id from address WHERE street = 'Herzogenmühlestrasse 60')),
     (NULL, 'Hottingen', 'https://www.ksh.ch/angebot/informatikmittelschule', NULL, NULL, 'Informatikmittelschule', (SELECT address_id from address WHERE street = 'Minervastrasse 14')),
@@ -357,7 +366,8 @@ INSERT INTO project (name, description, thumbnail, image, url, github, date, cli
     ('Geschmacksprofil',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
     ('Popup',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
     ('Konfigurationsseiten Magnolia',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
-    ('Webseiten aufsetzen',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco'));
+    ('Webseiten aufsetzen',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('Webseiten warten',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco'));
 
 INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
@@ -372,7 +382,8 @@ INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Geschmacksprofil'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Popup'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Konfigurationsseiten Magnolia'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
-    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT person_id FROM person WHERE firstName = 'Georgiy'));
+    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT person_id FROM person WHERE firstName = 'Georgiy'));
 
 INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE name = 'Java')),
@@ -411,10 +422,12 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Share Buttons'),(SELECT skill_id FROM skill WHERE name = 'JavaScript')),
     ((SELECT project_id FROM project WHERE name = 'Share Buttons'),(SELECT skill_id FROM skill WHERE name = 'HTML')),
     ((SELECT project_id FROM project WHERE name = 'Share Buttons'),(SELECT skill_id FROM skill WHERE name = 'CSS')),
+    ((SELECT project_id FROM project WHERE name = 'Share Buttons'),(SELECT skill_id FROM skill WHERE name = 'Schema Markup')),
     ((SELECT project_id FROM project WHERE name = 'SEO Analyse'),(SELECT skill_id FROM skill WHERE name = 'Word')),
     ((SELECT project_id FROM project WHERE name = 'SEO Analyse'),(SELECT skill_id FROM skill WHERE name = 'PowerPoint')),
     ((SELECT project_id FROM project WHERE name = 'SEO Analyse'),(SELECT skill_id FROM skill WHERE name = 'Web Accessibility')),
     ((SELECT project_id FROM project WHERE name = 'SEO Analyse'),(SELECT skill_id FROM skill WHERE name = 'SEO')),
+    ((SELECT project_id FROM project WHERE name = 'SEO Analyse'),(SELECT skill_id FROM skill WHERE name = 'Schema Markup')),
     ((SELECT project_id FROM project WHERE name = 'Geschmacksprofil'),(SELECT skill_id FROM skill WHERE name = 'JCR')),
     ((SELECT project_id FROM project WHERE name = 'Geschmacksprofil'),(SELECT skill_id FROM skill WHERE name = 'HTML')),
     ((SELECT project_id FROM project WHERE name = 'Geschmacksprofil'),(SELECT skill_id FROM skill WHERE name = 'CSS')),
@@ -434,7 +447,18 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT skill_id FROM skill WHERE name = 'JCR')),
     ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT skill_id FROM skill WHERE name = 'Docker')),
     ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT skill_id FROM skill WHERE name = 'Tomcat7')),
-    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT skill_id FROM skill WHERE name = 'Bash'));
+    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT skill_id FROM skill WHERE name = 'Bash')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT skill_id FROM skill WHERE name = 'SCSS')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE name = 'Java')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE name = 'Magnolia')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE name = 'JCR')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE name = 'Docker')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE name = 'Tomcat7')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE name = 'Bash')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE name = 'SCSS')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE name = 'HTML')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE name = 'JavaScript')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE name = 'MySQL'));
 
 INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, workplace_id) VALUES
     ('Webscraping automatisation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,(SELECT workplace_id FROM workplace WHERE name = 'Ernesto Vargas'));
@@ -447,4 +471,60 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Webscraping automatisation'),(SELECT skill_id FROM skill WHERE name = 'Python'));
 
 INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, workplace_id) VALUES
-    ('Portfolio',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+    ('Portfolio',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Finanzplaner',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Textbasiertes Spiel',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Roguelike Dungeon Spiel 1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Roguelike Dungeon Spiel 2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Roguelike Dungeon Spiel 3',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Raketen Spiel',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Minecraft Kopie',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Immobilien Webseite',NULL,NULL,NULL,NULL,NULL,NULL,(SELECT person_id FROM person WHERE name = 'Alexey'),NULL),
+    ('RusFrauenTreff Webseite',NULL,NULL,NULL,NULL,NULL,NULL,(SELECT person_id FROM person WHERE name = 'Tatiana'),NULL);
+
+INSERT INTO project_author (project_id, author_id) VALUES
+    ((SELECT project_id FROM project WHERE name = 'Portfolio'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Finanzplaner'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 1'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 2'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Raketen Spiel'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Minecraft Kopie'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Immobilien Webseite'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'RusFrauenTreff Webseite'),(SELECT person_id FROM person WHERE firstName = 'Georgiy'));
+    
+INSERT INTO project_skill (project_id, skill_id) VALUES
+    ((SELECT project_id FROM project WHERE name = 'Portfolio'),(SELECT skill_id FROM skill WHERE name = 'React')),
+    ((SELECT project_id FROM project WHERE name = 'Portfolio'),(SELECT skill_id FROM skill WHERE name = 'TypeScript')),
+    ((SELECT project_id FROM project WHERE name = 'Portfolio'),(SELECT skill_id FROM skill WHERE name = 'HTML')),
+    ((SELECT project_id FROM project WHERE name = 'Portfolio'),(SELECT skill_id FROM skill WHERE name = 'SCSS')),
+    ((SELECT project_id FROM project WHERE name = 'Portfolio'),(SELECT skill_id FROM skill WHERE name = 'Schema Markup')),
+    ((SELECT project_id FROM project WHERE name = 'Portfolio'),(SELECT skill_id FROM skill WHERE name = 'PostgreSQL')),
+    ((SELECT project_id FROM project WHERE name = 'Portfolio'),(SELECT skill_id FROM skill WHERE name = 'Firebase')),
+    ((SELECT project_id FROM project WHERE name = 'Finanzplaner'),(SELECT skill_id FROM skill WHERE name = 'Python')),
+    ((SELECT project_id FROM project WHERE name = 'Finanzplaner'),(SELECT skill_id FROM skill WHERE name = 'Excel')),
+    ((SELECT project_id FROM project WHERE name = 'Finanzplaner'),(SELECT skill_id FROM skill WHERE name = 'MySQL')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel'),(SELECT skill_id FROM skill WHERE name = 'C#')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel'),(SELECT skill_id FROM skill WHERE name = 'Python')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 1'),(SELECT skill_id FROM skill WHERE name = 'Unity')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 1'),(SELECT skill_id FROM skill WHERE name = 'C#')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 1'),(SELECT skill_id FROM skill WHERE name = 'Gimp')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 2'),(SELECT skill_id FROM skill WHERE name = 'Python')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 2'),(SELECT skill_id FROM skill WHERE name = 'Python?')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 2'),(SELECT skill_id FROM skill WHERE name = 'Gimp')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE name = 'Python')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE name = 'Python?')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE name = 'Gimp')),
+    ((SELECT project_id FROM project WHERE name = 'Raketen Spiel'),(SELECT skill_id FROM skill WHERE name = 'Unity')),
+    ((SELECT project_id FROM project WHERE name = 'Raketen Spiel'),(SELECT skill_id FROM skill WHERE name = 'C#')),
+    ((SELECT project_id FROM project WHERE name = 'Raketen Spiel'),(SELECT skill_id FROM skill WHERE name = 'Blender')),
+    ((SELECT project_id FROM project WHERE name = 'Minecraft Kopie'),(SELECT skill_id FROM skill WHERE name = 'Python')),
+    ((SELECT project_id FROM project WHERE name = 'Minecraft Kopie'),(SELECT skill_id FROM skill WHERE name = 'Python?')),
+    ((SELECT project_id FROM project WHERE name = 'Immobilien Webseite'),(SELECT skill_id FROM skill WHERE name = 'PHP')),
+    ((SELECT project_id FROM project WHERE name = 'Immobilien Webseite'),(SELECT skill_id FROM skill WHERE name = 'HTML')),
+    ((SELECT project_id FROM project WHERE name = 'Immobilien Webseite'),(SELECT skill_id FROM skill WHERE name = 'CSS')),
+    ((SELECT project_id FROM project WHERE name = 'RusFrauenTreff Webseite'),(SELECT skill_id FROM skill WHERE name = 'HTML'));
+    ((SELECT project_id FROM project WHERE name = 'RusFrauenTreff Webseite'),(SELECT skill_id FROM skill WHERE name = 'CSS'));
+    ((SELECT project_id FROM project WHERE name = 'RusFrauenTreff Webseite'),(SELECT skill_id FROM skill WHERE name = 'JavaScript'));
+
