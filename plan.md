@@ -151,3 +151,70 @@
   - persönlich
   - sprachen
   - schulwissen
+
+- projects
+  - it
+    - inteco
+      - SCSS
+      - affolter
+      - bootstrapReplaceOrCreate
+      - fillUserCountries
+      - probeIPA_altersüberprüfung
+      - produzenten
+      - translate
+      - SEO
+      - ageVerification
+      - clearImageCache
+      - mariabuehler
+      - probeIPA_produzenten
+      - selenium
+      - updatedNodesExport 
+      - SQL
+      - dmviniDocker
+      - emails
+      - firstwineAwards
+      - googleECommerce
+      - i18n
+      - logConfigurable
+      - metaTags
+      - passwordReset
+      - raspi
+      - shareButtons
+      - shopSettingsPage
+      - tasteProfile
+    - fernesto vargas
+      - webscraping
+    - meins
+      - portfolio
+      - python finance
+      - rocketgame unity
+      - dungeongame unity 
+      - dungeongame python
+      - textgame python
+      - minecraft python
+      - website dad
+      - website mom
+      - 
+      - kriztunez
+      - shop react
+  - art
+    - kusudama
+    - origami
+    - graffiti
+    - drawing
+    - painting
+    - sewing
+    - woodwork
+    - mosaic
+    - guitar
+    - bass
+    - drums
+    - ableton
+    - fl studio
+  - other
+    - bike
+    - cevi
+    - camping
+    - hiking
+    - cooking
+    - 
