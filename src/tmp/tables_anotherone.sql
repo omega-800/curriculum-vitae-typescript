@@ -233,7 +233,8 @@ CREATE TABLE IF NOT EXISTS project (
     image VARCHAR,
     github VARCHAR,
     date DATE,
-    client_id UUID REFERENCES person(person_id)
+    client_id UUID REFERENCES person(person_id),
+    workplace_id UUID REFERENCES workplace(workplace_id)
 );
 
 CREATE TABLE IF NOT EXISTS project_skill (

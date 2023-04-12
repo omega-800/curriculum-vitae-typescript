@@ -109,7 +109,8 @@ INSERT INTO applicationType (name, name_e, description) VALUES
     ('Umgebung', 'Environment',NULL),
     ('Applikation', 'Application',NULL),
     ('Rahmenwerk', 'Framework',NULL),
-    ('Bibliothek', 'Library',NULL);
+    ('Bibliothek', 'Library',NULL),
+    ('Inhaltsverwaltungssystem', 'Content Management System',NULL);
 
 INSERT INTO operatingSystem (name, description, url) VALUES 
    ('Windows', 'Ein beliebtes Betriebssystem für Personalcomputer.', 'https://www.microsoft.com/windows'),
@@ -148,7 +149,10 @@ INSERT INTO skill (hobby, type, name, description, alternateName, keywords, url,
     (FALSE, 'Applikation', 'FreeMarker', 'FreeMarker ist ein Template-Engine, die die Erstellung dynamischer Webseiten durch die Generierung von Textausgaben auf der Grundlage von Vorlagen ermöglicht.', 'Apache FreeMarker', 'FreeMarker, Template Engine, Java', 'https://freemarker.apache.org/', '2.3.31', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 85),
     (TRUE, 'Applikation', 'PostgreSQL', 'PostgreSQL ist ein leistungsstarkes Open-Source-Relationales-Datenbankmanagementsystem.', 'Postgres', 'PostgreSQL, Postgres, Strukturierte Abfragesprache, Datenbankmanagementsystem, Softwareentwicklung', 'https://www.postgresql.org/', '14.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 45),
     (TRUE, 'Applikation', 'Ableton Live 10', 'Ableton Live 10 ist eine digitale Audio-Workstation für macOS und Windows. Es wird hauptsächlich zum Komponieren, Aufnehmen, Remixen und Arrangieren von Musik verwendet.', 'Ableton', 'Ableton Live 10, DAW, Musikproduktion, Audio-Workstation', 'https://www.ableton.com/de/live/', '10.1.30', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 85),
-    (TRUE, 'Applikation', 'FL Studio', 'FL Studio ist eine digitale Audio-Workstation für Windows. Es wird hauptsächlich zum Erstellen und Produzieren von Musik verwendet.', 'FruityLoops', 'FL Studio, FruityLoops, DAW, Musikproduktion, Audio-Workstation', 'https://www.image-line.com/flstudio/', '20.8.4', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 60);
+    (TRUE, 'Applikation', 'FL Studio', 'FL Studio ist eine digitale Audio-Workstation für Windows. Es wird hauptsächlich zum Erstellen und Produzieren von Musik verwendet.', 'FruityLoops', 'FL Studio, FruityLoops, DAW, Musikproduktion, Audio-Workstation', 'https://www.image-line.com/flstudio/', '20.8.4', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 60),
+    (FALSE, 'Applikation', 'Magnolia', '', 'Magnolia CMS', '', '', '', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 85),
+    (FALSE, 'Applikation', 'JCR', '', 'Java Content Repositories', '', '', '', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 80),
+    (FALSE, 'Applikation', 'Docker', '', 'Docker', '', '', '', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 25);
 
 /*INSERT INTO application_operatingSystem (application_id, operatingSystem_id) VALUES
     ((SELECT application_id FROM application WHERE name = 'Vim'), (SELECT operatingSystem_id FROM operatingSystem WHERE name = 'Windows'));*/
@@ -194,7 +198,10 @@ INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'FreeMarker'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Frontend')),
     ((SELECT skill_id FROM skill WHERE name = 'PostgreSQL'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Datenbankentwicklung')),
     ((SELECT skill_id FROM skill WHERE name = 'Ableton Live 10'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Musik')),
-    ((SELECT skill_id FROM skill WHERE name = 'FL Studio'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Musik'));
+    ((SELECT skill_id FROM skill WHERE name = 'FL Studio'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Musik')),
+    ((SELECT skill_id FROM skill WHERE name = 'Magnolia'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Inhaltsverwaltungssystem')),
+    ((SELECT skill_id FROM skill WHERE name = 'JCR'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Datenbankentwicklung')),
+    ((SELECT skill_id FROM skill WHERE name = 'Docker'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend'));
 
 INSERT INTO skill (name, knowledgePercent, hobby, type) VALUES
     ('Origami', 90, TRUE, 'Aktivität'),
@@ -337,5 +344,107 @@ INSERT INTO person_country (person_id, country_id) VALUES
 
 
 
-/*INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id) VALUES
-();*/
+INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, workplace_id) VALUES
+    ('ID Altersverifikation',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('Produzentenseite',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('SCSS Skript',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('Übersetzungsskript',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('Testen mittels Selenium',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('i18n',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('Passwort zurücksetzen',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('Share Buttons',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('SEO Analyse',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('Geschmacksprofil',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('Popup',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('Konfigurationsseiten Magnolia',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco')),
+    ('Webseiten aufsetzen',NULL,NULL,NULL,NULL,NULL,NULL,NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco'));
+
+INSERT INTO project_author (project_id, author_id) VALUES
+    ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'SCSS Skript'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Übersetzungsskript'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Testen mittels Selenium'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'i18n'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Passwort zurücksetzen'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Share Buttons'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'SEO Analyse'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Geschmacksprofil'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Popup'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Konfigurationsseiten Magnolia'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT person_id FROM person WHERE firstName = 'Georgiy'));
+
+INSERT INTO project_skill (project_id, skill_id) VALUES
+    ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE name = 'Java')),
+    ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE name = 'Freemarker')),
+    ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE name = 'CSS')),
+    ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE name = 'JavaScript')),
+    ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE name = 'Magnolia')),
+    ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE name = 'JCR')),
+    ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE name = 'HTML')),
+    ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT skill_id FROM skill WHERE name = 'Java')),
+    ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT skill_id FROM skill WHERE name = 'Freemarker')),
+    ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT skill_id FROM skill WHERE name = 'CSS')),
+    ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT skill_id FROM skill WHERE name = 'JavaScript')),
+    ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT skill_id FROM skill WHERE name = 'Magnolia')),
+    ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT skill_id FROM skill WHERE name = 'JCR')),
+    ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT skill_id FROM skill WHERE name = 'HTML')),
+    ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT skill_id FROM skill WHERE name = 'MySQL')),
+    ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT skill_id FROM skill WHERE name = 'Inkscape')),
+    ((SELECT project_id FROM project WHERE name = 'SCSS Skript'),(SELECT skill_id FROM skill WHERE name = 'SCSS')),
+    ((SELECT project_id FROM project WHERE name = 'SCSS Skript'),(SELECT skill_id FROM skill WHERE name = 'Bash')),
+    ((SELECT project_id FROM project WHERE name = 'SCSS Skript'),(SELECT skill_id FROM skill WHERE name = 'Vim')),
+    ((SELECT project_id FROM project WHERE name = 'Übersetzungsskript'),(SELECT skill_id FROM skill WHERE name = 'Python')),
+    ((SELECT project_id FROM project WHERE name = 'Übersetzungsskript'),(SELECT skill_id FROM skill WHERE name = 'JavaScript')),
+    ((SELECT project_id FROM project WHERE name = 'Übersetzungsskript'),(SELECT skill_id FROM skill WHERE name = 'TypeScript')),
+    ((SELECT project_id FROM project WHERE name = 'Testen mittels Selenium'),(SELECT skill_id FROM skill WHERE name = 'Selenium')),
+    ((SELECT project_id FROM project WHERE name = 'Testen mittels Selenium'),(SELECT skill_id FROM skill WHERE name = 'Python')),
+    ((SELECT project_id FROM project WHERE name = 'i18n'),(SELECT skill_id FROM skill WHERE name = 'Java')),
+    ((SELECT project_id FROM project WHERE name = 'i18n'),(SELECT skill_id FROM skill WHERE name = 'Freemarker')),
+    ((SELECT project_id FROM project WHERE name = 'i18n'),(SELECT skill_id FROM skill WHERE name = 'Magnolia')),
+    ((SELECT project_id FROM project WHERE name = 'i18n'),(SELECT skill_id FROM skill WHERE name = 'JCR')),
+    ((SELECT project_id FROM project WHERE name = 'Passwort zurücksetzen'),(SELECT skill_id FROM skill WHERE name = 'Java')),
+    ((SELECT project_id FROM project WHERE name = 'Passwort zurücksetzen'),(SELECT skill_id FROM skill WHERE name = 'Freemarker')),
+    ((SELECT project_id FROM project WHERE name = 'Passwort zurücksetzen'),(SELECT skill_id FROM skill WHERE name = 'HTML')),
+    ((SELECT project_id FROM project WHERE name = 'Passwort zurücksetzen'),(SELECT skill_id FROM skill WHERE name = 'Magnolia')),
+    ((SELECT project_id FROM project WHERE name = 'Passwort zurücksetzen'),(SELECT skill_id FROM skill WHERE name = 'JCR')),
+    ((SELECT project_id FROM project WHERE name = 'Share Buttons'),(SELECT skill_id FROM skill WHERE name = 'JavaScript')),
+    ((SELECT project_id FROM project WHERE name = 'Share Buttons'),(SELECT skill_id FROM skill WHERE name = 'HTML')),
+    ((SELECT project_id FROM project WHERE name = 'Share Buttons'),(SELECT skill_id FROM skill WHERE name = 'CSS')),
+    ((SELECT project_id FROM project WHERE name = 'SEO Analyse'),(SELECT skill_id FROM skill WHERE name = 'Word')),
+    ((SELECT project_id FROM project WHERE name = 'SEO Analyse'),(SELECT skill_id FROM skill WHERE name = 'PowerPoint')),
+    ((SELECT project_id FROM project WHERE name = 'SEO Analyse'),(SELECT skill_id FROM skill WHERE name = 'Web Accessibility')),
+    ((SELECT project_id FROM project WHERE name = 'SEO Analyse'),(SELECT skill_id FROM skill WHERE name = 'SEO')),
+    ((SELECT project_id FROM project WHERE name = 'Geschmacksprofil'),(SELECT skill_id FROM skill WHERE name = 'JCR')),
+    ((SELECT project_id FROM project WHERE name = 'Geschmacksprofil'),(SELECT skill_id FROM skill WHERE name = 'HTML')),
+    ((SELECT project_id FROM project WHERE name = 'Geschmacksprofil'),(SELECT skill_id FROM skill WHERE name = 'CSS')),
+    ((SELECT project_id FROM project WHERE name = 'Geschmacksprofil'),(SELECT skill_id FROM skill WHERE name = 'Magnolia')),
+    ((SELECT project_id FROM project WHERE name = 'Geschmacksprofil'),(SELECT skill_id FROM skill WHERE name = 'MySQL')),
+    ((SELECT project_id FROM project WHERE name = 'Popup'),(SELECT skill_id FROM skill WHERE name = 'HTML')),
+    ((SELECT project_id FROM project WHERE name = 'Popup'),(SELECT skill_id FROM skill WHERE name = 'CSS')),
+    ((SELECT project_id FROM project WHERE name = 'Popup'),(SELECT skill_id FROM skill WHERE name = 'JavaScript')),
+    ((SELECT project_id FROM project WHERE name = 'Konfigurationsseiten Magnolia'),(SELECT skill_id FROM skill WHERE name = 'Java')),
+    ((SELECT project_id FROM project WHERE name = 'Konfigurationsseiten Magnolia'),(SELECT skill_id FROM skill WHERE name = 'JCR')),
+    ((SELECT project_id FROM project WHERE name = 'Konfigurationsseiten Magnolia'),(SELECT skill_id FROM skill WHERE name = 'Magnolia')),
+    ((SELECT project_id FROM project WHERE name = 'Konfigurationsseiten Magnolia'),(SELECT skill_id FROM skill WHERE name = 'HTML')),
+    ((SELECT project_id FROM project WHERE name = 'Konfigurationsseiten Magnolia'),(SELECT skill_id FROM skill WHERE name = 'CSS')),
+    ((SELECT project_id FROM project WHERE name = 'Konfigurationsseiten Magnolia'),(SELECT skill_id FROM skill WHERE name = 'JavaScript')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT skill_id FROM skill WHERE name = 'Java')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT skill_id FROM skill WHERE name = 'Magnolia')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT skill_id FROM skill WHERE name = 'JCR')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT skill_id FROM skill WHERE name = 'Docker')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT skill_id FROM skill WHERE name = 'Tomcat7')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT skill_id FROM skill WHERE name = 'Bash'));
+
+INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, workplace_id) VALUES
+    ('Webscraping automatisation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,(SELECT workplace_id FROM workplace WHERE name = 'Ernesto Vargas'));
+
+INSERT INTO project_author (project_id, author_id) VALUES
+    ((SELECT project_id FROM project WHERE name = 'Webscraping automatisation'),(SELECT person_id FROM person WHERE firstName = 'Georgiy'));
+
+INSERT INTO project_skill (project_id, skill_id) VALUES
+    ((SELECT project_id FROM project WHERE name = 'Webscraping automatisation'),(SELECT skill_id FROM skill WHERE name = 'Selenium')),
+    ((SELECT project_id FROM project WHERE name = 'Webscraping automatisation'),(SELECT skill_id FROM skill WHERE name = 'Python'));
+
+INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, workplace_id) VALUES
+    ('Portfolio',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
