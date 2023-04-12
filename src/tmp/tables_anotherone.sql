@@ -38,8 +38,8 @@ CREATE TABLE IF NOT EXISTS country (
     shortName VARCHAR
 );
 
-CREATE TABLE IF NOT EXISTS category (
-    category_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+CREATE TABLE IF NOT EXISTS skillCategory (
+    skillCategory_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     name VARCHAR NOT NULL,
     name_e VARCHAR,
     name_r VARCHAR,
@@ -48,18 +48,26 @@ CREATE TABLE IF NOT EXISTS category (
     description_r VARCHAR
 );
 
-CREATE TABLE IF NOT EXISTS skillCategory (
-    skillCategory_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
-) INHERITS (category);
-
 CREATE TABLE IF NOT EXISTS skillSubCategory (
     skillSubCategory_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    skillCategory_id UUID NOT NULL REFERENCES skillCategory(skillCategory_id)
-) INHERITS (category);
+    skillCategory_id UUID NOT NULL REFERENCES skillCategory(skillCategory_id),
+    name VARCHAR NOT NULL,
+    name_e VARCHAR,
+    name_r VARCHAR,
+    description VARCHAR,
+    description_e VARCHAR,
+    description_r VARCHAR
+);
 
 CREATE TABLE IF NOT EXISTS applicationType(
-    applicationType_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
-) INHERITS (category);
+    applicationType_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    name VARCHAR NOT NULL,
+    name_e VARCHAR,
+    name_r VARCHAR,
+    description VARCHAR,
+    description_e VARCHAR,
+    description_r VARCHAR
+);
 
 CREATE TABLE IF NOT EXISTS skill (
     skill_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -98,8 +106,14 @@ CREATE TABLE IF NOT EXISTS skill_skillSubCategory (
 
 CREATE TABLE IF NOT EXISTS operatingSystem(
     operatingSystem_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    url VARCHAR
-) INHERITS (category);
+    url VARCHAR,
+    name VARCHAR NOT NULL,
+    name_e VARCHAR,
+    name_r VARCHAR,
+    description VARCHAR,
+    description_e VARCHAR,
+    description_r VARCHAR
+);
 
 CREATE TABLE IF NOT EXISTS application_operatingSystem (
     application_operatingSystem_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -130,8 +144,11 @@ CREATE TABLE IF NOT EXISTS address (
     country_id UUID NOT NULL REFERENCES country(country_id)
 );
 
-CREATE TABLE IF NOT EXISTS organization(
-    organization_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+CREATE TABLE IF NOT EXISTS workplace (
+    workplace_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    legalName VARCHAR,
+    foundingDate DATE,
+    founder VARCHAR,
     description VARCHAR,
     description_e VARCHAR,
     description_r VARCHAR,
@@ -144,13 +161,6 @@ CREATE TABLE IF NOT EXISTS organization(
     address_id UUID NOT NULL REFERENCES address(address_id)
 );
 
-CREATE TABLE IF NOT EXISTS workplace (
-    workplace_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    legalName VARCHAR,
-    foundingDate DATE,
-    founder VARCHAR
-) INHERITS (organization);
-
 CREATE TABLE IF NOT EXISTS workplace_contactPoint (
     workplace_contactPoint_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     contactPoint_id UUID NOT NULL REFERENCES contactPoint(contactPoint_id),
@@ -161,8 +171,18 @@ CREATE TABLE IF NOT EXISTS school (
     school_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     type VARCHAR,
     type_e VARCHAR,
-    type_d VARCHAR
-) INHERITS (organization);
+    type_d VARCHAR,
+    description VARCHAR,
+    description_e VARCHAR,
+    description_r VARCHAR,
+    name VARCHAR,
+    name_e VARCHAR,
+    name_r VARCHAR,
+    url VARCHAR,
+    logo VARCHAR,
+    image VARCHAR,
+    address_id UUID NOT NULL REFERENCES address(address_id)
+);
 
 CREATE TABLE IF NOT EXISTS school_contactPoint (
     school_contactPoint_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -186,8 +206,14 @@ CREATE TABLE IF NOT EXISTS career (
 );
 
 CREATE TABLE IF NOT EXISTS personCategory (
-    personCategory_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
-) INHERITS (category);
+    personCategory_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    name VARCHAR NOT NULL,
+    name_e VARCHAR,
+    name_r VARCHAR,
+    description VARCHAR,
+    description_e VARCHAR,
+    description_r VARCHAR
+);
 
 CREATE TABLE IF NOT EXISTS person (
     person_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
