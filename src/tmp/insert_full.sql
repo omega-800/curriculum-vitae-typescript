@@ -1,9 +1,9 @@
-INSERT INTO skillCategory (name, description) VALUES
-    ('Kunst',NULL),
-    ('Pädagogik',NULL),
-    ('Gesundheit',NULL),
-    ('Informatik',NULL),
-    ('Allgemein',NULL);
+INSERT INTO skillCategory (name, name_e, name_r, description, description_e, description_r) VALUES
+    ('Kunst', 'Art', 'Искусство', 'Kategorie für Kunstfertigkeiten', 'Category for artistic skills', 'Категория для художественных навыков'),
+    ('Pädagogik', 'Education', 'Образование', 'Kategorie für pädagogische Fähigkeiten', 'Category for educational skills', 'Категория для педагогических навыков'),
+    ('Gesundheit', 'Health', 'Здоровье', 'Kategorie für gesundheitsbezogene Fähigkeiten', 'Category for health-related skills', 'Категория для навыков связанных со здоровьем'),
+    ('Informatik', 'Computer Science', 'Информатика', 'Kategorie für informatische Fähigkeiten', 'Category for computer science skills', 'Категория для навыков в области компьютерных наук'),
+    ('Allgemein', 'General', 'Общее', 'Kategorie für allgemeine Fähigkeiten', 'Category for general skills', 'Категория для общих навыков');
 
 INSERT INTO skillSubCategory (name, description, skillCategory_id) VALUES
     ('Musik', NULL, (SELECT skillCategory_id FROM skillCategory WHERE name = 'Kunst')),
