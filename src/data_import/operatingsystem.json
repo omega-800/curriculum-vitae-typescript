@@ -1,0 +1,32 @@
+[
+ {
+  "operatingsystem_id": "124009a9-d603-4576-a5b3-2165ae9ce057",
+  "url": "https://www.linux.org",
+  "name": "Linux",
+  "name_e": null,
+  "name_r": null,
+  "description": "Ein kostenloses und quelloffenes Betriebssystem, das viele Server und andere Geräte antreibt.",
+  "description_e": null,
+  "description_r": null
+ },
+ {
+  "operatingsystem_id": "3ada8f5a-6088-49de-be94-4f87ac5e1107",
+  "url": "https://www.microsoft.com/windows",
+  "name": "Windows",
+  "name_e": null,
+  "name_r": null,
+  "description": "Ein beliebtes Betriebssystem für Personalcomputer.",
+  "description_e": null,
+  "description_r": null
+ },
+ {
+  "operatingsystem_id": "40886e98-fe8b-494d-b462-d8af622687d0",
+  "url": "https://www.apple.com/macos",
+  "name": "macOS",
+  "name_e": null,
+  "name_r": null,
+  "description": "Das Betriebssystem für Apples Macintosh-Reihe von Personalcomputern.",
+  "description_e": null,
+  "description_r": null
+ }
+]

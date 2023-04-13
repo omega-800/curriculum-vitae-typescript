@@ -1,0 +1,27 @@
+[
+ {
+  "school_contactpoint_id": "0e2388a9-14bd-497c-bf4e-aae4af7d96dd",
+  "contactpoint_id": "3c605ecf-e7a1-418a-bb88-418fa2772a90",
+  "school_id": "6947bf76-24da-437d-b994-6172260f318a"
+ },
+ {
+  "school_contactpoint_id": "197ec11d-e49a-40d8-9222-85998d3f4be3",
+  "contactpoint_id": "d3421328-50e2-42a8-b0a1-d7b6b62a3a93",
+  "school_id": "214015ea-efdb-4864-86b8-e57e18fa0afb"
+ },
+ {
+  "school_contactpoint_id": "d40e6323-7bf0-44f8-bc24-61854274051b",
+  "contactpoint_id": "190ca222-95ba-4ded-88e2-b97e333f387f",
+  "school_id": "d054b8f9-9211-488a-b639-62e62edd7e52"
+ },
+ {
+  "school_contactpoint_id": "fc0e47f8-f061-4324-bb10-c579fa9afa44",
+  "contactpoint_id": "1978701f-5db5-4b7c-a7c0-cc6e07a3e97d",
+  "school_id": "1e1b8c25-de69-490f-9251-f56df59a2578"
+ },
+ {
+  "school_contactpoint_id": "fcdfc26b-32ef-4d95-9f39-22ca3d29f78e",
+  "contactpoint_id": "e12e0842-e645-43b4-a8c9-39ea67b82b2b",
+  "school_id": "2d3158be-3144-4e4f-a9b0-7bec69e083d6"
+ }
+]
