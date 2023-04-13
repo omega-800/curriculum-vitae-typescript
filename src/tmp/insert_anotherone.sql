@@ -499,7 +499,7 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE name = 'Teamwork'));
 
 INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, workplace_id) VALUES
-    ('Webscraping automatisation','',NULL,NULL,NULL,NULL,NULL,NULL,(SELECT workplace_id FROM workplace WHERE name = 'Ernesto Vargas'));
+    ('Webscraping automatisation','',NULL,NULL,NULL,'https://github.com/omega-800/AutomationPython',NULL,NULL,(SELECT workplace_id FROM workplace WHERE name = 'Ernesto Vargas'));
 
 INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Webscraping automatisation'),(SELECT person_id FROM person WHERE firstName = 'Georgiy'));
