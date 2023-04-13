@@ -130,6 +130,7 @@ INSERT INTO skill (hobby, type, name, description, alternateName, keywords, url,
     (TRUE, 'Applikation', 'Vue.js', 'Vue.js ist ein Open-Source-JavaScript-Framework zum Erstellen von Benutzeroberflächen und Single-Page-Anwendungen.', 'VueJS', 'Vue.js, VueJS, JavaScript-Framework, Front-End-Entwicklung', 'https://vuejs.org/', '3.2.29', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 45),
     (TRUE, 'Applikation', 'Selenium', 'Selenium ist eine Suite von Tools zum Automatisieren von Webbrowsern auf vielen Plattformen.', 'Selenium WebDriver', 'Selenium, Selenium WebDriver, Automatisierte Tests, Webtests', 'https://www.selenium.dev/', '4.1.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 75),
     (FALSE, 'Applikation', 'Swing', 'Swing ist ein GUI-Widget-Toolkit für Java, das die Erstellung von Desktop-Anwendungen mit grafischer Benutzeroberfläche ermöglicht.', 'Java Swing', 'Swing, Java, GUI, Bibliothek', 'https://docs.oracle.com/javase/tutorial/uiswing/', 'Java 16', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 40),
+    (TRUE, 'Applikation', 'Ursina', '', 'Ursina-Engine', 'Python, Ursina, Game Engine, Game Development,', 'https://www.ursinaengine.org/', '5.2.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 40),
     (FALSE, 'Applikation', 'GlassFish', 'GlassFish ist ein kostenloses und Open-Source-Application-Server für das Erstellen und Bereitstellen von Webanwendungen auf der Java-EE-Plattform.', 'GlassFish Server', 'GlassFish, Anwendungsserver, Java EE', 'https://javaee.github.io/glassfish/', '5.1.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Umgebung'), 25),
     (FALSE, 'Applikation', 'Tomcat7', 'Apache Tomcat 7 ist eine Open-Source-Softwareimplementierung der Java Servlet, JavaServer Pages, Java Expression Language und Java WebSocket-Technologien.', 'Apache Tomcat 7', 'Tomcat, Anwendungsserver, Servlet-Container', 'http://tomcat.apache.org/tomcat-7.0-doc/', '7.0.107', (SELECT applicationType_id FROM applicationType WHERE name = 'Umgebung'), 35),
     (TRUE, 'Applikation', 'Word', 'Microsoft Word ist eine Textverarbeitungssoftware, die von Microsoft entwickelt und veröffentlicht wurde.', 'Microsoft Word', 'Microsoft Word, Textverarbeitung, Texteditor', 'https://www.microsoft.com/de-de/microsoft-365/word', 'Microsoft Word 2021', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 95),
@@ -169,6 +170,7 @@ INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'Unity'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Spielentwicklung')),
     ((SELECT skill_id FROM skill WHERE name = 'Pygame'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Spielentwicklung')),
     ((SELECT skill_id FROM skill WHERE name = 'Panda3D'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Spielentwicklung')),
+    ((SELECT skill_id FROM skill WHERE name = 'Ursina'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Spielentwicklung')),
     ((SELECT skill_id FROM skill WHERE name = 'React'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend')),
     ((SELECT skill_id FROM skill WHERE name = 'React'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Frontend')),
     ((SELECT skill_id FROM skill WHERE name = 'Vue.js'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Frontend')),
@@ -496,7 +498,7 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE name = 'Teamwork'));
 
 INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, workplace_id) VALUES
-    ('Webscraping automatisation','',NULL,NULL,NULL,NULL,NULL,NULL,(SELECT workplace_id FROM workplace WHERE name = 'Ernesto Vargas'));
+    ('Webscraping automatisation','',NULL,NULL,NULL,'https://github.com/omega-800/AutomationPython',NULL,NULL,(SELECT workplace_id FROM workplace WHERE name = 'Ernesto Vargas'));
 
 INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Webscraping automatisation'),(SELECT person_id FROM person WHERE firstName = 'Georgiy'));
@@ -511,21 +513,23 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Webscraping automatisation'),(SELECT skill_id FROM skill WHERE name = 'Selbstständigkeit'));
 
 INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, workplace_id) VALUES
-    ('Portfolio','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Finanzplaner','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Textbasiertes Spiel','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Roguelike Dungeon Spiel 1','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Portfolio','',NULL,NULL,'https://portfolio-chirokikh-georgiy.web.app/','https://github.com/omega-800/curriculum-vitae-typescript',NULL,NULL,NULL),
+    ('Finanzplaner','',NULL,NULL,NULL,'https://github.com/omega-800/budgetplanner-python',NULL,NULL,NULL),
+    ('Textbasiertes Spiel Python','',NULL,NULL,NULL,'https://github.com/omega-800/stranded-python',NULL,NULL,NULL),
+    ('Textbasiertes Spiel C#','',NULL,NULL,NULL,'https://github.com/omega-800/stranded',NULL,NULL,NULL),
+    ('Roguelike Dungeon Spiel 1','',NULL,NULL,NULL,'https://github.com/omega-800/dungeon_game',NULL,NULL,NULL),
     ('Roguelike Dungeon Spiel 2','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Roguelike Dungeon Spiel 3','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    ('Roguelike Dungeon Spiel 3','',NULL,NULL,NULL,'https://github.com/omega-800/roguelike-game',NULL,NULL,NULL),
     ('Raketen Spiel','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
     ('Minecraft Kopie','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
     ('Immobilien Webseite','',NULL,NULL,NULL,NULL,NULL,(SELECT person_id FROM person WHERE firstName = 'Alexey'),NULL),
-    ('RusFrauenTreff Webseite','',NULL,NULL,NULL,NULL,NULL,(SELECT person_id FROM person WHERE firstName = 'Tatiana'),NULL);
+    ('RusFrauenTreff Webseite','',NULL,NULL,NULL,'https://github.com/omega-800/rusfrauentreff',NULL,(SELECT person_id FROM person WHERE firstName = 'Tatiana'),NULL);
 
 INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Portfolio'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Finanzplaner'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
-    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel Python'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel C#'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 1'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 2'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
@@ -553,12 +557,17 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Finanzplaner'),(SELECT skill_id FROM skill WHERE name = 'Logisches Denken')),
     ((SELECT project_id FROM project WHERE name = 'Finanzplaner'),(SELECT skill_id FROM skill WHERE name = 'Selbstständigkeit')),
     ((SELECT project_id FROM project WHERE name = 'Finanzplaner'),(SELECT skill_id FROM skill WHERE name = 'Lernfähigkeit')),
-    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel'),(SELECT skill_id FROM skill WHERE name = 'C#')),
-    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel'),(SELECT skill_id FROM skill WHERE name = 'Python')),
-    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel'),(SELECT skill_id FROM skill WHERE name = 'Kreativität')),
-    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel'),(SELECT skill_id FROM skill WHERE name = 'Lernfähigkeit')),
-    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel'),(SELECT skill_id FROM skill WHERE name = 'Englisch')),
-    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel'),(SELECT skill_id FROM skill WHERE name = 'Selbstständigkeit')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel Python'),(SELECT skill_id FROM skill WHERE name = 'Python')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel Python'),(SELECT skill_id FROM skill WHERE name = 'Kreativität')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel Python'),(SELECT skill_id FROM skill WHERE name = 'Lernfähigkeit')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel Python'),(SELECT skill_id FROM skill WHERE name = 'Englisch')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel Python'),(SELECT skill_id FROM skill WHERE name = 'Selbstständigkeit')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel C#'),(SELECT skill_id FROM skill WHERE name = 'C#')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel C#'),(SELECT skill_id FROM skill WHERE name = 'Logisches Denken')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel C#'),(SELECT skill_id FROM skill WHERE name = 'Kreativität')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel C#'),(SELECT skill_id FROM skill WHERE name = 'Lernfähigkeit')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel C#'),(SELECT skill_id FROM skill WHERE name = 'Englisch')),
+    ((SELECT project_id FROM project WHERE name = 'Textbasiertes Spiel C#'),(SELECT skill_id FROM skill WHERE name = 'Selbstständigkeit')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 1'),(SELECT skill_id FROM skill WHERE name = 'Unity')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 1'),(SELECT skill_id FROM skill WHERE name = 'C#')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 1'),(SELECT skill_id FROM skill WHERE name = 'GIMP')),
@@ -573,7 +582,7 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 2'),(SELECT skill_id FROM skill WHERE name = 'Kreativität')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 2'),(SELECT skill_id FROM skill WHERE name = 'Selbstständigkeit')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE name = 'Python')),
-    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE name = 'Python')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE name = 'Ursina')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE name = 'GIMP')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE name = 'Logisches Denken')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE name = 'Kreativität')),
