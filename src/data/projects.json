@@ -1,20 +1,72 @@
 {
-    "projectName":{
-        "@context": "http://schema.org/",
-        "@type": "SoftwareSourceCode",
-        "identifier": "@yourname/YourProject",
-        "name": "YourProject",
-        "programmingLanguage": {
-            "@type": "ComputerLanguage",
-            "name": "Swift",
-            "url": "https://swift.org"
+    "@context": "https://schema.org/",
+    "@type": "ItemList",
+    "name": "IT Projects",
+    "description": "A collection of IT projects i have developed",
+    "keywords": "Software Development, Projects",
+    "itemListElement": [
+        {
+            "@context": "http://schema.org/",
+            "@type": "SoftwareSourceCode",
+            "@id":"X01",
+            "name": "Finance Planner",
+            "description":"",
+            "category":"C06",
+            "url":"",
+            "thumbnail":"",
+            "images":[ "" ],
+            "github":"",
+            "skills": [ 
+                "K02L08",
+                "K03L03" 
+            ],
+            "author": ["me"],
+            "from":2023,
+            "to":2023
         },
-        "author": {
-            "@type": "Person",
-            "@id": "https://github.com/yourname",
-            "givenName": "First Name",
-            "middleName": "Middle Name",
-            "familyName": "Last Name"
+        {
+            "@context": "http://schema.org/",
+            "@type": "SoftwareSourceCode",
+            "@id":"X02",
+            "name": "ID age verification",
+            "description":"",
+            "category":"C06",
+            "url":"",
+            "thumbnail":"",
+            "images":[ "" ],
+            "github":"",
+            "skills": [ 
+                "K02L01",
+                "K02L02", 
+                "K02L04", 
+                "K02L07", 
+                "K02L13"
+            ],
+            "author": ["me"],
+            "from":2023,
+            "to":2023
+        },
+        {
+            "@context": "http://schema.org/",
+            "@type": "SoftwareSourceCode",
+            "@id":"X03",
+            "name": "Dungeon roguelike",
+            "description":"!t!projects_unity_dungeon",
+            "category":"C06",
+            "url":"",
+            "thumbnail":"",
+            "images":[ "" ],
+            "github":"",
+            "skills": [ 
+                "K02L01",
+                "K02L02", 
+                "K02L04", 
+                "K02L07", 
+                "K02L13"
+            ],
+            "author": ["me"],
+            "from":2023,
+            "to":2023
         }
-    }
+    ]
 }

@@ -59,17 +59,165 @@
   - link : string
   - address_id : int
 
-## site
+*oknewplan*
 
-- home
-  - about
-  - skills
-  - 
-- career
-  - schools
-  - jobs
-- it
-  - projects
-- art
-  - projects
-- other hobbies
+- personalinfo
+  - name
+  - birthdate
+  - nationalities[]
+  - birthplace
+  - _experience[]
+  - knowledge[]
+    - _generalskills
+    - _coding
+    - _software
+    - _languages
+    - _art
+  - _projects[]
+  - _referencecontacts[]
+
+- _referencecontact_
+  - @id
+  - name
+  - description
+  - email
+  - phone
+
+- _category_
+  - @id
+  - name
+  - description
+  - image
+  - thumbnail
+  - link?
+
+- _experienceitem_
+  - @id
+  - name
+  - description
+  - _categoryid
+  - image
+  - thumbnail
+  - yearfrom
+  - yearto
+  - link
+  - documents[]?
+  - _referencecontact[]?
+
+- _knowledgeitem_
+  - @id
+  - name
+  - description
+  - _categoryid
+  - skillpercent
+  - proficiency
+  - image
+  - thumbnail
+  - timeknown?
+  - link?
+
+- _projectitem_
+  - @id
+  - name
+  - description
+  - timefrom
+  - timeto
+  - _knowledgeid[]
+  - category
+  - _link?
+  - image[]
+  - thumbnail
+
+- projects_categories
+  - web
+  - game
+  - seo
+  - teaching
+
+- informatik
+  - web_front
+  - web_back
+  - db
+  - office
+- kunst
+  - musik
+  - zeichnen etc
+- pädagogik
+  - aushilfe
+  - hort
+  - einzelunterricht
+- gesundheit
+  - sport
+  - natur
+  - kochen
+- allgemein
+  - persönlich
+  - sprachen
+  - schulwissen
+
+- projects
+  - it
+    - inteco
+      - SCSS
+      - affolter
+      - bootstrapReplaceOrCreate
+      - fillUserCountries
+      - probeIPA_altersüberprüfung
+      - produzenten
+      - translate
+      - SEO
+      - ageVerification
+      - clearImageCache
+      - mariabuehler
+      - probeIPA_produzenten
+      - selenium
+      - updatedNodesExport 
+      - SQL
+      - dmviniDocker
+      - emails
+      - firstwineAwards
+      - googleECommerce
+      - i18n
+      - logConfigurable
+      - metaTags
+      - passwordReset
+      - raspi
+      - shareButtons
+      - shopSettingsPage
+      - tasteProfile
+    - fernesto vargas
+      - webscraping
+    - meins
+      - portfolio
+      - python finance
+      - rocketgame unity
+      - dungeongame unity 
+      - dungeongame python
+      - textgame python
+      - minecraft python
+      - website dad
+      - website mom
+      - 
+      - kriztunez
+      - shop react
+  - art
+    - kusudama
+    - origami
+    - graffiti
+    - drawing
+    - painting
+    - sewing
+    - woodwork
+    - mosaic
+    - guitar
+    - bass
+    - drums
+    - ableton
+    - fl studio
+  - other
+    - bike
+    - cevi
+    - camping
+    - hiking
+    - cooking
+

@@ -23,7 +23,6 @@
         "logo":"",
         "name":"Probstei",
         "url":"https://www.stadt-zuerich.ch/schulen/de/probstei.html",
-        "fromto":"2008 - 2014",
         "type":"primarschule"
     },
     "hopro":{
@@ -52,7 +51,6 @@
         "logo":"",
         "name":"Hohe Promenade",
         "url":"https://www.kshp.ch/",
-        "fromto":"2014 - 2016",
         "type":"gymnasium"
     },
     "sek":{
@@ -84,7 +82,6 @@
         "sameAs" : [
             "https://www.stadt-zuerich.ch/schulen/de/herzogenmuehle.html"
         ],
-        "fromto":"2016 - 2017",
         "type":"sekundarschule"
     },
     "ims":{
@@ -113,7 +110,6 @@
         "logo":"",
         "name":"Hottingen",
         "url":"https://www.ksh.ch/angebot/informatikmittelschule",
-        "fromto":"2017 - 2020",
         "type":"Informatikmittelschule"
     },
     "bzz":{
@@ -141,7 +137,6 @@
         "logo":"",
         "name":"Berufsbildungszentrum Zürichsee",
         "url":"https://www.bzz.ch/berufslehre/informatik-mediamatik/informatikerin-efz-informatiker-in-efz-ims/",
-        "fromto":"2017 - 2020",
         "type":"Informatikmittelschule"
     }
 }

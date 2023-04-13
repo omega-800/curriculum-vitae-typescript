@@ -1,0 +1,457 @@
+[
+ {
+  "skill_skillsubcategory_id": "02c9df42-d78a-4a7b-819b-0f52660a0717",
+  "skillsubcategory_id": "abec35c1-a653-4798-888b-32b35738ae3f",
+  "skill_id": "3427aeb1-d2d9-446c-b1c2-547a8ad38921"
+ },
+ {
+  "skill_skillsubcategory_id": "03a9d918-28b9-4fd1-9455-fe7465f492ba",
+  "skillsubcategory_id": "ab1f4458-fe99-4dbf-984d-023f0476dddd",
+  "skill_id": "0139fbe6-d764-4a5b-9105-e978b972b44a"
+ },
+ {
+  "skill_skillsubcategory_id": "04fdae08-c64d-4a39-90af-8bf7d6b427a9",
+  "skillsubcategory_id": "412f57e4-319d-4e20-8a6e-1ac86a54a1ce",
+  "skill_id": "79403c5b-297f-4841-ba6f-6181cb123433"
+ },
+ {
+  "skill_skillsubcategory_id": "067dd728-2979-499c-aa5c-8b28794c498a",
+  "skillsubcategory_id": "412f57e4-319d-4e20-8a6e-1ac86a54a1ce",
+  "skill_id": "eda37ede-04ae-4192-b18b-f31008942dfd"
+ },
+ {
+  "skill_skillsubcategory_id": "06ac1b0a-4455-4142-bbe5-921aca00b9ff",
+  "skillsubcategory_id": "cc8c0d1a-de6f-4987-87ff-cd8b3e4f1946",
+  "skill_id": "078deb3b-4f56-41fc-af50-8e4e38d2ed55"
+ },
+ {
+  "skill_skillsubcategory_id": "08d2fa37-fa4e-4066-8551-769e9e52a8c8",
+  "skillsubcategory_id": "e58f3ea5-f9e7-47a0-9513-5d598fec1fda",
+  "skill_id": "576897bd-456d-4825-8263-69d5e574cba9"
+ },
+ {
+  "skill_skillsubcategory_id": "0b212beb-2d31-412a-b27d-1db0f8cc5c22",
+  "skillsubcategory_id": "6fd94184-a19c-4bbf-9809-c3e4c2e9baaf",
+  "skill_id": "224f7d7f-6153-4ba9-880c-982d09874e6f"
+ },
+ {
+  "skill_skillsubcategory_id": "0f05906c-bf4b-4915-b161-b01823e2b54b",
+  "skillsubcategory_id": "e58f3ea5-f9e7-47a0-9513-5d598fec1fda",
+  "skill_id": "d354ce5d-3b75-4469-b4d2-c6a3742c5657"
+ },
+ {
+  "skill_skillsubcategory_id": "0fc1ffb2-9ab5-4e32-9a04-baa017286f22",
+  "skillsubcategory_id": "e58f3ea5-f9e7-47a0-9513-5d598fec1fda",
+  "skill_id": "8c26401c-56c1-43e3-94c1-3f903557745a"
+ },
+ {
+  "skill_skillsubcategory_id": "105128f6-aca9-4dad-b120-bb3b569a3fb6",
+  "skillsubcategory_id": "d86b3a1a-3f90-476b-9f1a-2d81ce70c985",
+  "skill_id": "0139fbe6-d764-4a5b-9105-e978b972b44a"
+ },
+ {
+  "skill_skillsubcategory_id": "13facbd2-56ba-44cc-a935-ee3081222293",
+  "skillsubcategory_id": "ab1f4458-fe99-4dbf-984d-023f0476dddd",
+  "skill_id": "bcf73c9b-c0f4-4af8-a64a-775597644549"
+ },
+ {
+  "skill_skillsubcategory_id": "13fb291e-8c62-4fb5-a71a-ce1a2c5040b2",
+  "skillsubcategory_id": "304ca376-1335-4b50-8a5e-12c1758265a0",
+  "skill_id": "81de6c9f-3dd4-46e9-97c2-495f4e7baee1"
+ },
+ {
+  "skill_skillsubcategory_id": "15c34375-f376-42f0-b685-2655419be737",
+  "skillsubcategory_id": "6a09ec56-c63c-40f2-8f8c-9bc880a4db38",
+  "skill_id": "4885104d-ae57-4897-aff1-3097be4f9ae5"
+ },
+ {
+  "skill_skillsubcategory_id": "20e2cdc2-ae4c-4399-8daf-b9f5bef261d8",
+  "skillsubcategory_id": "e58f3ea5-f9e7-47a0-9513-5d598fec1fda",
+  "skill_id": "3562596a-8654-4f7c-9a23-0310e94679c9"
+ },
+ {
+  "skill_skillsubcategory_id": "27056cb9-86f9-4533-8c49-07998390fa93",
+  "skillsubcategory_id": "26434aad-7a25-44d4-b1f5-09205734afec",
+  "skill_id": "013c60e2-3a26-4fba-805d-e8915aec7088"
+ },
+ {
+  "skill_skillsubcategory_id": "30a64e2e-3678-41fb-aa3c-4b5436df3075",
+  "skillsubcategory_id": "26434aad-7a25-44d4-b1f5-09205734afec",
+  "skill_id": "8751db9b-d6f2-493a-af97-7f66ee26dde0"
+ },
+ {
+  "skill_skillsubcategory_id": "363b06e5-5126-4031-98e5-1b36392a9a15",
+  "skillsubcategory_id": "1872135f-beaa-4092-9702-56ce28b0c8b8",
+  "skill_id": "151fc1db-acf1-49d7-ad03-378dc824c02b"
+ },
+ {
+  "skill_skillsubcategory_id": "375299ec-243a-454e-9fbd-a6ed2585d550",
+  "skillsubcategory_id": "0681cb06-9b98-4303-9636-0c68d494ed44",
+  "skill_id": "7dc96de9-4c2a-43f8-95c4-74bd58f918ce"
+ },
+ {
+  "skill_skillsubcategory_id": "3edff97f-c93e-4492-a6b8-73a0e6c6fd5b",
+  "skillsubcategory_id": "7c2f54be-5ff9-4a74-b275-e36cb53fb4e6",
+  "skill_id": "c1323795-861d-496b-808f-adfe65015185"
+ },
+ {
+  "skill_skillsubcategory_id": "43adc0c2-cd06-40bd-b8e7-4e723851ae75",
+  "skillsubcategory_id": "42acb1fd-ea26-4ef9-8d3d-a280b252b873",
+  "skill_id": "ef5786f4-c87b-49d0-bce2-95c26505c259"
+ },
+ {
+  "skill_skillsubcategory_id": "44bbcd10-a082-41a7-b3b0-35f6630d21b3",
+  "skillsubcategory_id": "d86b3a1a-3f90-476b-9f1a-2d81ce70c985",
+  "skill_id": "bc9cbc62-1cc1-432d-a18e-470bc3729fc8"
+ },
+ {
+  "skill_skillsubcategory_id": "44d1fe36-5864-4f0a-9668-9dd0b0de5277",
+  "skillsubcategory_id": "412f57e4-319d-4e20-8a6e-1ac86a54a1ce",
+  "skill_id": "6e88fa55-0621-4614-ad50-350240bdba95"
+ },
+ {
+  "skill_skillsubcategory_id": "45f299e3-c53a-45b0-bc57-1eafd3652dfa",
+  "skillsubcategory_id": "42acb1fd-ea26-4ef9-8d3d-a280b252b873",
+  "skill_id": "6e960ae8-ac3e-40aa-bbda-3b285ddc0683"
+ },
+ {
+  "skill_skillsubcategory_id": "49a40f2a-ab0c-489c-855a-af5c35d4e9b9",
+  "skillsubcategory_id": "651c4773-4482-4ed1-b868-20e99a444e5c",
+  "skill_id": "3c27632e-90c4-4d2a-a16b-716be70a5a20"
+ },
+ {
+  "skill_skillsubcategory_id": "4b4609fc-7554-4eb6-ad94-f0326e4558d9",
+  "skillsubcategory_id": "6fd94184-a19c-4bbf-9809-c3e4c2e9baaf",
+  "skill_id": "6a1ad09e-8949-4b55-a819-56e114257af4"
+ },
+ {
+  "skill_skillsubcategory_id": "4c11e782-be6c-4c2b-9a82-0ec0067c23cf",
+  "skillsubcategory_id": "42acb1fd-ea26-4ef9-8d3d-a280b252b873",
+  "skill_id": "2c320b0e-9140-4020-88e8-4bf73479b016"
+ },
+ {
+  "skill_skillsubcategory_id": "4c2a5c0b-d733-4951-b06c-4477cf319c6b",
+  "skillsubcategory_id": "d86b3a1a-3f90-476b-9f1a-2d81ce70c985",
+  "skill_id": "989faf5b-4538-495b-a9c1-3c282c0710c9"
+ },
+ {
+  "skill_skillsubcategory_id": "4db79e79-c56b-4a6e-8c7c-d9526e227a9e",
+  "skillsubcategory_id": "2aa0dc55-5954-4ff0-b46e-8aa48cfaa336",
+  "skill_id": "e5cd3b23-4583-494d-8b0a-4a7bbbb2d4dc"
+ },
+ {
+  "skill_skillsubcategory_id": "503bb8b4-d0eb-42b8-800c-ecb47334beed",
+  "skillsubcategory_id": "412f57e4-319d-4e20-8a6e-1ac86a54a1ce",
+  "skill_id": "3c53d6a0-ff5f-4a56-86ee-b588a9c5d983"
+ },
+ {
+  "skill_skillsubcategory_id": "54c443ec-1737-451b-a67d-84a300d3a49b",
+  "skillsubcategory_id": "e58f3ea5-f9e7-47a0-9513-5d598fec1fda",
+  "skill_id": "2aff71e6-13ca-4fb5-bcb3-3e275fc7fa04"
+ },
+ {
+  "skill_skillsubcategory_id": "5cd177ba-4644-4e57-8cfb-63a9ee3dea89",
+  "skillsubcategory_id": "ab1f4458-fe99-4dbf-984d-023f0476dddd",
+  "skill_id": "acdbe28b-18a6-4c75-ac59-cb426b60f2da"
+ },
+ {
+  "skill_skillsubcategory_id": "5cfc4a88-7599-416e-bdc0-cc45b43ab950",
+  "skillsubcategory_id": "304ca376-1335-4b50-8a5e-12c1758265a0",
+  "skill_id": "fdaf653b-d7aa-41fc-8a24-8b44c1abf9c1"
+ },
+ {
+  "skill_skillsubcategory_id": "5d44dbe5-0e1a-4554-bbe4-ea456826cc32",
+  "skillsubcategory_id": "d86b3a1a-3f90-476b-9f1a-2d81ce70c985",
+  "skill_id": "3997a173-4057-4ec0-b9f5-e032942bf3d3"
+ },
+ {
+  "skill_skillsubcategory_id": "5dc4ce35-1b86-47a0-a7bf-482756b93962",
+  "skillsubcategory_id": "6fd94184-a19c-4bbf-9809-c3e4c2e9baaf",
+  "skill_id": "d7d6ef30-3641-4b00-8385-83db0e1d2e98"
+ },
+ {
+  "skill_skillsubcategory_id": "60a2b252-7fa3-4882-be34-063e6acf307e",
+  "skillsubcategory_id": "e58f3ea5-f9e7-47a0-9513-5d598fec1fda",
+  "skill_id": "ad7dd243-0adf-48cd-844f-d20b8b69ac62"
+ },
+ {
+  "skill_skillsubcategory_id": "6193db40-0fef-47da-9807-f731f876adaa",
+  "skillsubcategory_id": "d86b3a1a-3f90-476b-9f1a-2d81ce70c985",
+  "skill_id": "013c60e2-3a26-4fba-805d-e8915aec7088"
+ },
+ {
+  "skill_skillsubcategory_id": "688f375f-5648-43ba-bc7a-543dcb37dc79",
+  "skillsubcategory_id": "d86b3a1a-3f90-476b-9f1a-2d81ce70c985",
+  "skill_id": "e504c205-b7f3-4fce-8f60-c99a6bd44033"
+ },
+ {
+  "skill_skillsubcategory_id": "6aadd4d1-ac3d-4035-a6f9-9ec0ba9d2dfa",
+  "skillsubcategory_id": "e58f3ea5-f9e7-47a0-9513-5d598fec1fda",
+  "skill_id": "ecf29ec7-e5fa-48a3-ac62-7b4e20f3f1ed"
+ },
+ {
+  "skill_skillsubcategory_id": "6f6a679c-79f3-4cc3-920b-a1e6bf16249c",
+  "skillsubcategory_id": "f38d46d8-31d2-4093-a560-6752fa690826",
+  "skill_id": "2e5f71a2-41b5-4521-9dee-f5068461784c"
+ },
+ {
+  "skill_skillsubcategory_id": "70bc81c2-86e6-413b-a157-56a75f177b0e",
+  "skillsubcategory_id": "304ca376-1335-4b50-8a5e-12c1758265a0",
+  "skill_id": "f631cc69-6c5a-4243-8805-48724bb0626d"
+ },
+ {
+  "skill_skillsubcategory_id": "71bde1b3-386f-4b1a-9162-76312909be39",
+  "skillsubcategory_id": "6fd94184-a19c-4bbf-9809-c3e4c2e9baaf",
+  "skill_id": "3dba1ffd-430f-4ad3-a767-9b0dc65f5ba8"
+ },
+ {
+  "skill_skillsubcategory_id": "7282c4e5-be0f-47a0-a767-cb3e554f4bce",
+  "skillsubcategory_id": "42acb1fd-ea26-4ef9-8d3d-a280b252b873",
+  "skill_id": "f0750ae1-0a00-4641-a10f-4976049916aa"
+ },
+ {
+  "skill_skillsubcategory_id": "73732b45-f98e-4610-bff2-b3a92d90eadc",
+  "skillsubcategory_id": "ab1f4458-fe99-4dbf-984d-023f0476dddd",
+  "skill_id": "6fb6b653-3c12-45fb-a51a-f748b5e0eeeb"
+ },
+ {
+  "skill_skillsubcategory_id": "74bb40da-db70-4c50-979f-1e923d369c40",
+  "skillsubcategory_id": "abec35c1-a653-4798-888b-32b35738ae3f",
+  "skill_id": "d910859c-76fb-4f84-9195-15a3dcce2c50"
+ },
+ {
+  "skill_skillsubcategory_id": "77fb11cc-c10e-4a73-801f-a1f72ef923d3",
+  "skillsubcategory_id": "304ca376-1335-4b50-8a5e-12c1758265a0",
+  "skill_id": "3c27632e-90c4-4d2a-a16b-716be70a5a20"
+ },
+ {
+  "skill_skillsubcategory_id": "7af2fefc-1d44-4c30-9734-e6be0b85f7fc",
+  "skillsubcategory_id": "ab1f4458-fe99-4dbf-984d-023f0476dddd",
+  "skill_id": "bc9cbc62-1cc1-432d-a18e-470bc3729fc8"
+ },
+ {
+  "skill_skillsubcategory_id": "8247aa19-d2eb-49f8-90bf-1eb75957757e",
+  "skillsubcategory_id": "6fd94184-a19c-4bbf-9809-c3e4c2e9baaf",
+  "skill_id": "bde649e2-1f1e-416d-a757-48e52512907f"
+ },
+ {
+  "skill_skillsubcategory_id": "82f013f7-3203-4f2f-b2b0-6f8e742611b0",
+  "skillsubcategory_id": "412f57e4-319d-4e20-8a6e-1ac86a54a1ce",
+  "skill_id": "ddbf5ed1-2156-46ba-acf8-1288702838b2"
+ },
+ {
+  "skill_skillsubcategory_id": "83855110-54cf-400f-a201-188acd7ee0e8",
+  "skillsubcategory_id": "d86b3a1a-3f90-476b-9f1a-2d81ce70c985",
+  "skill_id": "078deb3b-4f56-41fc-af50-8e4e38d2ed55"
+ },
+ {
+  "skill_skillsubcategory_id": "8434ac5e-89f2-4ab8-a393-c88c19a7ef34",
+  "skillsubcategory_id": "ab1f4458-fe99-4dbf-984d-023f0476dddd",
+  "skill_id": "23dc8c5c-06ba-47f9-967f-d17b806292f4"
+ },
+ {
+  "skill_skillsubcategory_id": "89ed9e79-78d4-4d18-b7c9-02c35967b6b6",
+  "skillsubcategory_id": "abec35c1-a653-4798-888b-32b35738ae3f",
+  "skill_id": "36fe43d5-582c-43c5-b5b2-8cc42ee0701f"
+ },
+ {
+  "skill_skillsubcategory_id": "8a9f6482-aea3-4936-85b2-0a26c105b0b9",
+  "skillsubcategory_id": "abec35c1-a653-4798-888b-32b35738ae3f",
+  "skill_id": "2779cb26-759b-4a00-8963-2bc6515fc1a3"
+ },
+ {
+  "skill_skillsubcategory_id": "8b8282d8-e3ff-4c70-81e6-732c8df58811",
+  "skillsubcategory_id": "304ca376-1335-4b50-8a5e-12c1758265a0",
+  "skill_id": "3c27632e-90c4-4d2a-a16b-716be70a5a20"
+ },
+ {
+  "skill_skillsubcategory_id": "8ba56c25-95ab-4ccc-a2c1-9546faee7185",
+  "skillsubcategory_id": "d86b3a1a-3f90-476b-9f1a-2d81ce70c985",
+  "skill_id": "d017e5e4-a42d-498a-b19a-e6e2bf506bb9"
+ },
+ {
+  "skill_skillsubcategory_id": "8cf994a7-7b40-4a50-b79b-824120a8575e",
+  "skillsubcategory_id": "26434aad-7a25-44d4-b1f5-09205734afec",
+  "skill_id": "d017e5e4-a42d-498a-b19a-e6e2bf506bb9"
+ },
+ {
+  "skill_skillsubcategory_id": "8ef0f545-78e3-4089-bb74-8324cd7f9fc2",
+  "skillsubcategory_id": "651c4773-4482-4ed1-b868-20e99a444e5c",
+  "skill_id": "2d486a9d-0e68-4397-a984-ceacd8893b22"
+ },
+ {
+  "skill_skillsubcategory_id": "9353e49e-a66f-424e-8a51-5055dcb5c214",
+  "skillsubcategory_id": "96c1dfe8-223e-452d-93e1-7ca08788b6a6",
+  "skill_id": "2d486a9d-0e68-4397-a984-ceacd8893b22"
+ },
+ {
+  "skill_skillsubcategory_id": "93fc9cfc-42b4-435e-b11b-5df481271476",
+  "skillsubcategory_id": "ab1f4458-fe99-4dbf-984d-023f0476dddd",
+  "skill_id": "645b68f3-2205-44c1-8dd5-f54858ab12ef"
+ },
+ {
+  "skill_skillsubcategory_id": "988f68ee-9825-485c-b225-81e26c610ebf",
+  "skillsubcategory_id": "ab1f4458-fe99-4dbf-984d-023f0476dddd",
+  "skill_id": "cc0b7096-9c8c-458f-bea7-a17c8512af3c"
+ },
+ {
+  "skill_skillsubcategory_id": "9a939b83-2501-4c02-8684-352f5d3a0915",
+  "skillsubcategory_id": "26434aad-7a25-44d4-b1f5-09205734afec",
+  "skill_id": "aa4e97b4-b3c5-4df8-92ac-dc93a09226a9"
+ },
+ {
+  "skill_skillsubcategory_id": "9f7c282b-7710-40bb-a83a-214d7e7b9ce3",
+  "skillsubcategory_id": "e58f3ea5-f9e7-47a0-9513-5d598fec1fda",
+  "skill_id": "2f5a031c-8260-4fbb-a629-a95805ac2231"
+ },
+ {
+  "skill_skillsubcategory_id": "a11ec6b2-90b2-441e-bad1-9aa536960a5f",
+  "skillsubcategory_id": "26434aad-7a25-44d4-b1f5-09205734afec",
+  "skill_id": "240da33f-2c00-4d7e-9b3b-e4c201251d9a"
+ },
+ {
+  "skill_skillsubcategory_id": "a6fcbcef-d7d6-4065-8cec-319d0c5bafbc",
+  "skillsubcategory_id": "0777078d-1fdc-4a15-8769-e8e7bc9ef1f8",
+  "skill_id": "0bf78b04-463f-41c1-b8ad-0127c6e2d931"
+ },
+ {
+  "skill_skillsubcategory_id": "aa6938e6-1a3e-48f7-90ad-db688ae58f9a",
+  "skillsubcategory_id": "7c2f54be-5ff9-4a74-b275-e36cb53fb4e6",
+  "skill_id": "d1099d96-80fa-481e-9a9b-4ccb3b54e6a1"
+ },
+ {
+  "skill_skillsubcategory_id": "aa879942-4ed7-44d0-885f-e730976f0d5a",
+  "skillsubcategory_id": "412f57e4-319d-4e20-8a6e-1ac86a54a1ce",
+  "skill_id": "13fdaade-f497-4f18-bc02-df7380b4ccff"
+ },
+ {
+  "skill_skillsubcategory_id": "ad0d85f7-cb22-4c44-b474-51beb1decf9f",
+  "skillsubcategory_id": "abec35c1-a653-4798-888b-32b35738ae3f",
+  "skill_id": "d1099d96-80fa-481e-9a9b-4ccb3b54e6a1"
+ },
+ {
+  "skill_skillsubcategory_id": "b08474e1-e9cb-494c-9fb9-12d0ca176dde",
+  "skillsubcategory_id": "887a9256-4bce-4df6-ba4d-32b68ceabc27",
+  "skill_id": "d0b05ff4-16c8-4ac1-9ead-0027032c5670"
+ },
+ {
+  "skill_skillsubcategory_id": "b11a9527-9daf-423a-9f5e-f1719379971a",
+  "skillsubcategory_id": "412f57e4-319d-4e20-8a6e-1ac86a54a1ce",
+  "skill_id": "34cf8e80-d3e3-498d-874a-83d62fef5c5a"
+ },
+ {
+  "skill_skillsubcategory_id": "b2aabe40-59a8-4cce-b3cc-590bfa2e367d",
+  "skillsubcategory_id": "412f57e4-319d-4e20-8a6e-1ac86a54a1ce",
+  "skill_id": "078deb3b-4f56-41fc-af50-8e4e38d2ed55"
+ },
+ {
+  "skill_skillsubcategory_id": "b3915d92-2566-490f-875b-00ac52573a32",
+  "skillsubcategory_id": "e58f3ea5-f9e7-47a0-9513-5d598fec1fda",
+  "skill_id": "9deb5f75-fd2b-4ea6-8d4b-6c11f2a253c6"
+ },
+ {
+  "skill_skillsubcategory_id": "bb5ee069-f71d-407d-ab51-9e19f43fe9a0",
+  "skillsubcategory_id": "d86b3a1a-3f90-476b-9f1a-2d81ce70c985",
+  "skill_id": "645b68f3-2205-44c1-8dd5-f54858ab12ef"
+ },
+ {
+  "skill_skillsubcategory_id": "bce6e9fc-f981-447a-bc8d-e4ca50bb059f",
+  "skillsubcategory_id": "1872135f-beaa-4092-9702-56ce28b0c8b8",
+  "skill_id": "85b7fbb2-3f40-400c-9e43-4a9b6f227494"
+ },
+ {
+  "skill_skillsubcategory_id": "bd3f76de-45c4-49a0-aef9-5253d8e2c6b0",
+  "skillsubcategory_id": "d86b3a1a-3f90-476b-9f1a-2d81ce70c985",
+  "skill_id": "bcf73c9b-c0f4-4af8-a64a-775597644549"
+ },
+ {
+  "skill_skillsubcategory_id": "c09afeb9-3c90-4d9a-ba15-f8af2b558c9f",
+  "skillsubcategory_id": "412f57e4-319d-4e20-8a6e-1ac86a54a1ce",
+  "skill_id": "f1ce5c41-8acf-4a72-9a88-433a9aa3e355"
+ },
+ {
+  "skill_skillsubcategory_id": "c7c3ecc7-2bfd-4882-812a-6283155b0dd6",
+  "skillsubcategory_id": "304ca376-1335-4b50-8a5e-12c1758265a0",
+  "skill_id": "3b761188-8c4d-4209-ba8a-fa162084b7db"
+ },
+ {
+  "skill_skillsubcategory_id": "caa7bc50-f787-4cca-b96a-4ecffe25304f",
+  "skillsubcategory_id": "0777078d-1fdc-4a15-8769-e8e7bc9ef1f8",
+  "skill_id": "c51f468a-66cc-4142-96d3-8a03cbbb237b"
+ },
+ {
+  "skill_skillsubcategory_id": "cd2fec48-4e4e-42c0-b528-0120bfa6978c",
+  "skillsubcategory_id": "e58f3ea5-f9e7-47a0-9513-5d598fec1fda",
+  "skill_id": "c1323795-861d-496b-808f-adfe65015185"
+ },
+ {
+  "skill_skillsubcategory_id": "d17c1943-4ab7-4142-bd2b-a34b57db11ad",
+  "skillsubcategory_id": "e58f3ea5-f9e7-47a0-9513-5d598fec1fda",
+  "skill_id": "b2e5ea42-812e-4e01-85ed-8dca9e4120ef"
+ },
+ {
+  "skill_skillsubcategory_id": "d2c34b66-ce2c-4445-86a1-7fdf14c63ba3",
+  "skillsubcategory_id": "0681cb06-9b98-4303-9636-0c68d494ed44",
+  "skill_id": "6251c822-e615-43bf-a5bc-6cbb3fec5071"
+ },
+ {
+  "skill_skillsubcategory_id": "d71ad452-4a0e-49b7-bead-86862bbd71be",
+  "skillsubcategory_id": "ab1f4458-fe99-4dbf-984d-023f0476dddd",
+  "skill_id": "8bc713f0-cc8f-4ce1-8e06-4e7d7bb68376"
+ },
+ {
+  "skill_skillsubcategory_id": "dbbc282d-ea75-4281-a71d-0374f37f377d",
+  "skillsubcategory_id": "2aa0dc55-5954-4ff0-b46e-8aa48cfaa336",
+  "skill_id": "43026f7c-9925-4786-9428-c3757393b8e8"
+ },
+ {
+  "skill_skillsubcategory_id": "dc86c847-57d0-4423-ab4f-16957d40b0f1",
+  "skillsubcategory_id": "ab1f4458-fe99-4dbf-984d-023f0476dddd",
+  "skill_id": "989faf5b-4538-495b-a9c1-3c282c0710c9"
+ },
+ {
+  "skill_skillsubcategory_id": "e0872d67-6deb-432c-ad43-26758022424c",
+  "skillsubcategory_id": "1872135f-beaa-4092-9702-56ce28b0c8b8",
+  "skill_id": "5205546d-c0b8-4601-b8ab-2c662cb0b705"
+ },
+ {
+  "skill_skillsubcategory_id": "e57ab8b2-d61d-48a4-991f-0439287b6675",
+  "skillsubcategory_id": "0777078d-1fdc-4a15-8769-e8e7bc9ef1f8",
+  "skill_id": "013c60e2-3a26-4fba-805d-e8915aec7088"
+ },
+ {
+  "skill_skillsubcategory_id": "e6d07a06-b22d-4854-ac3d-149bf69ad904",
+  "skillsubcategory_id": "7c2f54be-5ff9-4a74-b275-e36cb53fb4e6",
+  "skill_id": "2aff71e6-13ca-4fb5-bcb3-3e275fc7fa04"
+ },
+ {
+  "skill_skillsubcategory_id": "eeee71da-369f-41c5-9e55-395652ec9d28",
+  "skillsubcategory_id": "d86b3a1a-3f90-476b-9f1a-2d81ce70c985",
+  "skill_id": "16ababfd-8297-456e-96ff-c62f4832aef0"
+ },
+ {
+  "skill_skillsubcategory_id": "f1f27a3a-ace3-4bee-877f-03274c89df36",
+  "skillsubcategory_id": "0681cb06-9b98-4303-9636-0c68d494ed44",
+  "skill_id": "26b60265-2030-445a-a603-7cb79ef486f1"
+ },
+ {
+  "skill_skillsubcategory_id": "f78abf29-300e-48da-9338-2011c7047f1f",
+  "skillsubcategory_id": "ab1f4458-fe99-4dbf-984d-023f0476dddd",
+  "skill_id": "c153a85a-0cfd-43c2-864d-a53a0f706b9a"
+ },
+ {
+  "skill_skillsubcategory_id": "f7f199b7-6764-4d62-84cc-79f5917bbfaa",
+  "skillsubcategory_id": "ab1f4458-fe99-4dbf-984d-023f0476dddd",
+  "skill_id": "2916ab37-e248-4bd0-9c1c-fce2bd440059"
+ },
+ {
+  "skill_skillsubcategory_id": "fba7a44f-ae90-47cd-aa2e-972e140fef5a",
+  "skillsubcategory_id": "6fd94184-a19c-4bbf-9809-c3e4c2e9baaf",
+  "skill_id": "03dc0486-8469-4d22-a498-b6cc5857401b"
+ },
+ {
+  "skill_skillsubcategory_id": "fbce2778-e8bb-44a1-acbe-f6e842fe9420",
+  "skillsubcategory_id": "412f57e4-319d-4e20-8a6e-1ac86a54a1ce",
+  "skill_id": "4728458e-2bbc-40c5-a796-b303425c882f"
+ }
+]

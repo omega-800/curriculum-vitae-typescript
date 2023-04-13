@@ -1,0 +1,117 @@
+$lightest: 	#262626;
+$lighter: 	#7868e6;
+$mid:	#e4fbff;
+$darker: #b8b5ff;
+$darkest:#edeef7;
+
+@import './pages/_Pages.scss';
+@import './components/_Components.scss';
+@import './_App.scss';
+
+body *{
+  transition: .12s cubic-bezier(.3, 0, 1, 1);
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $darkest;
+  color: $darkest;
+  flex-wrap: wrap;
+  margin:0;
+}
+button, a{
+  background-color:$lighter;
+  color:$darkest;
+  border:none;
+  width:100%;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none;
+  text-align: center;
+}
+table{
+  border-spacing: .1em;
+  width:100%;
+  table-layout: fixed;
+}
+td,a{
+  overflow:clip;
+  white-space:wrap;
+  text-overflow:ellipsis;
+}
+tr{padding:1em;}
+thead{text-align:center;}
+button:hover, a:hover{
+  color:$lightest;
+  background-color: $darkest;
+}
+.section {
+  display:flex;
+  align-items: space-around;
+  justify-content: space-around;
+  flex-wrap:wrap;
+  margin:1rem;
+}
+.section_title{
+  text-align: center;
+  width:100%;
+  color:$lighter;
+  margin:1rem;
+}
+.box{
+  background-color: $darker;
+  color: $lightest;
+  display:flex;
+  flex-grow:1;
+  flex-shrink:1;
+  flex-basis: 44%;
+  margin: 1%;
+  flex-direction:column;
+  align-items:stretch;
+  text-align: justify;
+}
+.box_title{
+  width: 96%;
+  background-color: $lighter;
+  padding:2%;
+  display: flex;
+  justify-content: center;
+  color:$darkest;
+}
+.box_title *{
+  margin:0;
+}
+.box table, button, a{
+  width:100%;
+}
+.box_content{
+  width:90%;
+  padding:5%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
+@media (max-width: 660px){
+  h2{font-size: 1em;}
+  h3{font-size:0.9em;}
+  h4{font-size:0.8em;}
+  td,p{font-size:0.7em;}
+  button,a{
+    padding:.5rem 0;
+    font-size:0.7em;
+  }
+  tr{padding:0.5em;}
+  .section_title{margin:0;}
+  .section_title h2{margin:0.5em;}
+  .box{
+    flex-basis:98%;
+    margin:1%;
+  }
+}

@@ -8,15 +8,15 @@
     flex-grow: 1;
     flex-shrink: 1;
     padding:5%;
-}
-.footer h2{
-    margin-top: 0;
-}
-.footer a{
-    background-color:var(--darker);
-    color:var(--lightest);
-}
-.footer a:hover{
-    background-color:var(--darkest);
-    color:var(--lightest);
+    & h2{
+        margin-top: 0;
+    }
+    & a{
+        background-color:var(--darker);
+        color:var(--lightest);
+        &:hover{
+            background-color:var(--darkest);
+            color:var(--lightest);
+        }
+    }
 }
