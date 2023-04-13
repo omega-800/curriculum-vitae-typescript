@@ -45,7 +45,8 @@ CREATE TABLE IF NOT EXISTS skillCategory (
     name_r VARCHAR,
     description VARCHAR,
     description_e VARCHAR,
-    description_r VARCHAR
+    description_r VARCHAR,
+    percent INT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS skillSubCategory (

@@ -21,7 +21,7 @@ const { Client } = require("pg");
     }
     let tables = await run_query("SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'",true,"tablenames");
 
-    tables.forEach( async element => {
+    tables.forEach(async element => {
       await run_query("SELECT * FROM "+element.table_name, true, element.table_name); 
     });
 

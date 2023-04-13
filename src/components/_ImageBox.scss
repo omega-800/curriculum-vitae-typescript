@@ -18,10 +18,10 @@
 }
 .imgbox_content{
   text-align: center;
-}
-.imgbox_content img{
-  object-fit:contain;
-  width:100%;
+  & img{
+    object-fit:contain;
+    width:100%;
+  }
 }
 @media (max-width:660px) {
   .imgbox{
