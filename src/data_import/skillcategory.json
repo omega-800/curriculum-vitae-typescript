@@ -1,0 +1,47 @@
+[
+ {
+  "skillcategory_id": "1b423b5a-7303-463f-b110-8affd7efa4c5",
+  "name": "Pädagogik",
+  "name_e": null,
+  "name_r": null,
+  "description": null,
+  "description_e": null,
+  "description_r": null
+ },
+ {
+  "skillcategory_id": "ab37fa93-d83a-491a-8cc6-76518e0a12c8",
+  "name": "Allgemein",
+  "name_e": null,
+  "name_r": null,
+  "description": null,
+  "description_e": null,
+  "description_r": null
+ },
+ {
+  "skillcategory_id": "c22ac77e-6bfc-4c25-9cc4-39dfe1a62414",
+  "name": "Informatik",
+  "name_e": null,
+  "name_r": null,
+  "description": null,
+  "description_e": null,
+  "description_r": null
+ },
+ {
+  "skillcategory_id": "cae7892a-faab-4f1c-ba40-f9ed23d485f6",
+  "name": "Gesundheit",
+  "name_e": null,
+  "name_r": null,
+  "description": null,
+  "description_e": null,
+  "description_r": null
+ },
+ {
+  "skillcategory_id": "f9efabbc-3dc5-420d-8f85-cef68436cecd",
+  "name": "Kunst",
+  "name_e": null,
+  "name_r": null,
+  "description": null,
+  "description_e": null,
+  "description_r": null
+ }
+]
