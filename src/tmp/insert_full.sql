@@ -32,18 +32,18 @@ INSERT INTO skillSubCategory (name, description, skillCategory_id) VALUES
     ('Sprachen', 'Die Fähigkeit, Sprachen fließend zu sprechen, lesen und schreiben.', (SELECT skillCategory_id FROM skillCategory WHERE name = 'Allgemein')),
     ('Wissen', 'Die Fähigkeit, Wissen in verschiedenen Bereichen zu sammeln, zu verstehen und anzuwenden.', (SELECT skillCategory_id FROM skillCategory WHERE name = 'Allgemein'));
 
-INSERT INTO skill (name, description, knowledgePercent, hobby, type) VALUES
-    ('Web Accessibility', 'Web Accessibility bezieht sich auf die Praktiken und Technologien, die verwendet werden, um Websites für Menschen mit Behinderungen zugänglicher zu machen.', 50, FALSE, 'Wissen'),
-    ('SEO', 'SEO (Search Engine Optimization) umfasst Techniken und Strategien, um die Sichtbarkeit einer Website in Suchmaschinen zu erhöhen.', 50, FALSE, 'Wissen'),
-    ('Mathematik', 'Mathematik ist die Wissenschaft der Zahlen, Mengen und Formen und wird in vielen Bereichen wie Wissenschaft, Technologie, Wirtschaft und Finanzen angewendet.', 75, TRUE, 'Wissen'),
-    ('Geschichte', 'Geschichte ist die wissenschaftliche Untersuchung von Vergangenheit und Gegenwart, einschließlich der Entwicklungen von Gesellschaften, Kulturen und Ereignissen.', 45, TRUE, 'Wissen'),
-    ('Philosophie', 'Philosophie ist die Untersuchung grundlegender Konzepte wie Wahrheit, Existenz, Wissen, Werte, Moral und Ethik.', 80, TRUE, 'Wissen'),
-    ('Politik', 'Politik befasst sich mit der Organisation und Entscheidungsfindung von Gruppen und Gesellschaften, insbesondere der Regierung und des Staates.', 65, TRUE, 'Wissen'),
-    ('Geographie', 'Geographie befasst sich mit der Erde, einschließlich ihrer Landschaften, ihrer Bewohner und ihrer Phänomene wie Klima und Umwelt.', 50, FALSE, 'Wissen'),
-    ('Biologie', 'Biologie ist die Wissenschaft des Lebens und der lebenden Organismen, einschließlich Pflanzen, Tiere und Mikroorganismen.', 65, TRUE, 'Wissen'),
-    ('Chemie', 'Chemie ist die Wissenschaft der Materie, ihrer Eigenschaften und ihrer Reaktionen.', 60, TRUE, 'Wissen'),
-    ('Physik', 'Physik ist die Wissenschaft der Materie und Energie und deren Wechselwirkungen in der Welt um uns herum.', 55, FALSE, 'Wissen'),
-    ('Hauswirtschaft', 'Hauswirtschaft bezieht sich auf die Fähigkeiten und Kenntnisse, die zur Bewältigung alltäglicher Aufgaben im Haushalt erforderlich sind, wie Kochen, Reinigen und Organisieren.', 95, TRUE, 'Wissen');
+INSERT INTO skill (yearsOfExperience, name, description, knowledgePercent, hobby, type) VALUES
+    (0, 'Web Accessibility', 'Web Accessibility bezieht sich auf die Praktiken und Technologien, die verwendet werden, um Websites für Menschen mit Behinderungen zugänglicher zu machen.', 50, FALSE, 'Wissen'),
+    (0, 'SEO', 'SEO (Search Engine Optimization) umfasst Techniken und Strategien, um die Sichtbarkeit einer Website in Suchmaschinen zu erhöhen.', 50, FALSE, 'Wissen'),
+    (0, 'Mathematik', 'Mathematik ist die Wissenschaft der Zahlen, Mengen und Formen und wird in vielen Bereichen wie Wissenschaft, Technologie, Wirtschaft und Finanzen angewendet.', 75, TRUE, 'Wissen'),
+    (0, 'Geschichte', 'Geschichte ist die wissenschaftliche Untersuchung von Vergangenheit und Gegenwart, einschließlich der Entwicklungen von Gesellschaften, Kulturen und Ereignissen.', 45, TRUE, 'Wissen'),
+    (0, 'Philosophie', 'Philosophie ist die Untersuchung grundlegender Konzepte wie Wahrheit, Existenz, Wissen, Werte, Moral und Ethik.', 80, TRUE, 'Wissen'),
+    (0, 'Politik', 'Politik befasst sich mit der Organisation und Entscheidungsfindung von Gruppen und Gesellschaften, insbesondere der Regierung und des Staates.', 65, TRUE, 'Wissen'),
+    (0, 'Geographie', 'Geographie befasst sich mit der Erde, einschließlich ihrer Landschaften, ihrer Bewohner und ihrer Phänomene wie Klima und Umwelt.', 50, FALSE, 'Wissen'),
+    (0, 'Biologie', 'Biologie ist die Wissenschaft des Lebens und der lebenden Organismen, einschließlich Pflanzen, Tiere und Mikroorganismen.', 65, TRUE, 'Wissen'),
+    (0, 'Chemie', 'Chemie ist die Wissenschaft der Materie, ihrer Eigenschaften und ihrer Reaktionen.', 60, TRUE, 'Wissen'),
+    (0, 'Physik', 'Physik ist die Wissenschaft der Materie und Energie und deren Wechselwirkungen in der Welt um uns herum.', 55, FALSE, 'Wissen'),
+    (0, 'Hauswirtschaft', 'Hauswirtschaft bezieht sich auf die Fähigkeiten und Kenntnisse, die zur Bewältigung alltäglicher Aufgaben im Haushalt erforderlich sind, wie Kochen, Reinigen und Organisieren.', 95, TRUE, 'Wissen');
 
 INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'SEO'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Frontend')),
@@ -59,17 +59,17 @@ INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'Physik'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Wissen')),
     ((SELECT skill_id FROM skill WHERE name = 'Hauswirtschaft'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Wissen'));
 
-INSERT INTO skill (name, description, knowledgePercent, hobby, type) VALUES
-    ('Selbstständigkeit', 'Selbstständigkeit bezieht sich auf die Fähigkeit, unabhängig zu handeln und Verantwortung für die eigenen Entscheidungen und Handlungen zu übernehmen.', 100, FALSE, 'Skill'),
-    ('Teamwork', 'Teamwork bezieht sich auf die Fähigkeit, effektiv in einer Gruppe zu arbeiten. Teamwork erfordert Zusammenarbeit, Kommunikation und Kompromissbereitschaft, um gemeinsame Ziele zu erreichen.', 80, FALSE, 'Skill'),
-    ('Logisches Denken', 'Logisches Denken bezieht sich auf die Fähigkeit, komplexe Probleme zu analysieren und zu lösen, indem man rationale und systematische Schritte unternimmt.', 90, FALSE, 'Skill'),
-    ('Kritikfähigkeit', 'Kritikfähigkeit bezieht sich auf die Fähigkeit, konstruktive Kritik zu akzeptieren und davon zu lernen. Kritikfähigkeit erfordert Offenheit und die Bereitschaft, aus Fehlern zu lernen.', 95, FALSE, 'Skill'),
-    ('Kreativität', 'Kreativität bezieht sich auf die Fähigkeit, neue und originelle Ideen zu entwickeln und umzusetzen. Kreativität kann auch helfen, Probleme auf unkonventionelle Weise zu lösen.', 100, FALSE, 'Skill'),
-    ('Kommunikation', 'Kommunikation bezieht sich auf die Fähigkeit, effektiv zu sprechen und zuzuhören, um Botschaften zu vermitteln und zu verstehen. Kommunikation ist auch im täglichen Leben wichtig.', 75, FALSE, 'Skill'),
-    ('Lernfähigkeit', 'Lernfähigkeit bezieht sich auf die Fähigkeit, schnell und effektiv neue Informationen und Fähigkeiten zu erwerben. Lernfähigkeit erfordert Offenheit und die Bereitschaft, aus Erfahrungen und Fehlern zu lernen.', 90, FALSE, 'Skill'),
-    ('Organisation', 'Organisation bezieht sich auf die Fähigkeit, effektiv Zeit, Ressourcen und Aufgaben zu planen und zu verwalten. Organisation kann auch helfen, den Alltag effektiver zu gestalten.', 65, FALSE, 'Skill'),
-    ('Empathie', 'Die Fähigkeit, sich in andere Menschen hineinzuversetzen und deren Gefühle zu verstehen und nachzuvollziehen.', 95, FALSE, 'Skill'),
-    ('Geduld', 'Die Fähigkeit, in schwierigen oder herausfordernden Situationen ruhig zu bleiben und darauf zu vertrauen, dass sich die Dinge zum Guten wenden werden. Geduld hilft dabei, auch langfristige Ziele zu verfolgen und Hindernisse zu überwinden.', 75, FALSE, 'Skill');
+INSERT INTO skill (yearsOfExperience, name, description, knowledgePercent, hobby, type) VALUES
+    (0, 'Selbstständigkeit', 'Selbstständigkeit bezieht sich auf die Fähigkeit, unabhängig zu handeln und Verantwortung für die eigenen Entscheidungen und Handlungen zu übernehmen.', 100, FALSE, 'Skill'),
+    (0, 'Teamwork', 'Teamwork bezieht sich auf die Fähigkeit, effektiv in einer Gruppe zu arbeiten. Teamwork erfordert Zusammenarbeit, Kommunikation und Kompromissbereitschaft, um gemeinsame Ziele zu erreichen.', 80, FALSE, 'Skill'),
+    (0, 'Logisches Denken', 'Logisches Denken bezieht sich auf die Fähigkeit, komplexe Probleme zu analysieren und zu lösen, indem man rationale und systematische Schritte unternimmt.', 90, FALSE, 'Skill'),
+    (0, 'Kritikfähigkeit', 'Kritikfähigkeit bezieht sich auf die Fähigkeit, konstruktive Kritik zu akzeptieren und davon zu lernen. Kritikfähigkeit erfordert Offenheit und die Bereitschaft, aus Fehlern zu lernen.', 95, FALSE, 'Skill'),
+    (0, 'Kreativität', 'Kreativität bezieht sich auf die Fähigkeit, neue und originelle Ideen zu entwickeln und umzusetzen. Kreativität kann auch helfen, Probleme auf unkonventionelle Weise zu lösen.', 100, FALSE, 'Skill'),
+    (0, 'Kommunikation', 'Kommunikation bezieht sich auf die Fähigkeit, effektiv zu sprechen und zuzuhören, um Botschaften zu vermitteln und zu verstehen. Kommunikation ist auch im täglichen Leben wichtig.', 75, FALSE, 'Skill'),
+    (0, 'Lernfähigkeit', 'Lernfähigkeit bezieht sich auf die Fähigkeit, schnell und effektiv neue Informationen und Fähigkeiten zu erwerben. Lernfähigkeit erfordert Offenheit und die Bereitschaft, aus Erfahrungen und Fehlern zu lernen.', 90, FALSE, 'Skill'),
+    (0, 'Organisation', 'Organisation bezieht sich auf die Fähigkeit, effektiv Zeit, Ressourcen und Aufgaben zu planen und zu verwalten. Organisation kann auch helfen, den Alltag effektiver zu gestalten.', 65, FALSE, 'Skill'),
+    (0, 'Empathie', 'Die Fähigkeit, sich in andere Menschen hineinzuversetzen und deren Gefühle zu verstehen und nachzuvollziehen.', 95, FALSE, 'Skill'),
+    (0, 'Geduld', 'Die Fähigkeit, in schwierigen oder herausfordernden Situationen ruhig zu bleiben und darauf zu vertrauen, dass sich die Dinge zum Guten wenden werden. Geduld hilft dabei, auch langfristige Ziele zu verfolgen und Hindernisse zu überwinden.', 75, FALSE, 'Skill');
 
 INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'Selbstständigkeit'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Softskills')),
@@ -82,11 +82,11 @@ INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'Organisation'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Softskills')),
     ((SELECT skill_id FROM skill WHERE name = 'Empathie'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Softskills'));
 
-INSERT INTO skill (name, description, shortName, knowledgePercent, proficiencyLevel, hobby, type) VALUES
-    ('Deutsch', 'Seit Geburt', 'DE', 100, 'C2', FALSE, 'Sprache'),
-    ('Englisch', 'Vatersprache', 'EN', 90, 'C1', FALSE, 'Sprache'),
-    ('Russisch', 'Muttersprache', 'RU', 75, 'B2', FALSE, 'Sprache'),
-    ('Französisch', 'Schulwissen', 'FR', 50, 'B1', FALSE, 'Sprache');
+INSERT INTO skill (yearsOfExperience, name, description, shortName, knowledgePercent, proficiencyLevel, hobby, type) VALUES
+    (0, 'Deutsch', 'Seit Geburt', 'DE', 100, 'C2', FALSE, 'Sprache'),
+    (0, 'Englisch', 'Vatersprache', 'EN', 90, 'C1', FALSE, 'Sprache'),
+    (0, 'Russisch', 'Muttersprache', 'RU', 75, 'B2', FALSE, 'Sprache'),
+    (0, 'Französisch', 'Schulwissen', 'FR', 50, 'B1', FALSE, 'Sprache');
 
 INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'Deutsch'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen')),
@@ -94,11 +94,11 @@ INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'Russisch'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen')),
     ((SELECT skill_id FROM skill WHERE name = 'Französisch'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen'));
 
-INSERT INTO country(name, shortName) VALUES 
-    ('Schweiz', 'CH'), 
-    ('Amerika', 'US'), 
-    ('Russland', 'RU'), 
-    ('Frankreich', 'FR');
+INSERT INTO country(name, name_e, name_r, shortName) VALUES 
+    ('Schweiz', NULL, NULL, 'CH'), 
+    ('Amerika', NULL, NULL, 'US'), 
+    ('Russland', NULL, NULL, 'RU'), 
+    ('Frankreich', NULL, NULL, 'FR');
 
 INSERT INTO country_language (language_id, country_id) VALUES 
     ((SELECT skill_id from skill WHERE shortName = 'DE'), (SELECT country_id from country WHERE shortName = 'CH')),
@@ -118,48 +118,48 @@ INSERT INTO operatingSystem (name, description, url) VALUES
    ('macOS', 'Das Betriebssystem für Apples Macintosh-Reihe von Personalcomputern.', 'https://www.apple.com/macos'),
    ('Linux', 'Ein kostenloses und quelloffenes Betriebssystem, das viele Server und andere Geräte antreibt.', 'https://www.linux.org');
 
-INSERT INTO skill (hobby, type, name, description, alternateName, keywords, url, version, applicationType_id, knowledgePercent) VALUES
-    (TRUE, 'Applikation', 'Vim', 'Vim ist ein freier Texteditor für die Arbeit mit einer Vi-kompatiblen Befehlszeilenschnittstelle.', 'Vi IMproved', 'Vim, Texteditor, Vi, Befehlszeile', 'https://www.vim.org/', '8.2.3401', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 75),
-    (TRUE, 'Applikation', 'GIMP', 'GIMP ist ein kostenloses, plattformübergreifendes Bildbearbeitungsprogramm für die Erstellung und Bearbeitung von digitalen Bildern.', 'GNU Image Manipulation Program', 'GIMP, Bildbearbeitung, Photoshop-Alternative', 'https://www.gimp.org/', '2.10.28', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 80),
-    (TRUE, 'Applikation', 'Adobe Photoshop', 'Adobe Photoshop ist ein professionelles Bildbearbeitungsprogramm für Kreative.', 'Photoshop, Adobe Creative Suite', 'Bildbearbeitung, Grafikdesign, Kreativität, Adobe Creative Cloud', 'https://www.adobe.com/products/photoshop.html', '2022', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 75),
-    (TRUE, 'Applikation', 'Inkscape', 'Inkscape ist ein professionelles Vektorgrafikprogramm, das eine kostenlose und Open-Source-Alternative zu Adobe Illustrator bietet.', 'Inkscape', 'Inkscape, Vektorgrafik, Open-Source, Adobe Illustrator', 'https://inkscape.org/', '1.1', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 70),
-    (TRUE, 'Applikation', 'Unity', 'Unity ist eine plattformübergreifende Game Engine, die zur Entwicklung von Videospielen für PC, Konsolen, Mobilgeräte und Websites verwendet wird.', 'Unity3D', 'Unity, Unity3D, Game Engine, 3D Game Development', 'https://unity.com/', '2020.3.19f1', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 65),
-    (TRUE, 'Applikation', 'Pygame', 'Pygame ist eine Sammlung von Python-Modulen, die für die Entwicklung von Videospielen entwickelt wurden.', 'Pygame-Bibliothek', 'Python, Pygame, Game Development, Game Programming, 2D-Spiele', 'https://www.pygame.org/', '2.0.1', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 45),
-    (TRUE, 'Applikation', 'Panda3D', 'Panda3D ist eine Game Engine, ein Framework für 3D-Rendering und Game Development für Python- und C++-Programme.', 'Panda3D-Engine', 'Python, Panda3D, Game Engine, Game Development, 3D-Spiele', 'https://www.panda3d.org/', '1.10.11', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 40),
-    (TRUE, 'Applikation', 'React', 'React ist eine JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen.', 'ReactJS', 'React, ReactJS, JavaScript-Bibliothek, Front-End-Entwicklung', 'https://reactjs.org/', '17.0.2', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 60),
-    (TRUE, 'Applikation', 'Vue.js', 'Vue.js ist ein Open-Source-JavaScript-Framework zum Erstellen von Benutzeroberflächen und Single-Page-Anwendungen.', 'VueJS', 'Vue.js, VueJS, JavaScript-Framework, Front-End-Entwicklung', 'https://vuejs.org/', '3.2.29', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 45),
-    (TRUE, 'Applikation', 'Selenium', 'Selenium ist eine Suite von Tools zum Automatisieren von Webbrowsern auf vielen Plattformen.', 'Selenium WebDriver', 'Selenium, Selenium WebDriver, Automatisierte Tests, Webtests', 'https://www.selenium.dev/', '4.1.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 75),
-    (FALSE, 'Applikation', 'Swing', 'Swing ist ein GUI-Widget-Toolkit für Java, das die Erstellung von Desktop-Anwendungen mit grafischer Benutzeroberfläche ermöglicht.', 'Java Swing', 'Swing, Java, GUI, Bibliothek', 'https://docs.oracle.com/javase/tutorial/uiswing/', 'Java 16', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 40),
-    (TRUE, 'Applikation', 'Ursina', '', 'Ursina-Engine', 'Python, Ursina, Game Engine, Game Development,', 'https://www.ursinaengine.org/', '5.2.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 40),
-    (FALSE, 'Applikation', 'GlassFish', 'GlassFish ist ein kostenloses und Open-Source-Application-Server für das Erstellen und Bereitstellen von Webanwendungen auf der Java-EE-Plattform.', 'GlassFish Server', 'GlassFish, Anwendungsserver, Java EE', 'https://javaee.github.io/glassfish/', '5.1.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Umgebung'), 25),
-    (FALSE, 'Applikation', 'Tomcat7', 'Apache Tomcat 7 ist eine Open-Source-Softwareimplementierung der Java Servlet, JavaServer Pages, Java Expression Language und Java WebSocket-Technologien.', 'Apache Tomcat 7', 'Tomcat, Anwendungsserver, Servlet-Container', 'http://tomcat.apache.org/tomcat-7.0-doc/', '7.0.107', (SELECT applicationType_id FROM applicationType WHERE name = 'Umgebung'), 35),
-    (TRUE, 'Applikation', 'Word', 'Microsoft Word ist eine Textverarbeitungssoftware, die von Microsoft entwickelt und veröffentlicht wurde.', 'Microsoft Word', 'Microsoft Word, Textverarbeitung, Texteditor', 'https://www.microsoft.com/de-de/microsoft-365/word', 'Microsoft Word 2021', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 95),
-    (TRUE, 'Applikation', 'Excel', 'Microsoft Excel ist eine Tabellenkalkulationssoftware, die von Microsoft entwickelt und veröffentlicht wurde.', 'Microsoft Excel', 'Microsoft Excel, Tabellenkalkulation, Berechnung, Datenanalyse', 'https://www.microsoft.com/de-de/microsoft-365/excel', 'Microsoft Excel 2021', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 85),
-    (FALSE, 'Applikation', 'PowerPoint', 'Microsoft PowerPoint ist eine Präsentationssoftware, die von Microsoft entwickelt und veröffentlicht wurde.', 'Microsoft PowerPoint', 'Microsoft PowerPoint, Präsentation, Slideshow', 'https://www.microsoft.com/de-de/microsoft-365/powerpoint', 'Microsoft PowerPoint 2021', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 95),
-    (FALSE, 'Applikation', 'Access', 'Microsoft Access ist ein Datenbankmanagementsystem, das von Microsoft entwickelt und veröffentlicht wurde.', 'Microsoft Access', 'Microsoft Access, Datenbankmanagementsystem, relationale Datenbank', 'https://www.microsoft.com/de-de/microsoft-365/access', 'Microsoft Access 2021', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 20),
-    (FALSE, 'Applikation', 'Outlook', 'Outlook ist ein E-Mail-Client und Personal Information Manager von Microsoft, der Teil der Microsoft Office Suite ist.', 'Microsoft Outlook', 'Microsoft Outlook, E-Mail-Client, Personal Information Manager, Microsoft Office', 'https://www.microsoft.com/de-de/microsoft-365/outlook', 'Microsoft Outlook 2021', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 70),
-    (TRUE, 'Applikation', 'HTML', 'HTML (Hypertext Markup Language) ist eine Auszeichnungssprache, die zur Erstellung der Struktur und des Inhalts von Webseiten verwendet wird.', 'Hypertext Markup Language', 'HTML, Hypertext Markup Language, Webentwicklung', 'https://developer.mozilla.org/de/docs/Web/HTML', 'HTML5', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 100),
-    (TRUE, 'Applikation', 'CSS', 'CSS (Cascading Style Sheets) ist eine Formatierungssprache, die verwendet wird, um die Darstellung eines in HTML oder XML geschriebenen Dokuments zu beschreiben.', 'Cascading Style Sheets', 'CSS, Cascading Style Sheets, Formatierungssprache, Webentwicklung', 'https://developer.mozilla.org/de/docs/Web/CSS', 'CSS3', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 100),
-    (TRUE, 'Applikation', 'SCSS', 'SCSS (Sassy CSS) ist eine Vorverarbeitungsskriptsprache, die eine Erweiterung von CSS darstellt und Funktionen wie Variablen, Mixins und Verschachtelung hinzufügt.', 'Syntactically Awesome Style Sheets', 'SCSS, Sassy CSS, Formatierungssprache, Webentwicklung', 'https://sass-lang.com/documentation', 'SCSS', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 90),
-    (TRUE, 'Applikation', 'JavaScript', 'JavaScript ist eine objektorientierte, höhere Programmiersprache, die verwendet wird, um interaktive Effekte in Webbrowsern zu erzeugen.', 'JS', 'JavaScript, JS, Programmiersprache, Webentwicklung', 'https://developer.mozilla.org/de/docs/Web/JavaScript', 'ES12', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 65),
-    (TRUE, 'Applikation', 'TypeScript', 'TypeScript ist ein typisierter Überbau von JavaScript, der zu normalem JavaScript kompiliert.', 'TS', 'TypeScript, TS, Programmiersprache, Webentwicklung', 'https://www.typescriptlang.org/', '4.4', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 60),
-    (FALSE, 'Applikation', 'PHP', 'PHP (Hypertext Preprocessor) ist eine serverseitige Skriptsprache, die zur Erstellung dynamischer Webseiten verwendet wird.', 'Hypertext Preprocessor', 'PHP, Hypertext Preprocessor, Programmiersprache, Webentwicklung', 'https://www.php.net/', '8.1', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 50),
-    (TRUE, 'Applikation', 'Java', 'Java ist eine objektorientierte Programmiersprache, die darauf ausgelegt ist, so wenige Implementierungsabhängigkeiten wie möglich zu haben.', 'Java SE', 'Java, Java SE, Programmiersprache, Softwareentwicklung', 'https://www.java.com/de/', '17', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 80),
-    (TRUE, 'Applikation', 'Python', 'Python ist eine interpretierte Hochsprachen-Programmiersprache, die Code-Lesbarkeit und Benutzerfreundlichkeit betont.', 'Python 3', 'Python, Python 3, Programmiersprache, Softwareentwicklung', 'https://www.python.org/', '3.10', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 80),
-    (TRUE, 'Applikation', 'MySQL', 'MySQL ist ein beliebtes, Open-Source-Relationales-Datenbankmanagementsystem.', 'Structured Query Language', 'MySQL, Strukturierte Abfragesprache, Datenbankmanagementsystem, Softwareentwicklung', 'https://www.mysql.com/', '8.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 90),
-    (TRUE, 'Applikation', 'C#', 'C# ist eine moderne, multiparadigmatische Programmiersprache, die von Microsoft entwickelt wurde.', 'C Sharp', 'C#, C Sharp, Programmiersprache, Softwareentwicklung', 'https://docs.microsoft.com/de-de/dotnet/csharp/', '10.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 65),
-    (TRUE, 'Applikation', 'Bash', 'Bash ist ein Shell-Programm für Unix-ähnliche Betriebssysteme, das Benutzern ermöglicht, Befehle einzugeben, um mit dem Betriebssystem zu interagieren.', 'Bourne-Again SHell', 'Bash, Shell, Befehlszeilenschnittstelle, CLI, Unix-ähnlich', 'https://www.gnu.org/software/bash/', 'Bash 5.1.8', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 45),
-    (FALSE, 'Applikation', 'FreeMarker', 'FreeMarker ist ein Template-Engine, die die Erstellung dynamischer Webseiten durch die Generierung von Textausgaben auf der Grundlage von Vorlagen ermöglicht.', 'Apache FreeMarker', 'FreeMarker, Template Engine, Java', 'https://freemarker.apache.org/', '2.3.31', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 85),
-    (TRUE, 'Applikation', 'PostgreSQL', 'PostgreSQL ist ein leistungsstarkes Open-Source-Relationales-Datenbankmanagementsystem.', 'Postgres', 'PostgreSQL, Postgres, Strukturierte Abfragesprache, Datenbankmanagementsystem, Softwareentwicklung', 'https://www.postgresql.org/', '14.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 45),
-    (TRUE, 'Applikation', 'Ableton Live 10', 'Ableton Live 10 ist eine digitale Audio-Workstation für macOS und Windows. Es wird hauptsächlich zum Komponieren, Aufnehmen, Remixen und Arrangieren von Musik verwendet.', 'Ableton', 'Ableton Live 10, DAW, Musikproduktion, Audio-Workstation', 'https://www.ableton.com/de/live/', '10.1.30', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 85),
-    (TRUE, 'Applikation', 'FL Studio', 'FL Studio ist eine digitale Audio-Workstation für Windows. Es wird hauptsächlich zum Erstellen und Produzieren von Musik verwendet.', 'FruityLoops', 'FL Studio, FruityLoops, DAW, Musikproduktion, Audio-Workstation', 'https://www.image-line.com/flstudio/', '20.8.4', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 60),
-    (FALSE, 'Applikation', 'Magnolia', 'Magnolia ist ein Open-Source-Content-Management-System (CMS) zur Verwaltung von Inhalten auf Websites und anderen digitalen Kanälen. Es ist in Java geschrieben und wurde von Magnolia International Ltd. entwickelt.', 'Magnolia CMS', 'Open-Source, Content-Management-System, Java, Magnolia International Ltd.',  'https://www.magnolia-cms.com/', '6.2.4', (SELECT applicationType_id FROM applicationType WHERE name = 'Inhaltsverwaltungssystem'), 85),
-    (FALSE, 'Applikation', 'JCR', 'Java Content Repositories (JCR) ist ein Standard des Java Community Process (JCP), der eine Schnittstelle für Content-Repositorys definiert. Ein Content-Repository ist eine Art Datenbank, in der nicht nur Daten gespeichert werden, sondern auch alle Arten von digitalen Assets, wie Bilder, Videos oder Dokumente.', 'Java Content Repositories', 'JCR, Java Community Process', 'https://jcp.org/en/jsr/detail?id=170', '2.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 80),
-    (FALSE, 'Applikation', 'Docker', 'Docker ist eine Software, die es ermöglicht, Anwendungen und ihre Abhängigkeiten in sogenannten Containern zu verpacken und bereitzustellen. Dadurch wird eine einfache und schnelle Bereitstellung von Anwendungen ermöglicht, da Container unabhängig von der zugrunde liegenden Infrastruktur ausgeführt werden können.', 'Docker Container', 'Container, Virtualisierung', 'https://www.docker.com/', '20.10.7', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 25),
-    (FALSE, 'Applikation', 'Schema Markup', 'Schema Markup ist eine Form von strukturierten Daten, die verwendet werden, um Informationen auf Webseiten zu kennzeichnen. Diese strukturierten Daten werden von Suchmaschinen genutzt, um Informationen besser zu verstehen und zu interpretieren. Dadurch können Suchergebnisse in den Suchmaschinen verbessert werden und eine bessere Sichtbarkeit in den Suchergebnissen erzielt werden.', 'Structured Data', 'Schema.org, strukturierte Daten', 'https://schema.org/docs/gs.html', '4.2',  (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 85),
-    (TRUE, 'Applikation', 'Firebase',  'Firebase ist eine Plattform von Google, die es Entwicklern ermöglicht, schnell und einfach mobile und Webanwendungen zu entwickeln. Firebase bietet eine Vielzahl von Diensten wie Datenbanken, Authentifizierung, Hosting und Push-Benachrichtigungen.', 'Google Firebase', 'Mobile App Entwicklung, Web Entwicklung', 'https://firebase.google.com/', '9.3.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 60),
-    (TRUE, 'Applikation', 'Blender', 'Blender ist eine kostenlose, Open-Source-Software zur Erstellung von 3D-Modellen, Animationen, visuellen Effekten, Kunstwerken und Videospielen. Blender wird von einer aktiven Community entwickelt und bietet eine breite Palette von Werkzeugen und Funktionen für die Erstellung von 3D-Inhalten.', 'Blender 3D', '3D-Modellierung, Animation, visuelle Effekte', 'https://www.blender.org/', '3.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 25),
-    (TRUE, 'Applikation', 'Angular', 'Angular is a TypeScript-based open-source web application framework. It is used to build dynamic web applications that run in the browser. Angular is maintained by Google and is one of the most popular frameworks for building web applications.', 'Angular 4', 'Angular, TypeScript, web application framework, Google', 'https://angular.io/', '12.2.5', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 35);
+INSERT INTO skill (yearsOfExperience, hobby, type, name, description, alternateName, keywords, url, version, applicationType_id, knowledgePercent) VALUES
+    (0, TRUE, 'Applikation', 'Vim', 'Vim ist ein freier Texteditor für die Arbeit mit einer Vi-kompatiblen Befehlszeilenschnittstelle.', 'Vi IMproved', 'Vim, Texteditor, Vi, Befehlszeile', 'https://www.vim.org/', '8.2.3401', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 75),
+    (0, TRUE, 'Applikation', 'GIMP', 'GIMP ist ein kostenloses, plattformübergreifendes Bildbearbeitungsprogramm für die Erstellung und Bearbeitung von digitalen Bildern.', 'GNU Image Manipulation Program', 'GIMP, Bildbearbeitung, Photoshop-Alternative', 'https://www.gimp.org/', '2.10.28', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 80),
+    (0, TRUE, 'Applikation', 'Adobe Photoshop', 'Adobe Photoshop ist ein professionelles Bildbearbeitungsprogramm für Kreative.', 'Photoshop, Adobe Creative Suite', 'Bildbearbeitung, Grafikdesign, Kreativität, Adobe Creative Cloud', 'https://www.adobe.com/products/photoshop.html', '2022', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 75),
+    (0, TRUE, 'Applikation', 'Inkscape', 'Inkscape ist ein professionelles Vektorgrafikprogramm, das eine kostenlose und Open-Source-Alternative zu Adobe Illustrator bietet.', 'Inkscape', 'Inkscape, Vektorgrafik, Open-Source, Adobe Illustrator', 'https://inkscape.org/', '1.1', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 70),
+    (0, TRUE, 'Applikation', 'Unity', 'Unity ist eine plattformübergreifende Game Engine, die zur Entwicklung von Videospielen für PC, Konsolen, Mobilgeräte und Websites verwendet wird.', 'Unity3D', 'Unity, Unity3D, Game Engine, 3D Game Development', 'https://unity.com/', '2020.3.19f1', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 65),
+    (0, TRUE, 'Applikation', 'Pygame', 'Pygame ist eine Sammlung von Python-Modulen, die für die Entwicklung von Videospielen entwickelt wurden.', 'Pygame-Bibliothek', 'Python, Pygame, Game Development, Game Programming, 2D-Spiele', 'https://www.pygame.org/', '2.0.1', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 45),
+    (0, TRUE, 'Applikation', 'Panda3D', 'Panda3D ist eine Game Engine, ein Framework für 3D-Rendering und Game Development für Python- und C++-Programme.', 'Panda3D-Engine', 'Python, Panda3D, Game Engine, Game Development, 3D-Spiele', 'https://www.panda3d.org/', '1.10.11', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 40),
+    (0, TRUE, 'Applikation', 'React', 'React ist eine JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen.', 'ReactJS', 'React, ReactJS, JavaScript-Bibliothek, Front-End-Entwicklung', 'https://reactjs.org/', '17.0.2', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 60),
+    (0, TRUE, 'Applikation', 'Vue.js', 'Vue.js ist ein Open-Source-JavaScript-Framework zum Erstellen von Benutzeroberflächen und Single-Page-Anwendungen.', 'VueJS', 'Vue.js, VueJS, JavaScript-Framework, Front-End-Entwicklung', 'https://vuejs.org/', '3.2.29', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 45),
+    (0, TRUE, 'Applikation', 'Selenium', 'Selenium ist eine Suite von Tools zum Automatisieren von Webbrowsern auf vielen Plattformen.', 'Selenium WebDriver', 'Selenium, Selenium WebDriver, Automatisierte Tests, Webtests', 'https://www.selenium.dev/', '4.1.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 75),
+    (0, FALSE, 'Applikation', 'Swing', 'Swing ist ein GUI-Widget-Toolkit für Java, das die Erstellung von Desktop-Anwendungen mit grafischer Benutzeroberfläche ermöglicht.', 'Java Swing', 'Swing, Java, GUI, Bibliothek', 'https://docs.oracle.com/javase/tutorial/uiswing/', 'Java 16', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 40),
+    (0, TRUE, 'Applikation', 'Ursina', '', 'Ursina-Engine', 'Python, Ursina, Game Engine, Game Development,', 'https://www.ursinaengine.org/', '5.2.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 40),
+    (0, FALSE, 'Applikation', 'GlassFish', 'GlassFish ist ein kostenloses und Open-Source-Application-Server für das Erstellen und Bereitstellen von Webanwendungen auf der Java-EE-Plattform.', 'GlassFish Server', 'GlassFish, Anwendungsserver, Java EE', 'https://javaee.github.io/glassfish/', '5.1.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Umgebung'), 25),
+    (0, FALSE, 'Applikation', 'Tomcat7', 'Apache Tomcat 7 ist eine Open-Source-Softwareimplementierung der Java Servlet, JavaServer Pages, Java Expression Language und Java WebSocket-Technologien.', 'Apache Tomcat 7', 'Tomcat, Anwendungsserver, Servlet-Container', 'http://tomcat.apache.org/tomcat-7.0-doc/', '7.0.107', (SELECT applicationType_id FROM applicationType WHERE name = 'Umgebung'), 35),
+    (0, TRUE, 'Applikation', 'Word', 'Microsoft Word ist eine Textverarbeitungssoftware, die von Microsoft entwickelt und veröffentlicht wurde.', 'Microsoft Word', 'Microsoft Word, Textverarbeitung, Texteditor', 'https://www.microsoft.com/de-de/microsoft-365/word', 'Microsoft Word 2021', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 95),
+    (0, TRUE, 'Applikation', 'Excel', 'Microsoft Excel ist eine Tabellenkalkulationssoftware, die von Microsoft entwickelt und veröffentlicht wurde.', 'Microsoft Excel', 'Microsoft Excel, Tabellenkalkulation, Berechnung, Datenanalyse', 'https://www.microsoft.com/de-de/microsoft-365/excel', 'Microsoft Excel 2021', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 85),
+    (0, FALSE, 'Applikation', 'PowerPoint', 'Microsoft PowerPoint ist eine Präsentationssoftware, die von Microsoft entwickelt und veröffentlicht wurde.', 'Microsoft PowerPoint', 'Microsoft PowerPoint, Präsentation, Slideshow', 'https://www.microsoft.com/de-de/microsoft-365/powerpoint', 'Microsoft PowerPoint 2021', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 95),
+    (0, FALSE, 'Applikation', 'Access', 'Microsoft Access ist ein Datenbankmanagementsystem, das von Microsoft entwickelt und veröffentlicht wurde.', 'Microsoft Access', 'Microsoft Access, Datenbankmanagementsystem, relationale Datenbank', 'https://www.microsoft.com/de-de/microsoft-365/access', 'Microsoft Access 2021', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 20),
+    (0, FALSE, 'Applikation', 'Outlook', 'Outlook ist ein E-Mail-Client und Personal Information Manager von Microsoft, der Teil der Microsoft Office Suite ist.', 'Microsoft Outlook', 'Microsoft Outlook, E-Mail-Client, Personal Information Manager, Microsoft Office', 'https://www.microsoft.com/de-de/microsoft-365/outlook', 'Microsoft Outlook 2021', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 70),
+    (0, TRUE, 'Applikation', 'HTML', 'HTML (Hypertext Markup Language) ist eine Auszeichnungssprache, die zur Erstellung der Struktur und des Inhalts von Webseiten verwendet wird.', 'Hypertext Markup Language', 'HTML, Hypertext Markup Language, Webentwicklung', 'https://developer.mozilla.org/de/docs/Web/HTML', 'HTML5', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 100),
+    (0, TRUE, 'Applikation', 'CSS', 'CSS (Cascading Style Sheets) ist eine Formatierungssprache, die verwendet wird, um die Darstellung eines in HTML oder XML geschriebenen Dokuments zu beschreiben.', 'Cascading Style Sheets', 'CSS, Cascading Style Sheets, Formatierungssprache, Webentwicklung', 'https://developer.mozilla.org/de/docs/Web/CSS', 'CSS3', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 100),
+    (0, TRUE, 'Applikation', 'SCSS', 'SCSS (Sassy CSS) ist eine Vorverarbeitungsskriptsprache, die eine Erweiterung von CSS darstellt und Funktionen wie Variablen, Mixins und Verschachtelung hinzufügt.', 'Syntactically Awesome Style Sheets', 'SCSS, Sassy CSS, Formatierungssprache, Webentwicklung', 'https://sass-lang.com/documentation', 'SCSS', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 90),
+    (0, TRUE, 'Applikation', 'JavaScript', 'JavaScript ist eine objektorientierte, höhere Programmiersprache, die verwendet wird, um interaktive Effekte in Webbrowsern zu erzeugen.', 'JS', 'JavaScript, JS, Programmiersprache, Webentwicklung', 'https://developer.mozilla.org/de/docs/Web/JavaScript', 'ES12', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 65),
+    (0, TRUE, 'Applikation', 'TypeScript', 'TypeScript ist ein typisierter Überbau von JavaScript, der zu normalem JavaScript kompiliert.', 'TS', 'TypeScript, TS, Programmiersprache, Webentwicklung', 'https://www.typescriptlang.org/', '4.4', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 60),
+    (0, FALSE, 'Applikation', 'PHP', 'PHP (Hypertext Preprocessor) ist eine serverseitige Skriptsprache, die zur Erstellung dynamischer Webseiten verwendet wird.', 'Hypertext Preprocessor', 'PHP, Hypertext Preprocessor, Programmiersprache, Webentwicklung', 'https://www.php.net/', '8.1', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 50),
+    (0, TRUE, 'Applikation', 'Java', 'Java ist eine objektorientierte Programmiersprache, die darauf ausgelegt ist, so wenige Implementierungsabhängigkeiten wie möglich zu haben.', 'Java SE', 'Java, Java SE, Programmiersprache, Softwareentwicklung', 'https://www.java.com/de/', '17', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 80),
+    (0, TRUE, 'Applikation', 'Python', 'Python ist eine interpretierte Hochsprachen-Programmiersprache, die Code-Lesbarkeit und Benutzerfreundlichkeit betont.', 'Python 3', 'Python, Python 3, Programmiersprache, Softwareentwicklung', 'https://www.python.org/', '3.10', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 80),
+    (0, TRUE, 'Applikation', 'MySQL', 'MySQL ist ein beliebtes, Open-Source-Relationales-Datenbankmanagementsystem.', 'Structured Query Language', 'MySQL, Strukturierte Abfragesprache, Datenbankmanagementsystem, Softwareentwicklung', 'https://www.mysql.com/', '8.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 90),
+    (0, TRUE, 'Applikation', 'C#', 'C# ist eine moderne, multiparadigmatische Programmiersprache, die von Microsoft entwickelt wurde.', 'C Sharp', 'C#, C Sharp, Programmiersprache, Softwareentwicklung', 'https://docs.microsoft.com/de-de/dotnet/csharp/', '10.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 65),
+    (0, TRUE, 'Applikation', 'Bash', 'Bash ist ein Shell-Programm für Unix-ähnliche Betriebssysteme, das Benutzern ermöglicht, Befehle einzugeben, um mit dem Betriebssystem zu interagieren.', 'Bourne-Again SHell', 'Bash, Shell, Befehlszeilenschnittstelle, CLI, Unix-ähnlich', 'https://www.gnu.org/software/bash/', 'Bash 5.1.8', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 45),
+    (0, FALSE, 'Applikation', 'FreeMarker', 'FreeMarker ist ein Template-Engine, die die Erstellung dynamischer Webseiten durch die Generierung von Textausgaben auf der Grundlage von Vorlagen ermöglicht.', 'Apache FreeMarker', 'FreeMarker, Template Engine, Java', 'https://freemarker.apache.org/', '2.3.31', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 85),
+    (0, TRUE, 'Applikation', 'PostgreSQL', 'PostgreSQL ist ein leistungsstarkes Open-Source-Relationales-Datenbankmanagementsystem.', 'Postgres', 'PostgreSQL, Postgres, Strukturierte Abfragesprache, Datenbankmanagementsystem, Softwareentwicklung', 'https://www.postgresql.org/', '14.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 45),
+    (0, TRUE, 'Applikation', 'Ableton Live 10', 'Ableton Live 10 ist eine digitale Audio-Workstation für macOS und Windows. Es wird hauptsächlich zum Komponieren, Aufnehmen, Remixen und Arrangieren von Musik verwendet.', 'Ableton', 'Ableton Live 10, DAW, Musikproduktion, Audio-Workstation', 'https://www.ableton.com/de/live/', '10.1.30', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 85),
+    (0, TRUE, 'Applikation', 'FL Studio', 'FL Studio ist eine digitale Audio-Workstation für Windows. Es wird hauptsächlich zum Erstellen und Produzieren von Musik verwendet.', 'FruityLoops', 'FL Studio, FruityLoops, DAW, Musikproduktion, Audio-Workstation', 'https://www.image-line.com/flstudio/', '20.8.4', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 60),
+    (0, FALSE, 'Applikation', 'Magnolia', 'Magnolia ist ein Open-Source-Content-Management-System (CMS) zur Verwaltung von Inhalten auf Websites und anderen digitalen Kanälen. Es ist in Java geschrieben und wurde von Magnolia International Ltd. entwickelt.', 'Magnolia CMS', 'Open-Source, Content-Management-System, Java, Magnolia International Ltd.',  'https://www.magnolia-cms.com/', '6.2.4', (SELECT applicationType_id FROM applicationType WHERE name = 'Inhaltsverwaltungssystem'), 85),
+    (0, FALSE, 'Applikation', 'JCR', 'Java Content Repositories (JCR) ist ein Standard des Java Community Process (JCP), der eine Schnittstelle für Content-Repositorys definiert. Ein Content-Repository ist eine Art Datenbank, in der nicht nur Daten gespeichert werden, sondern auch alle Arten von digitalen Assets, wie Bilder, Videos oder Dokumente.', 'Java Content Repositories', 'JCR, Java Community Process', 'https://jcp.org/en/jsr/detail?id=170', '2.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Programmiersprache'), 80),
+    (0, FALSE, 'Applikation', 'Docker', 'Docker ist eine Software, die es ermöglicht, Anwendungen und ihre Abhängigkeiten in sogenannten Containern zu verpacken und bereitzustellen. Dadurch wird eine einfache und schnelle Bereitstellung von Anwendungen ermöglicht, da Container unabhängig von der zugrunde liegenden Infrastruktur ausgeführt werden können.', 'Docker Container', 'Container, Virtualisierung', 'https://www.docker.com/', '20.10.7', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 25),
+    (0, FALSE, 'Applikation', 'Schema Markup', 'Schema Markup ist eine Form von strukturierten Daten, die verwendet werden, um Informationen auf Webseiten zu kennzeichnen. Diese strukturierten Daten werden von Suchmaschinen genutzt, um Informationen besser zu verstehen und zu interpretieren. Dadurch können Suchergebnisse in den Suchmaschinen verbessert werden und eine bessere Sichtbarkeit in den Suchergebnissen erzielt werden.', 'Structured Data', 'Schema.org, strukturierte Daten', 'https://schema.org/docs/gs.html', '4.2',  (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 85),
+    (0, TRUE, 'Applikation', 'Firebase',  'Firebase ist eine Plattform von Google, die es Entwicklern ermöglicht, schnell und einfach mobile und Webanwendungen zu entwickeln. Firebase bietet eine Vielzahl von Diensten wie Datenbanken, Authentifizierung, Hosting und Push-Benachrichtigungen.', 'Google Firebase', 'Mobile App Entwicklung, Web Entwicklung', 'https://firebase.google.com/', '9.3.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 60),
+    (0, TRUE, 'Applikation', 'Blender', 'Blender ist eine kostenlose, Open-Source-Software zur Erstellung von 3D-Modellen, Animationen, visuellen Effekten, Kunstwerken und Videospielen. Blender wird von einer aktiven Community entwickelt und bietet eine breite Palette von Werkzeugen und Funktionen für die Erstellung von 3D-Inhalten.', 'Blender 3D', '3D-Modellierung, Animation, visuelle Effekte', 'https://www.blender.org/', '3.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'), 25),
+    (0, TRUE, 'Applikation', 'Angular', 'Angular is a TypeScript-based open-source web application framework. It is used to build dynamic web applications that run in the browser. Angular is maintained by Google and is one of the most popular frameworks for building web applications.', 'Angular 4', 'Angular, TypeScript, web application framework, Google', 'https://angular.io/', '12.2.5', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'), 35);
 
 /*INSERT INTO application_operatingSystem (application_id, operatingSystem_id) VALUES
     ((SELECT application_id FROM application WHERE name = 'Vim'), (SELECT operatingSystem_id FROM operatingSystem WHERE name = 'Windows'));*/
@@ -217,26 +217,26 @@ INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'Firebase'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend')),
     ((SELECT skill_id FROM skill WHERE name = 'Blender'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Modellieren'));
 
-INSERT INTO skill (name, description, knowledgePercent, hobby, type) VALUES
-    ('Origami', '', 90, TRUE, 'Aktivität'),
-    ('Zeichnen', '', 85, TRUE, 'Aktivität'),
-    ('Graffiti', '', 70, TRUE, 'Aktivität'),
-    ('Holzarbeit', '', 65, TRUE, 'Aktivität'),
-    ('Nähen', '', 85, TRUE, 'Aktivität'),
-    ('Gitarre', '', 45, TRUE, 'Aktivität'),
-    ('Bass', '', 40, TRUE, 'Aktivität'),
-    ('Schlagzeug', '', 30, TRUE, 'Aktivität'),
-    ('Produzieren', '', 65, TRUE, 'Aktivität'),
-    ('Hort', '', 50, TRUE, 'Aktivität'),
-    ('Fahrrad', '', 80, TRUE, 'Aktivität'),
-    ('Volleyball', '', 65, TRUE, 'Aktivität'),
-    ('Skateboard', '', 45, TRUE, 'Aktivität'),
-    ('Tischtennis', '', 80, TRUE, 'Aktivität'),
-    ('Wandern', '', 80, TRUE, 'Aktivität'),
-    ('CEVI', '', 70, TRUE, 'Aktivität'),
-    ('Englischunterricht', '', 80, TRUE, 'Aktivität'),
-    ('Mathematikunterricht', '', 80, TRUE, 'Aktivität'),
-    ('Informatikunterricht', '', 80, TRUE, 'Aktivität');
+INSERT INTO skill (yearsOfExperience, name, description, knowledgePercent, hobby, type) VALUES
+    (0, 'Origami', '', 90, TRUE, 'Aktivität'),
+    (0, 'Zeichnen', '', 85, TRUE, 'Aktivität'),
+    (0, 'Graffiti', '', 70, TRUE, 'Aktivität'),
+    (0, 'Holzarbeit', '', 65, TRUE, 'Aktivität'),
+    (0, 'Nähen', '', 85, TRUE, 'Aktivität'),
+    (0, 'Gitarre', '', 45, TRUE, 'Aktivität'),
+    (0, 'Bass', '', 40, TRUE, 'Aktivität'),
+    (0, 'Schlagzeug', '', 30, TRUE, 'Aktivität'),
+    (0, 'Produzieren', '', 65, TRUE, 'Aktivität'),
+    (0, 'Hort', '', 50, TRUE, 'Aktivität'),
+    (0, 'Fahrrad', '', 80, TRUE, 'Aktivität'),
+    (0, 'Volleyball', '', 65, TRUE, 'Aktivität'),
+    (0, 'Skateboard', '', 45, TRUE, 'Aktivität'),
+    (0, 'Tischtennis', '', 80, TRUE, 'Aktivität'),
+    (0, 'Wandern', '', 80, TRUE, 'Aktivität'),
+    (0, 'CEVI', '', 70, TRUE, 'Aktivität'),
+    (0, 'Englischunterricht', '', 80, TRUE, 'Aktivität'),
+    (0, 'Mathematikunterricht', '', 80, TRUE, 'Aktivität'),
+    (0, 'Informatikunterricht', '', 80, TRUE, 'Aktivität');
 
 INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE name = 'Origami'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Gestalten')),
@@ -277,9 +277,9 @@ INSERT INTO address(street, city, zip, country_id) VALUES
 
 INSERT INTO contactPoint(name, phone, email) VALUES 
     ('info point', 0552565758, 'info@inteco.ch'),
-    ('Web support', NULL, 'webmaster@inteco.ch'),
-    ('Technik support', NULL, 'support@inteco.ch'),
-    ('WEGAS support', NULL, 'wegas@inteco.ch'),
+    ('Web support', 0, 'webmaster@inteco.ch'),
+    ('Technik support', 0, 'support@inteco.ch'),
+    ('WEGAS support', 0, 'wegas@inteco.ch'),
     ('info point', 0525502773, 'swissoffice@ernesto-vargas.com'),
     ('Sekretariat', 0444133080, NULL),
     ('Sekretariat', 0442446464, 'sekretariat@kshp.ch'),
@@ -291,7 +291,7 @@ INSERT INTO contactPoint(name, phone, email) VALUES
     ('dad', 0786081068, 'alexshev@yahoo.com'),
     ('niki', 0787280585, NULL),
     ('michi', 0786237232, NULL),
-    ('betina', NULL, 'betina.hiestand@inteco.ch');
+    ('betina', 0, 'betina.hiestand@inteco.ch');
 
 INSERT INTO workplace (description, name, legalName, url, logo, foundingDate, founder, address_id) VALUES 
     (NULL, 'Inteco', 'inteco edv ag', 'https://www.inteco.ch/', 'https://u.jimcdn.com/cms/o/s2be375c9b7b44441/userlayout/img/logo.png', '1978-01-01','Walter Tuchschmid', (SELECT address_id from address WHERE street = 'Barzloostrasse 20')),
@@ -333,13 +333,13 @@ INSERT INTO personCategory (name, description) VALUES
     ('berufsbildner',NULL),
     ('lehrer',NULL);
  
-INSERT INTO person (firstName, lastName, birthDate, birthPlace, jobTitle, gender, image, thumbnail, relation, description, address_id, workplace_id, school_id, personCategory_id, contactPoint_id) VALUES
-    ('Georgiy', 'Shevoroshkin', '2002-06-18', 'Zürich, ZH', 'Applikationsentwickler', 'M', 'content/profilepic/profilepic.jpg', NULL, 'myself', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'),(SELECT workplace_id FROM workplace WHERE name = 'Inteco'), NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'me'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'me')),
-    ('Tatiana', 'Chirokikh', '1967-04-14', 'St. Petersburg', 'Ernährungsberaterin', 'F', NULL, NULL, 'Mutter', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'), NULL, NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'familie'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'mom')),
-    ('Alexey', 'Shevoroshkin', '1966-05-08', 'Moscow', 'Applikationsentwickler', 'M', NULL, NULL, 'Vater', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'), NULL, NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'familie'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'dad')),
-    ('Nikolay', 'Shevoroshkin', '2006-08-05', 'Zürich, ZH', 'Schüler', 'M', NULL, NULL, 'Bruder', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'), NULL, NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'familie'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'niki')),
-    ('Michail', 'Shevoroshkin', '2004-11-22', 'Zürich, ZH', 'Tiermedizinischer Praxisassistent', 'M', NULL, NULL, 'Bruder', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'), NULL, NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'familie'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'michi')),
-    ('Betina', 'Hiestand', NULL, NULL, 'Applikationsentwicklerin', 'F', NULL, NULL, 'Berufsbildnerin', NULL, NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco'), NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'berufsbildner'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'betina'));
+INSERT INTO person (firstName, lastName, github, url, birthDate, birthPlace, jobTitle, gender, image, thumbnail, relation, description, address_id, workplace_id, school_id, personCategory_id, contactPoint_id) VALUES
+    ('Georgiy', 'Shevoroshkin', 'github.com',  'portfolio.com', '2002-06-18', 'Zürich, ZH', 'Applikationsentwickler', 'M', 'content/profilepic/profilepic_square.jpg', NULL, 'myself', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'),(SELECT workplace_id FROM workplace WHERE name = 'Inteco'), NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'me'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'me')),
+    ('Tatiana', 'Chirokikh', NULL, NULL, '1967-04-14', 'St. Petersburg', 'Ernährungsberaterin', 'F', NULL, NULL, 'Mutter', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'), NULL, NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'familie'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'mom')),
+    ('Alexey', 'Shevoroshkin', NULL, NULL, '1966-05-08', 'Moscow', 'Applikationsentwickler', 'M', NULL, NULL, 'Vater', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'), NULL, NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'familie'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'dad')),
+    ('Nikolay', 'Shevoroshkin', NULL, NULL, '2006-08-05', 'Zürich, ZH', 'Schüler', 'M', NULL, NULL, 'Bruder', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'), NULL, NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'familie'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'niki')),
+    ('Michail', 'Shevoroshkin', NULL, NULL, '2004-11-22', 'Zürich, ZH', 'Tiermedizinischer Praxisassistent', 'M', NULL, NULL, 'Bruder', NULL,(SELECT address_id FROM address WHERE street = 'Stettbachstrasse 129G'), NULL, NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'familie'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'michi')),
+    ('Betina', 'Hiestand', NULL, NULL, NULL, NULL, 'Applikationsentwicklerin', 'F', NULL, NULL, 'Berufsbildnerin', NULL, NULL, (SELECT workplace_id FROM workplace WHERE name = 'Inteco'), NULL, (SELECT personCategory_id FROM personCategory WHERE name = 'berufsbildner'), (SELECT contactPoint_id FROM contactPoint WHERE name = 'betina'));
 
 INSERT INTO person_country (person_id, country_id) VALUES
     ((SELECT person_id FROM person WHERE firstName = 'Georgiy'),(SELECT country_id FROM country WHERE shortName = 'CH')),

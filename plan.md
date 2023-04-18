@@ -217,4 +217,11 @@
     - camping
     - hiking
     - cooking
-    - 
+
+*skillsort options*
+
+- type
+- category
+- subCategory
+- hobby
+- applicationType_id

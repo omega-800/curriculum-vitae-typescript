@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS skillCategory (
     description VARCHAR,
     description_e VARCHAR,
     description_r VARCHAR,
-    percent INT NOT NULL
+    percent SMALLINT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS skillSubCategory (
@@ -73,11 +73,11 @@ CREATE TABLE IF NOT EXISTS applicationType(
 CREATE TABLE IF NOT EXISTS skill (
     skill_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     hobby BOOLEAN NOT NULL,
-    knowledgePercent INT,
+    knowledgePercent SMALLINT NOT NULL,
     proficiencyLevel VARCHAR,
     proficiencyLevel_e VARCHAR,
     proficiencyLevel_r VARCHAR,
-    yearsOfExperience INT,
+    yearsOfExperience SMALLINT,
     name VARCHAR NOT NULL,
     name_e VARCHAR,
     name_r VARCHAR,
@@ -141,7 +141,7 @@ CREATE TABLE IF NOT EXISTS address (
     address_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     street VARCHAR NOT NULL,
     city VARCHAR NOT NULL,
-    zip INT NOT NULL,
+    zip SMALLINT NOT NULL,
     country_id UUID NOT NULL REFERENCES country(country_id)
 );
 
@@ -199,8 +199,8 @@ CREATE TABLE IF NOT EXISTS career (
     description VARCHAR,
     description_e VARCHAR,
     description_r VARCHAR,
-    yearfrom INT NOT NULL,
-    yearto INT NOT NULL,
+    yearfrom SMALLINT NOT NULL,
+    yearto SMALLINT NOT NULL,
     document VARCHAR,
     workplace_id UUID REFERENCES workplace(workplace_id),
     school_id UUID REFERENCES school(school_id)
@@ -234,6 +234,8 @@ CREATE TABLE IF NOT EXISTS person (
     description VARCHAR,
     description_e VARCHAR,
     description_r VARCHAR,
+    github VARCHAR,
+    url VARCHAR,
     address_id UUID REFERENCES address(address_id),
     workplace_id UUID REFERENCES workplace(workplace_id),
     school_id UUID REFERENCES school(school_id),
