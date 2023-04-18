@@ -156,11 +156,11 @@ CREATE TABLE IF NOT EXISTS skill (
     proficiencyLevel_e VARCHAR,
     proficiencyLevel_r VARCHAR,
     yearsOfExperience SMALLINT,
-    application_id UUID NOT NULL REFERENCES application(application_id),
-    language_id UUID NOT NULL REFERENCES language(language_id),
-    knowledge_id UUID NOT NULL REFERENCES knowledge(knowledge_id),
-    activity_id UUID NOT NULL REFERENCES activity(activity_id),
-    ability_id UUID NOT NULL REFERENCES ability(ability_id)
+    application_id UUID REFERENCES application(application_id),
+    language_id UUID REFERENCES language(language_id),
+    knowledge_id UUID REFERENCES knowledge(knowledge_id),
+    activity_id UUID REFERENCES activity(activity_id),
+    ability_id UUID REFERENCES ability(ability_id)
 );
 
 CREATE TABLE IF NOT EXISTS skill_skillSubCategory (

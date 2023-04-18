@@ -32,7 +32,6 @@ INSERT INTO skillSubCategory (name, description, skillCategory_id) VALUES
     ('Sprachen', 'Die Fähigkeit, Sprachen fließend zu sprechen, lesen und schreiben.', (SELECT skillCategory_id FROM skillCategory WHERE name = 'Allgemein')),
     ('Wissen', 'Die Fähigkeit, Wissen in verschiedenen Bereichen zu sammeln, zu verstehen und anzuwenden.', (SELECT skillCategory_id FROM skillCategory WHERE name = 'Allgemein'));
 
-
 INSERT INTO knowledge (name, description, name_e, name_r, description_e, description_r, thumbnail, image, url) VALUES
     ('Web Accessibility', 'Web Accessibility bezieht sich auf die Praktiken und Technologien, die verwendet werden, um Websites für Menschen mit Behinderungen zugänglicher zu machen.','','','','','','',''),
     ('SEO', 'SEO (Search Engine Optimization) umfasst Techniken und Strategien, um die Sichtbarkeit einer Website in Suchmaschinen zu erhöhen.','','','','','','',''),
@@ -116,14 +115,14 @@ INSERT INTO language (name, description, shortName, name_e, name_r, description_
     ('Französisch', 'Schulwissen', 'FR','','','','','','','');
     
 INSERT INTO skill (yearsOfExperience, identifier, knowledgePercent, proficiencyLevel, hobby, language_id) VALUES
-    (0, 'de', 100, 'C2', FALSE, (SELECT skill_id FROM skill WHERE name = 'Deutsch')),
-    (0, 'en', 90, 'C1', FALSE, (SELECT skill_id FROM skill WHERE name = 'Englisch')),
-    (0, 'ru', 75, 'B2', FALSE, (SELECT skill_id FROM skill WHERE name = 'Russisch')),
-    (0, 'fr', 50, 'B1', FALSE, (SELECT skill_id FROM skill WHERE name = 'Französisch'));
+    (0, 'de', 100, 'C2', FALSE, (SELECT language_id FROM language WHERE name = 'Deutsch')),
+    (0, 'en', 90, 'C1', FALSE, (SELECT language_id FROM language WHERE name = 'Englisch')),
+    (0, 'ru', 75, 'B2', FALSE, (SELECT language_id FROM language WHERE name = 'Russisch')),
+    (0, 'fr', 50, 'B1', FALSE, (SELECT language_id FROM language WHERE name = 'Französisch'));
 
 INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE identifier = 'de'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen')),
-    ((SELECT skill_id FROM skill WHERE identifier = 'ED'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen')),
+    ((SELECT skill_id FROM skill WHERE identifier = 'de'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen')),
     ((SELECT skill_id FROM skill WHERE identifier = 'ru'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen')),
     ((SELECT skill_id FROM skill WHERE identifier = 'fr'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen'));
 
@@ -134,10 +133,10 @@ INSERT INTO country(name, name_e, name_r, shortName) VALUES
     ('Frankreich', NULL, NULL, 'FR');
 
 INSERT INTO country_language (language_id, country_id) VALUES 
-    ((SELECT language_id from language WHERE shortName = 'de'), (SELECT country_id from country WHERE shortName = 'CH')),
-    ((SELECT language_id from language WHERE shortName = 'en'), (SELECT country_id from country WHERE shortName = 'US')),
-    ((SELECT language_id from language WHERE shortName = 'ru'), (SELECT country_id from country WHERE shortName = 'RU')),
-    ((SELECT language_id from language WHERE shortName = 'fr'), (SELECT country_id from country WHERE shortName = 'FR'));
+    ((SELECT language_id from language WHERE shortName = 'DE'), (SELECT country_id from country WHERE shortName = 'CH')),
+    ((SELECT language_id from language WHERE shortName = 'EN'), (SELECT country_id from country WHERE shortName = 'US')),
+    ((SELECT language_id from language WHERE shortName = 'RU'), (SELECT country_id from country WHERE shortName = 'RU')),
+    ((SELECT language_id from language WHERE shortName = 'FR'), (SELECT country_id from country WHERE shortName = 'FR'));
 
 INSERT INTO applicationType (name, name_e, description) VALUES
     ('Programmiersprache', 'Programming language',NULL),
@@ -684,7 +683,7 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 2'),(SELECT skill_id FROM skill WHERE identifier = 'kreat')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 2'),(SELECT skill_id FROM skill WHERE identifier = 'selbst')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE identifier = 'py')),
-    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE identifier = 'Ursina')),
+    ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE identifier = 'ursina')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE identifier = 'gimp')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE identifier = 'logic')),
     ((SELECT project_id FROM project WHERE name = 'Roguelike Dungeon Spiel 3'),(SELECT skill_id FROM skill WHERE identifier = 'kreat')),
