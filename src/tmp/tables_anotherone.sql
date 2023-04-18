@@ -29,6 +29,9 @@ DROP TABLE IF EXISTS country CASCADE;
 DROP TABLE IF EXISTS language CASCADE;
 DROP TABLE IF EXISTS category CASCADE;
 DROP TABLE IF EXISTS skill_skillSubCategory CASCADE;
+DROP TABLE IF EXISTS applicationSubCategory CASCADE;
+DROP TABLE IF EXISTS projectCategory CASCADE;
+DROP TABLE IF EXISTS project_projectCategory CASCADE;
 
 CREATE TABLE IF NOT EXISTS country (
     country_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
