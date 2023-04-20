@@ -225,3 +225,14 @@
 - subCategory
 - hobby
 - applicationType_id
+
+
+
+- Promises / async await
+- angular state
+- atomizable components
+- create plan: which components / services will the webapp have?
+  - lists of components
+  - filter
+  - button
+  - infobox

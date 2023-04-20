@@ -191,7 +191,8 @@ INSERT INTO application (name, description, alternateName, keywords, url, versio
     ('Schema Markup', 'Schema Markup ist eine Form von strukturierten Daten, die verwendet werden, um Informationen auf Webseiten zu kennzeichnen. Diese strukturierten Daten werden von Suchmaschinen genutzt, um Informationen besser zu verstehen und zu interpretieren. Dadurch können Suchergebnisse in den Suchmaschinen verbessert werden und eine bessere Sichtbarkeit in den Suchergebnissen erzielt werden.', 'Structured Data', 'Schema.org, strukturierte Daten', 'https://schema.org/docs/gs.html', '4.2',  (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk')),
     ('Firebase',  'Firebase ist eine Plattform von Google, die es Entwicklern ermöglicht, schnell und einfach mobile und Webanwendungen zu entwickeln. Firebase bietet eine Vielzahl von Diensten wie Datenbanken, Authentifizierung, Hosting und Push-Benachrichtigungen.', 'Google Firebase', 'Mobile App Entwicklung, Web Entwicklung', 'https://firebase.google.com/', '9.3.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation')),
     ('Blender', 'Blender ist eine kostenlose, Open-Source-Software zur Erstellung von 3D-Modellen, Animationen, visuellen Effekten, Kunstwerken und Videospielen. Blender wird von einer aktiven Community entwickelt und bietet eine breite Palette von Werkzeugen und Funktionen für die Erstellung von 3D-Inhalten.', 'Blender 3D', '3D-Modellierung, Animation, visuelle Effekte', 'https://www.blender.org/', '3.0', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation')),
-    ('Angular', 'Angular is a TypeScript-based open-source web application framework. It is used to build dynamic web applications that run in the browser. Angular is maintained by Google and is one of the most popular frameworks for building web applications.', 'Angular 4', 'Angular, TypeScript, web application framework, Google', 'https://angular.io/', '12.2.5', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk'));
+    ('Angular', 'Angular is a TypeScript-based open-source web application framework. It is used to build dynamic web applications that run in the browser. Angular is maintained by Google and is one of the most popular frameworks for building web applications.', 'Angular 4', 'Angular, TypeScript, web application framework, Google', 'https://angular.io/', '12.2.5', (SELECT applicationType_id FROM applicationType WHERE name = 'Rahmenwerk')),
+    ('Regex', 'Regex ist eine Abkürzung für regulärer Ausdruck und bezieht sich auf Muster oder Vorlagen, die zur Suche und Manipulation von Zeichenketten in Texten verwendet werden.', 'Regular Expression', 'Regex, regulärer Ausdruck, Muster, Vorlagen, Zeichenketten, Text', 'https://regex101.com/', '', (SELECT applicationType_id FROM applicationType WHERE name = 'Applikation'));
 
 INSERT INTO skill (identifier, yearsOfExperience, hobby, knowledgePercent, application_id) VALUES
     ('vim', 0, TRUE, 75, (SELECT application_id FROM application WHERE name = 'Vim')),
@@ -234,7 +235,8 @@ INSERT INTO skill (identifier, yearsOfExperience, hobby, knowledgePercent, appli
     ('schema', 0, FALSE, 85, (SELECT application_id FROM application WHERE name = 'Schema Markup')),
     ('fireb', 0, FALSE, 50, (SELECT application_id FROM application WHERE name = 'Firebase')),
     ('blend', 0, FALSE, 30, (SELECT application_id FROM application WHERE name = 'Blender')),
-    ('ng', 0, FALSE, 45, (SELECT application_id FROM application WHERE name = 'Angular'));
+    ('ng', 0, FALSE, 45, (SELECT application_id FROM application WHERE name = 'Angular')),
+    ('regex', 0, FALSE, 70, (SELECT application_id FROM application WHERE name = 'Regex'));
 
 /*INSERT INTO application_operatingSystem (application_id, operatingSystem_id) VALUES
     ((SELECT application_id FROM application WHERE name = 'Vim'), (SELECT operatingSystem_id FROM operatingSystem WHERE name = 'Windows'));*/
@@ -290,7 +292,9 @@ INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE identifier = 'schema'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'SEO')),
     ((SELECT skill_id FROM skill WHERE identifier = 'schema'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Frontend')),
     ((SELECT skill_id FROM skill WHERE identifier = 'fireb'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend')),
-    ((SELECT skill_id FROM skill WHERE identifier = 'blend'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Modellieren'));
+    ((SELECT skill_id FROM skill WHERE identifier = 'blend'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Modellieren')),
+    ((SELECT skill_id FROM skill WHERE identifier = 'regex'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend')),
+    ((SELECT skill_id FROM skill WHERE identifier = 'regex'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Datenmanagement'));
 
 INSERT INTO activity (name, description) VALUES
     ('Origami', ''),
@@ -497,6 +501,7 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE identifier = 'logic')),
     ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE identifier = 'org')),
     ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE identifier = 'kritik')),
+    ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE identifier = 'regex')),
     ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT skill_id FROM skill WHERE identifier = 'java')),
     ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT skill_id FROM skill WHERE identifier = 'freem')),
     ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT skill_id FROM skill WHERE identifier = 'css')),
@@ -514,10 +519,12 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'SCSS Skript'),(SELECT skill_id FROM skill WHERE identifier = 'bash')),
     ((SELECT project_id FROM project WHERE name = 'SCSS Skript'),(SELECT skill_id FROM skill WHERE identifier = 'vim')),
     ((SELECT project_id FROM project WHERE name = 'SCSS Skript'),(SELECT skill_id FROM skill WHERE identifier = 'logic')),
+    ((SELECT project_id FROM project WHERE name = 'SCSS Skript'),(SELECT skill_id FROM skill WHERE identifier = 'regex')),
     ((SELECT project_id FROM project WHERE name = 'Übersetzungsskript'),(SELECT skill_id FROM skill WHERE identifier = 'py')),
     ((SELECT project_id FROM project WHERE name = 'Übersetzungsskript'),(SELECT skill_id FROM skill WHERE identifier = 'js')),
     ((SELECT project_id FROM project WHERE name = 'Übersetzungsskript'),(SELECT skill_id FROM skill WHERE identifier = 'ts')),
     ((SELECT project_id FROM project WHERE name = 'Übersetzungsskript'),(SELECT skill_id FROM skill WHERE identifier = 'logic')),
+    ((SELECT project_id FROM project WHERE name = 'Übersetzungsskript'),(SELECT skill_id FROM skill WHERE identifier = 'regex')),
     ((SELECT project_id FROM project WHERE name = 'Testen mittels Selenium'),(SELECT skill_id FROM skill WHERE identifier = 'selen')),
     ((SELECT project_id FROM project WHERE name = 'Testen mittels Selenium'),(SELECT skill_id FROM skill WHERE identifier = 'py')),
     ((SELECT project_id FROM project WHERE name = 'Testen mittels Selenium'),(SELECT skill_id FROM skill WHERE identifier = 'logic')),
