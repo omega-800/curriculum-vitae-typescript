@@ -218,13 +218,15 @@
     - hiking
     - cooking
 
-*skillsort options*
+*skillfilter options*
 
 - type
 - category
 - subCategory
 - hobby
 - applicationType_id
+
+*projectfilter options*
 
 
 

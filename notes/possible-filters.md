@@ -1,0 +1,51 @@
+# Filter options
+
+## Skills
+
+- hobby
+  - True
+  - False
+- category
+  - "Allgemein"
+  - "Gesundheit"
+  - "Informatik"
+  - "Kunst"
+  - "Pädagogik"
+- ifCategorySelected: subCategory
+  - "Backend"
+  - "Bildbearbeitung"
+  - "Datenbankentwicklung"
+  - "Datenbearbeitung"
+  - "Datenmanagement"
+  - "Einzelunterricht"
+  - "Ernährung"
+  - "Frontend"
+  - "Geist"
+  - "Gestalten"
+  - "Mobile App Entwicklung"
+  - "Modellieren"
+  - "Musik"
+  - "Natur"
+  - "Office"
+  - "Schule"
+  - "SEO"
+  - "Softskills"
+  - "Spielentwicklung"
+  - "Sport"
+  - "Sprachen"
+  - "Textilarbeit"
+  - "Verein"
+  - "Werken"
+  - "Wissen"  
+- type
+  - "Applikation"
+  - "Skill"
+  - "Aktivität"
+  - "Sprache"
+  - "Wissen"
+- ifTypeEqualsApp: applicationType
+  - "Applikation"
+  - "Inhaltsverwaltungssystem"
+  - "Programmiersprache"
+  - "Rahmenwerk"
+  - "Umgebung" 
