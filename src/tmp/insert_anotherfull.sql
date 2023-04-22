@@ -85,16 +85,16 @@ INSERT INTO ability (name, description, name_e, name_r, description_e, descripti
     ('Geduld', 'Die Fähigkeit, in schwierigen oder herausfordernden Situationen ruhig zu bleiben und darauf zu vertrauen, dass sich die Dinge zum Guten wenden werden. Geduld hilft dabei, auch langfristige Ziele zu verfolgen und Hindernisse zu überwinden.','','','','','','','');
 
 INSERT INTO skill (identifier, yearsOfExperience, knowledgePercent, hobby, ability_id) VALUES
-    ('selbst', 0, 100, FALSE, (SELECT knowledge_id FROM knowledge WHERE name = 'Selbstständigkeit')),
-    ('team', 0, 80, FALSE, (SELECT knowledge_id FROM knowledge WHERE name = 'Teamwork')),
-    ('logic', 0, 90, FALSE, (SELECT knowledge_id FROM knowledge WHERE name = 'Logisches Denken')),
-    ('kritik', 0, 95, FALSE, (SELECT knowledge_id FROM knowledge WHERE name = 'Kritikfähigkeit')),
-    ('kreat', 0, 100, FALSE, (SELECT knowledge_id FROM knowledge WHERE name = 'Kreativität')),
-    ('komm', 0, 75, FALSE, (SELECT knowledge_id FROM knowledge WHERE name = 'Kommunikation')),
-    ('lern', 0, 90, FALSE, (SELECT knowledge_id FROM knowledge WHERE name = 'Lernfähigkeit')),
-    ('org', 0, 65, FALSE, (SELECT knowledge_id FROM knowledge WHERE name = 'Organisation')),
-    ('empa', 0, 95, FALSE, (SELECT knowledge_id FROM knowledge WHERE name = 'Empathie')),
-    ('gedu', 0, 75, FALSE, (SELECT knowledge_id FROM knowledge WHERE name = 'Geduld'));
+    ('selbst', 0, 100, FALSE, (SELECT ability_id FROM ability WHERE name = 'Selbstständigkeit')),
+    ('team', 0, 80, FALSE, (SELECT ability_id FROM ability WHERE name = 'Teamwork')),
+    ('logic', 0, 90, FALSE, (SELECT ability_id FROM ability WHERE name = 'Logisches Denken')),
+    ('kritik', 0, 95, FALSE, (SELECT ability_id FROM ability WHERE name = 'Kritikfähigkeit')),
+    ('kreat', 0, 100, FALSE, (SELECT ability_id FROM ability WHERE name = 'Kreativität')),
+    ('komm', 0, 75, FALSE, (SELECT ability_id FROM ability WHERE name = 'Kommunikation')),
+    ('lern', 0, 90, FALSE, (SELECT ability_id FROM ability WHERE name = 'Lernfähigkeit')),
+    ('org', 0, 65, FALSE, (SELECT ability_id FROM ability WHERE name = 'Organisation')),
+    ('empa', 0, 95, FALSE, (SELECT ability_id FROM ability WHERE name = 'Empathie')),
+    ('gedu', 0, 75, FALSE, (SELECT ability_id FROM ability WHERE name = 'Geduld'));
 
 INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE identifier = 'selbst'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Softskills')),
