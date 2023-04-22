@@ -425,7 +425,7 @@ INSERT INTO career (name, description, yearfrom, yearto, workplace_id, school_id
     ('ims',NULL,2017,2020,NULL,(SELECT school_id FROM school WHERE name = 'Hottingen')),
     ('sek',NULL,2016,2017,NULL,(SELECT school_id FROM school WHERE name = 'Herzogenmühle')),
     ('hopro',NULL,2014,2016,NULL,(SELECT school_id FROM school WHERE name = 'Hohe Promenade')),
-    ('probstei',NULL,2008,2014,NULL,(SELECT school_id FROM school WHERE name = 'Probsteis'));
+    ('probstei',NULL,2008,2014,NULL,(SELECT school_id FROM school WHERE name = 'Probstei'));
 
 INSERT INTO personCategory (name, description) VALUES 
     ('me', NULL),
