@@ -6,6 +6,7 @@ DROP TABLE IF EXISTS skillCategory CASCADE;
 DROP TABLE IF EXISTS skillSubCategory CASCADE;
 DROP TABLE IF EXISTS knowledge CASCADE;
 DROP TABLE IF EXISTS activity CASCADE;
+DROP TABLE IF EXISTS ability CASCADE;
 DROP TABLE IF EXISTS operatingSystem CASCADE;
 DROP TABLE IF EXISTS applicationType CASCADE;
 DROP TABLE IF EXISTS applicationCategory CASCADE;
@@ -327,7 +328,7 @@ CREATE TABLE IF NOT EXISTS project (
     github VARCHAR,
     date DATE,
     client_id UUID REFERENCES person(person_id),
-    workplace_id UUID REFERENCES workplace(workplace_id)
+    career_id UUID REFERENCES career(career_id)
 );
 
 CREATE TABLE IF NOT EXISTS project_skill (
