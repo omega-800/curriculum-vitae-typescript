@@ -34,6 +34,8 @@ DROP TABLE IF EXISTS skill_skillSubCategory CASCADE;
 DROP TABLE IF EXISTS applicationSubCategory CASCADE;
 DROP TABLE IF EXISTS projectCategory CASCADE;
 DROP TABLE IF EXISTS project_projectCategory CASCADE;
+DROP TABLE IF EXISTS client CASCADE;
+DROP TABLE IF EXISTS project_client CASCADE;
 
 CREATE TABLE IF NOT EXISTS country (
     country_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -342,5 +344,18 @@ CREATE TABLE IF NOT EXISTS project_author (
     project_author_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     project_id UUID NOT NULL REFERENCES project(project_id),
     author_id UUID NOT NULL REFERENCES person(person_id)
+);
+
+CREATE TABLE IF NOT EXISTS client (
+    client_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    name VARCHAR NOT NULL,
+    description VARCHAR,
+    url VARCHAR NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS project_client (
+    project_client_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    project_id UUID NOT NULL REFERENCES project(project_id),
+    client_id UUID NOT NULL REFERENCES client(client_id)
 );
 

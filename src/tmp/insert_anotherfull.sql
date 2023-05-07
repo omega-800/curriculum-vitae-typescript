@@ -139,11 +139,11 @@ INSERT INTO country_language (language_id, country_id) VALUES
     ((SELECT language_id from language WHERE shortName = 'FR'), (SELECT country_id from country WHERE shortName = 'FR'));
 
 INSERT INTO applicationType (name, name_e, description) VALUES
-    ('Programmiersprache', 'Programming language',NULL),
-    ('Umgebung', 'Environment',NULL),
-    ('Applikation', 'Application',NULL),
-    ('Rahmenwerk', 'Framework',NULL),
-    ('Inhaltsverwaltungssystem', 'Content Management System',NULL);
+    ('Programmiersprache', 'Programming language', 'Eine Programmiersprache ist eine formale Sprache, die entwickelt wurde, um Computerprogramme zu erstellen.'),
+    ('Umgebung', 'Environment', 'Eine Umgebung bezieht sich auf den Satz von Ressourcen, in dem Software ausgeführt wird.'),
+    ('Applikation', 'Application', 'Eine Applikation ist ein Computerprogramm oder eine Softwareanwendung, die bestimmte Aufgaben oder Funktionen ausführt.'),
+    ('Rahmenwerk', 'Framework', 'Ein Rahmenwerk ist ein unterstützendes Strukturkonzept, das bei der Entwicklung von Softwareanwendungen verwendet wird.'),
+    ('Inhaltsverwaltungssystem', 'Content Management System', 'Ein Inhaltsverwaltungssystem (CMS) ist eine Software, die verwendet wird, um digitale Inhalte zu erstellen, zu bearbeiten, zu organisieren und zu veröffentlichen, insbesondere in Bezug auf Websites und Blogs.');
 
 INSERT INTO operatingSystem (name, description, url) VALUES 
    ('Windows', 'Ein beliebtes Betriebssystem für Personalcomputer.', 'https://www.microsoft.com/windows'),
@@ -460,21 +460,29 @@ INSERT INTO person_country (person_id, country_id) VALUES
     ((SELECT person_id FROM person WHERE firstName = 'Tatiana'),(SELECT country_id FROM country WHERE shortName = 'CH')),
     ((SELECT person_id FROM person WHERE firstName = 'Tatiana'),(SELECT country_id FROM country WHERE shortName = 'RU'));
 
+INSERT INTO client (name, description, url) VALUES
+    ('Firstwine','','https://www.firstwine.ch/startseite'),
+    ('DM Vini','','https://www.dmvini.ch/startseite'),
+    ('Maria Bühler','','https://www.buehlerweine.ch/startseite'),
+    ('Wy Galerie','','https://www.wy-galerie-grueningen.ch/startseite'),
+    ('Terroir-ist','','https://www.terroir-ist.ch/startseite.html');
+
 INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, career_id) VALUES
-    ('ID Altersverifikation','',NULL,'projects/it/inteco/idageverification/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('Produzentenseite','',NULL,'projects/it/inteco/producer/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('SCSS Skript','',NULL,'projects/it/inteco/scss_script/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('Übersetzungsskript','',NULL,'projects/it/inteco/translate/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('Testen mittels Selenium','',NULL,'projects/it/inteco/seleniumtest/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('i18n','',NULL,'projects/it/inteco/i18n/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('Passwort zurücksetzen','',NULL,'projects/it/inteco/passreset/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('Share Buttons','',NULL,'projects/it/inteco/sharebtn/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('SEO Analyse','',NULL,'projects/it/inteco/seo_analysis/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('Geschmacksprofil','',NULL,'projects/it/inteco/tasteprofile/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('Popup','',NULL,'projects/it/inteco/popup/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('Konfigurationsseiten Magnolia','',NULL,'projects/it/inteco/admincenter/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('Webseiten aufsetzen','',NULL,'projects/it/inteco/aufsetzen/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
-    ('Webseiten warten','',NULL,'projects/it/inteco/warten/',NULL,NULL,NULL,NULL, (SELECT career_id FROM career WHERE name = 'inteco'));
+    ('ID Altersverifikation','Die Inteco EDV AG setzt für Getränkehändler Webshops um. Da viele dieser Kunden alkoholhaltige Getränke verkaufen, musste laut den neuen Onlinegesetzen der Schweiz eine Altersüberprüfungsmethode im Webshop implementiert werden. 
+Mir wurde der Auftrag vermittelt, eine Altersüberprüfung in den Webshops einzubauen, welche durch die Kennzahlen der Schweizer ID oder des Schweizer Passes erfolgen soll.',NULL,'/projects/it/inteco/idageverification/',NULL,NULL,'2023-01-12',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('Produzentenseite','Ich setzte die Seite «Partner» im neuen Webshop vom Kunden Firstwine um, auf welcher die Getränkeproduzenten nach Ortschaft sortiert ersichtlich sind. Ihr alter Webshop besass schon diese Unterseite und im neuen Shop wurde eine Komponente erstellt, die durch einen neuen, rekursiven Ansatz die Produzenten auflistet.',NULL,'/projects/it/inteco/producer/',NULL,NULL,'2022-12-01',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('SCSS Skript','Ein weiterer Auftrag war das Refaktorisieren des SCSS Quellcodes, damit dieser mit der neuen Version des SCSS VS Code Plugins Kompiliert werden konnte. Da hauptsächlich die gleichen Fehler behoben werden mussten, schrieb ich ein Shell-Skript welches mithilfe von Regular Expressions die betroffenen Zeilen ersetzte.',NULL,'/projects/it/inteco/scss_script/',NULL,NULL,'2022-11-15',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('Übersetzungsskript','Bei der Integration der Internationalisierung in die von der Inteco edv AG entwickelten Webseiten mussten viele Werte übersetzt werden, welche in .properties Dateien gespeichert waren. Um den Prozess teils zu automatisieren schrieb ich ein Python- und danach ein TypeScript-Skript, welches mithilfe von Regular Expressions durch die Werte aus der gegebenen Datei iteriert und entweder (nach optionaler Bestätigung) ersetzt oder überspringt falls sie schon übersetzt waren.',NULL,'/projects/it/inteco/translate/',NULL,NULL,'2023-02-02',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('Testen mittels Selenium','Bei der implementation der Produzentenseite schrieb ich in Python mithilfe von Selenium ein Skript, welches das Frontend der erstellten Seite auf bestimmte Kriterien testete und die Resultate in eine Tabelle eingetragen hat.',NULL,'/projects/it/inteco/seleniumtest/',NULL,NULL,'2022-12-20',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('i18n','',NULL,'/projects/it/inteco/i18n/',NULL,NULL,'2023-02-01',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('Passwort zurücksetzen','Da mir auffiel, dass bei der Anfrage auf ein neues Passwort dieses in einfachem Text per E-Mail versendet wurde, erarbeitete ich eine sicherere Methode das Passwort zurückzusetzen. Diese erfolgt durch das versenden eines Links, welcher auf eine Seite führt, worauf der User sein Passwort selber setzt (nachdem die Gültigkeit des Links überprüft wurde).',NULL,'/projects/it/inteco/passreset/',NULL,NULL,'2022-10-20',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('Share Buttons','Einer meiner ersten Aufträge bei der Inteco edv AG war es, auf der Produktdetailseite Share-Buttons einzufügen, sowie das Schema Markup, welches die Vorschau des Produktes beim Teilen ermöglichte.',NULL,'/projects/it/inteco/sharebtn/',NULL,NULL,'2022-07-01',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('SEO Analyse','Innerhalb des Praktikums bei Inteco erarbeitete ich mir viel Wissen über (das unendliche Thema) SEO, welches ich in einem Dokument zusammenfasste und durch eine Präsentation unserem Webentwicklungs-Team vorstellte. Teilweise begann ich selbst damit einen Teil, welchen wir als Entwickler zu SEO beitragen können, umzusetzen.',NULL,'/projects/it/inteco/seo_analysis/',NULL,NULL,'2022-09-01',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('Geschmacksprofil','Mein erster Auftrag als Praktikant war es, ein Geschmacksprofil auf der Produktdetailseite der Weine zu erstellen, an dem ersichtlich sein soll, wie der Wein schmeckt.',NULL,'/projects/it/inteco/tasteprofile/',NULL,NULL,'2022-06-20',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('Popup','Im Auftrag vom Terroir-ist erstellte ich ein Konfigurierbares Popup, um als User das Alter bestätigen zu können.',NULL,'/projects/it/inteco/popup/',NULL,NULL,'2023-03-05',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('Konfigurationsseiten Magnolia','',NULL,'/projects/it/inteco/admincenter/',NULL,NULL,'2023-02-24',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('Webseiten aufsetzen','In meiner Zeit als Praktikant hatte ich zwei Webseiten auf Tomcat7 Servern sowie Docker neu aufgesetzt und livegeschaltet für Kunden, die vom alten Webshop in den neuen migrierten.',NULL,'/projects/it/inteco/aufsetzen/',NULL,NULL,'2022-08-05',NULL, (SELECT career_id FROM career WHERE name = 'inteco')),
+    ('Webseiten warten','Ich wartete bei der Inteco edv AG bei mehreren Kunden Ihre Webseiten mit und setzte erwünschte Features um. Dabei sammelte ich viele Erfahrungen mit Frontend sowie Backend Technologien.',NULL,'/projects/it/inteco/warten/',NULL,NULL,'2022-07-05',NULL, (SELECT career_id FROM career WHERE name = 'inteco'));
 
 INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
@@ -491,6 +499,19 @@ INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Konfigurationsseiten Magnolia'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT person_id FROM person WHERE firstName = 'Georgiy'));
+
+INSERT INTO project_client (project_id, client_id) VALUES
+    ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT client_id FROM client WHERE name = 'DM Vini')),
+    ((SELECT project_id FROM project WHERE name = 'Produzentenseite'),(SELECT client_id FROM client WHERE name = 'Firstwine')),
+    ((SELECT project_id FROM project WHERE name = 'i18n'),(SELECT client_id FROM client WHERE name = 'DM Vini')),
+    ((SELECT project_id FROM project WHERE name = 'Passwort zurücksetzen'),(SELECT client_id FROM client WHERE name = 'Wy Galerie')),
+    ((SELECT project_id FROM project WHERE name = 'Share Buttons'),(SELECT client_id FROM client WHERE name = 'Wy Galerie')),
+    ((SELECT project_id FROM project WHERE name = 'Geschmacksprofil'),(SELECT client_id FROM client WHERE name = 'Wy Galerie')),
+    ((SELECT project_id FROM project WHERE name = 'Popup'),(SELECT client_id FROM client WHERE name = 'Terroir-ist')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT client_id FROM client WHERE name = 'Maria Bühler')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten aufsetzen'),(SELECT client_id FROM client WHERE name = 'Firstwine')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT client_id FROM client WHERE name = 'Maria Bühler')),
+    ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT client_id FROM client WHERE name = 'Terroir-ist'));
 
 INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'ID Altersverifikation'),(SELECT skill_id FROM skill WHERE identifier = 'java')),
@@ -609,7 +630,7 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Webseiten warten'),(SELECT skill_id FROM skill WHERE identifier = 'teamwork'));
 
 INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, career_id) VALUES
-    ('Webscraping automatisation','',NULL,'projects/it/python/ernestovargas',NULL,'https://github.com/omega-800/AutomationPython',NULL,NULL, (SELECT career_id FROM career WHERE name='ernestovargas'));
+    ('Webscraping automatisation','',NULL,'/projects/it/python/ernestovargas/',NULL,'https://github.com/omega-800/AutomationPython','2020-12-18',NULL, (SELECT career_id FROM career WHERE name='ernestovargas'));
 
 INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Webscraping automatisation'),(SELECT person_id FROM person WHERE firstName = 'Georgiy'));
@@ -624,20 +645,20 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Webscraping automatisation'),(SELECT skill_id FROM skill WHERE identifier = 'independence'));
 
 INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, career_id) VALUES
-    ('Portfolio','',NULL,'projects/it/web/cv_old','https://portfolio-chirokikh-georgiy.web.app/','https://github.com/omega-800/curriculum-vitae-typescript',NULL,NULL,NULL),
-    ('Finanzplaner','',NULL,NULL,NULL,'https://github.com/omega-800/budgetplanner-python',NULL,NULL,NULL),
-    ('Textbasiertes Spiel Python','',NULL,NULL,NULL,'https://github.com/omega-800/stranded-python',NULL,NULL,NULL),
-    ('Textbasiertes Spiel C#','',NULL,NULL,NULL,'https://github.com/omega-800/stranded',NULL,NULL,NULL),
-    ('Roguelike Dungeon Spiel 1','',NULL,'projects/it/unity/dungeon',NULL,'https://github.com/omega-800/dungeon_game',NULL,NULL,NULL),
+    ('Portfolio','Für die Bewerbungsphase nach der Informatikmittelschule entwickelte ich eine Portfolio-Webseite. Dies war die alte Version der jetzigen Seite.',NULL,'/projects/it/web/cv_old/','https://portfolio-chirokikh-georgiy.web.app/','https://github.com/omega-800/curriculum-vitae-typescript','2019-06-20',NULL,NULL),
+    ('Finanzplaner','Um meine Einnahmen und Ausgaben im überblick zu halten und analysieren hatte ich eine Excel-Tabelle mit meinen Transaktionen erstellt. Um diese einfacher verwalten zu können und Prognosen zu erstellen, schrieb ich ein Python-script, welches die Daten aus der Tabelle in eine MySQL Datenbank speichern und als Excel-Tabelle wieder exportieren kann. Dazu programmierte ich verschiedene Funktionen wzB eine Prognose des ersparten in x Jahren, basierend auf den bisherigen Ausgaben.',NULL,NULL,NULL,'https://github.com/omega-800/budgetplanner-python','2023-03-17',NULL,NULL),
+    ('Textbasiertes Spiel Python','Ich wurde durch das Entdecken einer Python-Library für das Entwickeln textbasierter Spiele dazu inspiriert, ein eigenes Spiel zu schreiben. In dieser Geschichte strandet der Spieler auf einer Insel und muss ressourcen sammeln sowie Feinde bekämpfen, um schlussendlich das Ziel des Bauen eines Bootes um der Insel zu entfliehen zu erreichen.',NULL,NULL,NULL,'https://github.com/omega-800/stranded-python','2023-01-19',NULL,NULL),
+    ('Textbasiertes Spiel C#','Dieses Spiel ist die weiterführung, bzw die Neu-Implementation des Python Stranded Spiels. Da mir die Dynamische Typisierung sowie die Laufzeit von Python nicht gefiel, fing ich an dieses Spiel in C# zu entwickeln.',NULL,NULL,NULL,'https://github.com/omega-800/stranded','2023-01-29',NULL,NULL),
+    ('Roguelike Dungeon Spiel 1','Da mir die Spielentwicklung mittelsunity sehr gefallen hat, fing ich an ein eigener Roguelike Dungeon Spiel zu entwickeln. Die Sprites habe ich mittels Gimp designed.',NULL,'/projects/it/unity/dungeon/',NULL,'https://github.com/omega-800/dungeon_game','2019-03-29',NULL,NULL),
     ('Roguelike Dungeon Spiel 2','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Roguelike Dungeon Spiel 3','',NULL,NULL,NULL,'https://github.com/omega-800/roguelike-game',NULL,NULL,NULL),
-    ('Raketen Spiel','',NULL,'projects/it/unity/rocket',NULL,NULL,NULL,NULL,NULL),
+    ('Roguelike Dungeon Spiel 3','Da mir die 2D-Roguelike Spiele sehr gefielen und ich Python lernen wollte, entwickelte ich so ein Spiel mittels Ursina. Die Sprites erstellte ich mittels Gimp.',NULL,NULL,NULL,'https://github.com/omega-800/roguelike-game','2022-09-10',NULL,NULL),
+    ('Raketen Spiel','In der Informatikmittelschule zeigte mir ein Kollege, wie man ein Spiel in Unity entwickelt. Dies ist das Ergebnis meines ersten Unity-Projektes. Die Rakete modellierte ich in Blender.',NULL,'/projects/it/unity/rocket/',NULL,NULL,'2018-11-01',NULL,NULL),
     ('Minecraft Kopie','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Textbasiertes Spiel Java','',NULL,'projects/it/java/textgame',NULL,NULL,NULL,NULL,NULL),
-    ('Java UNO Spiel','',NULL,'projects/it/java/uno',NULL,NULL,NULL,NULL,(SELECT career_id FROM career WHERE name='bzz')),
-    ('Immobilien Webseite','',NULL,'projects/it/web/immob',NULL,NULL,NULL,(SELECT person_id FROM person WHERE firstName = 'Alexey'),NULL),
-    ('RusFrauenTreff Webseite','',NULL,'projects/it/web/rus',NULL,'https://github.com/omega-800/rusfrauentreff',NULL,(SELECT person_id FROM person WHERE firstName = 'Tatiana'),NULL);
-
+    ('Textbasiertes Spiel Java','Dieses Spiel entwickelte ich, als ich Informatikunterricht gab. Mein Ziel war es, ein vom Code-Aufbau simples Spiel zu gestalten, um das den Lernenden beizubringen und zusammen zu schreiben.',NULL,'/projects/it/java/textgame/',NULL,NULL,'2019-05-01',NULL,NULL),
+    ('Java UNO Spiel','Während der Schulzeit entwickelte ich mit ein paar meiner Klassenkameraden ein UNO-Spiel mittels Java sowie Swing für die GUI-Implementation.',NULL,'/projects/it/java/uno/',NULL,NULL,'2019-02-20',NULL,(SELECT career_id FROM career WHERE name='bzz')),
+    ('Immobilien Webseite','Im Auftrag meines Vaters schrieb ich eine simple Webseite, damit er seine zu verkaufenden, renovierten Immobilien ausstellen konnte.',NULL,'/projects/it/web/immob/',NULL,NULL,'2017-11-20',(SELECT person_id FROM person WHERE firstName = 'Alexey'),NULL),
+    ('RusFrauenTreff Webseite','Für die Treffen russischer Frauen in Zürich entwickelte ich nach Bitte meiner Mutter eine Info-Homepage.',NULL,'/projects/it/web/rus/',NULL,'https://github.com/omega-800/rusfrauentreff','2017-04-20',(SELECT person_id FROM person WHERE firstName = 'Tatiana'),NULL);
+    
 INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Portfolio'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Finanzplaner'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
@@ -737,29 +758,29 @@ INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'RusFrauenTreff Webseite'),(SELECT skill_id FROM skill WHERE identifier = 'independence'));
 
 INSERT INTO project (name, description, thumbnail, image, url, github, date, client_id, career_id) VALUES
-    ('Teddy','',NULL,'projects/art/textile/teddy/',NULL,NULL,NULL,NULL,NULL),
-    ('Tie Dye','',NULL,'projects/art/textile/tiedye/',NULL,NULL,NULL,NULL,NULL),
-    ('Portemonnaie','',NULL,'projects/art/textile/wallet/',NULL,NULL,NULL,NULL,NULL),
-    ('Pullover','',NULL,'projects/art/textile/pullover/',NULL,NULL,NULL,NULL,NULL),
-    ('Heavy Metal Veste','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Punk Pullover','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Holzbesteck','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Holzohrenring','',NULL,'projects/art/wood/plug/',NULL,NULL,NULL,NULL,NULL),
+    ('Teddy','',NULL,'/projects/art/textile/teddy/',NULL,NULL,'2022-02-01',NULL,NULL),
+    ('Tie Dye','',NULL,'/projects/art/textile/tiedye/',NULL,NULL,'2022-04-01',NULL,NULL),
+    ('Portemonnaie','',NULL,'/projects/art/textile/wallet/',NULL,NULL,'2023-04-11',NULL,NULL),
+    ('Pullover','',NULL,'/projects/art/textile/pullover/',NULL,NULL,'2023-04-10',NULL,NULL),
+    ('Heavy Metal Veste','',NULL,NULL,NULL,NULL,'2017-05-01',NULL,NULL),
+    ('Punk Pullover','',NULL,NULL,NULL,NULL,'2022-04-21',NULL,NULL),
+    ('Holzbesteck','',NULL,NULL,NULL,NULL,'2022-10-01',NULL,NULL),
+    ('Holzohrenring','',NULL,'/projects/art/wood/plug/',NULL,NULL,'2023-05-06',NULL,NULL),
     ('Bemaltes Eigentum','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Turnsack und Seemannssack','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Legales Graffiti','',NULL,'projects/art/art/spray/',NULL,NULL,NULL,NULL,NULL),
-    ('Kusudama','',NULL,'projects/art/paper/kusudama/',NULL,NULL,NULL,NULL,NULL),
-    ('Origami','',NULL,'projects/art/paper/origami/',NULL,NULL,NULL,NULL,NULL),
-    ('Zeichnungen','',NULL,'projects/art/art/drawing/',NULL,NULL,NULL,NULL,NULL),
-    ('Mosaik','',NULL,'projects/art/other/mosaic/',NULL,NULL,NULL,NULL,NULL),
-    ('Katzenbaum','',NULL,'projects/art/wood/cat/',NULL,NULL,NULL,NULL,NULL),
-    ('Malen','',NULL,'projects/art/art/paint/',NULL,NULL,NULL,NULL,NULL),
+    ('Turnsack und Seemannssack','',NULL,NULL,NULL,NULL,'2017-07-01',NULL,NULL),
+    ('Legales Graffiti','',NULL,'/projects/art/art/spray/',NULL,NULL,NULL,NULL,NULL),
+    ('Kusudama','',NULL,'/projects/art/paper/kusudama/',NULL,NULL,NULL,NULL,NULL),
+    ('Origami','',NULL,'/projects/art/paper/origami/',NULL,NULL,NULL,NULL,NULL),
+    ('Zeichnungen','',NULL,'/projects/art/art/drawing/',NULL,NULL,NULL,NULL,NULL),
+    ('Mosaik','',NULL,'/projects/art/other/mosaic/',NULL,NULL,NULL,NULL,NULL),
+    ('Katzenbaum','',NULL,'/projects/art/wood/cat/',NULL,NULL,'2023-05-11',NULL,NULL),
+    ('Malen','',NULL,'/projects/art/art/paint/',NULL,NULL,NULL,NULL,NULL),
     ('Gitarre','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
     ('Bass','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
     ('Schlagzeug','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
     ('Ableton','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
     ('FL Studio','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Faden','',NULL,'projects/art/other/string/',NULL,NULL,NULL,NULL,NULL);
+    ('Faden','',NULL,'/projects/art/other/string/',NULL,NULL,NULL,NULL,NULL);
 
 INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Teddy'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
@@ -777,6 +798,7 @@ INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Origami'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Zeichnungen'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Mosaik'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
+    ((SELECT project_id FROM project WHERE name = 'Katzenbaum'),(SELECT person_id FROM person WHERE firstName = 'Michail')),
     ((SELECT project_id FROM project WHERE name = 'Katzenbaum'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Malen'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
     ((SELECT project_id FROM project WHERE name = 'Gitarre'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
@@ -874,11 +896,11 @@ INSERT INTO project (name, description, thumbnail, image, url, github, date, cli
     ('Fahrrad','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
     ('Volleyball','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
     ('Skateboard','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Tischtennis','',NULL,'projects/health/sports/tabletennis/',NULL,NULL,NULL,NULL,NULL),
+    ('Tischtennis','',NULL,'/projects/health/sports/tabletennis/',NULL,NULL,NULL,NULL,NULL),
     ('Campen','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
     ('Wandern','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
     ('Kochen','',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-    ('Lebkuchen','',NULL,'projects/health/cooking/lebkuchen/',NULL,NULL,NULL,NULL,NULL);
+    ('Lebkuchen','',NULL,'/projects/health/cooking/lebkuchen/',NULL,NULL,'2022-12-21',NULL,NULL);
 
 INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Skateboard'),(SELECT person_id FROM person WHERE firstName = 'Georgiy')),
@@ -899,7 +921,6 @@ INSERT INTO project_author (project_id, author_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Lebkuchen'),(SELECT person_id FROM person WHERE firstName = 'Michail')),
     ((SELECT project_id FROM project WHERE name = 'Lebkuchen'),(SELECT person_id FROM person WHERE firstName = 'Nikolay'));
 
-    
 INSERT INTO project_skill (project_id, skill_id) VALUES
     ((SELECT project_id FROM project WHERE name = 'Skateboard'),(SELECT skill_id FROM skill WHERE identifier = 'skateboard')),
     ((SELECT project_id FROM project WHERE name = 'Skateboard'),(SELECT skill_id FROM skill WHERE identifier = 'learning')),
