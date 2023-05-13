@@ -280,7 +280,6 @@ INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE identifier = 'java'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend')),
     ((SELECT skill_id FROM skill WHERE identifier = 'java'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Mobile App Entwicklung')),
     ((SELECT skill_id FROM skill WHERE identifier = 'python'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Datenmanagement')),
-    ((SELECT skill_id FROM skill WHERE identifier = 'python'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Spielentwicklung')),
     ((SELECT skill_id FROM skill WHERE identifier = 'python'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend')),
     ((SELECT skill_id FROM skill WHERE identifier = 'mysql'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Datenbankentwicklung')),
     ((SELECT skill_id FROM skill WHERE identifier = 'csharp'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend')),
