@@ -9,7 +9,7 @@ const { Client } = require("pg");
         host: 'localhost',
         user: 'postgres',
         password: 'root',
-        database: 'postgres',
+        database: 'portfolio',
         port:5432
       });
       await client.connect();
@@ -17,7 +17,7 @@ const { Client } = require("pg");
         client.end();
         console.log(result);
         if(dowrite){
-          fs.writeFile(`C:\\Users\\GeorgiyShevoroshkin\\ownCode\\data_import\\${filename}.json`, JSON.stringify(result.rows, null, ' ').replaceAll('null','""'), err => {
+          fs.writeFile(`/mnt/c/Users/anon/Documents/Code/Web/cv-angular/src/data/${filename}.json`, JSON.stringify(result.rows, null, ' ').replace(/: null/g, ': ""'), err => {
             if (err) {
               console.error(err);
             }

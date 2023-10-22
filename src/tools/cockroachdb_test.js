@@ -11,7 +11,7 @@ const { Client } = require("pg");
         client.end();
         console.log(result);
         if(dowrite){
-          fs.writeFile(`/mnt/c/Users/anon/Documents/Code/Web/curriculum-vitae-ts/src/data_import/${filename}.json`, JSON.stringify(result.rows, null, ' ').replace(/: null/g, ': ""'), err => {
+          fs.writeFile(`/mnt/c/Users/anon/Documents/Code/Web/curriculum-vitae-ts/src/data_import/${filename}.json`, JSON.stringify(result.rows, null, ' '), err => {
             if (err) {
               console.error(err);
             }
@@ -19,11 +19,8 @@ const { Client } = require("pg");
         }
         return result.rows;
     }
-    let tables = await run_query("SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'",true,"tablenames");
+    let tables = await run_query("SELECT * FROM skill",false,"tablenames");
 
-    tables.forEach(async element => {
-      await run_query("SELECT * FROM "+element.table_name, true, element.table_name); 
-    });
 
   } catch (err) {
     console.error("error executing query:", err);
