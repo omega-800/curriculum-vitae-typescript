@@ -112,19 +112,22 @@ INSERT INTO language (name, description, shortName, name_e, name_r, description_
     ('Deutsch', 'Seit Geburt', 'DE','','','','','','',''),
     ('Englisch', 'Vatersprache', 'EN','','','','','','',''),
     ('Russisch', 'Muttersprache', 'RU','','','','','','',''),
-    ('Französisch', 'Schulwissen', 'FR','','','','','','','');
+    ('Französisch', 'Schulwissen', 'FR','','','','','','',''),
+    ('Latein', 'Grundkenntnisse', 'LAT','','','','','','','');
     
 INSERT INTO skill (yearsOfExperience, identifier, knowledgePercent, proficiencyLevel, hobby, language_id) VALUES
     (0, 'german', 100, 'C2', FALSE, (SELECT language_id FROM language WHERE name = 'Deutsch')),
     (0, 'english', 90, 'C1', FALSE, (SELECT language_id FROM language WHERE name = 'Englisch')),
     (0, 'russian', 75, 'B2', FALSE, (SELECT language_id FROM language WHERE name = 'Russisch')),
-    (0, 'french', 50, 'B1', FALSE, (SELECT language_id FROM language WHERE name = 'Französisch'));
+    (0, 'french', 50, 'B1', FALSE, (SELECT language_id FROM language WHERE name = 'Französisch')),
+    (0, 'latin', 5, '', FALSE, (SELECT language_id FROM language WHERE name = 'Latein'));
 
 INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE identifier = 'german'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen')),
     ((SELECT skill_id FROM skill WHERE identifier = 'english'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen')),
     ((SELECT skill_id FROM skill WHERE identifier = 'russian'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen')),
-    ((SELECT skill_id FROM skill WHERE identifier = 'french'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen'));
+    ((SELECT skill_id FROM skill WHERE identifier = 'french'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen')),
+    ((SELECT skill_id FROM skill WHERE identifier = 'latin'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Sprachen'));
 
 INSERT INTO country(name, name_e, name_r, shortName) VALUES 
     ('Schweiz', NULL, NULL, 'CH'), 
@@ -277,7 +280,6 @@ INSERT INTO skill_skillSubCategory (skill_id, skillSubCategory_id) VALUES
     ((SELECT skill_id FROM skill WHERE identifier = 'java'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend')),
     ((SELECT skill_id FROM skill WHERE identifier = 'java'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Mobile App Entwicklung')),
     ((SELECT skill_id FROM skill WHERE identifier = 'python'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Datenmanagement')),
-    ((SELECT skill_id FROM skill WHERE identifier = 'python'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Spielentwicklung')),
     ((SELECT skill_id FROM skill WHERE identifier = 'python'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend')),
     ((SELECT skill_id FROM skill WHERE identifier = 'mysql'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Datenbankentwicklung')),
     ((SELECT skill_id FROM skill WHERE identifier = 'csharp'), (SELECT skillSubCategory_id FROM skillSubCategory WHERE name = 'Backend')),
@@ -429,6 +431,157 @@ INSERT INTO career (name, description, yearfrom, yearto, workplace_id, school_id
     ('sek',NULL,2016,2017,NULL,(SELECT school_id FROM school WHERE name = 'Herzogenmühle')),
     ('hopro',NULL,2014,2016,NULL,(SELECT school_id FROM school WHERE name = 'Hohe Promenade')),
     ('probstei',NULL,2008,2014,NULL,(SELECT school_id FROM school WHERE name = 'Probstei'));
+
+INSERT INTO career_skill (career_id, skill_id, percent) VALUES 
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'vim'), 65),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'inkscape'), 35),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'vue'), 5),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'selenium'), 10),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'tomcat'), 30),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'word'), 20),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'excel'), 15),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'powerpoint'), 25),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'outlook'), 70),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'html'), 85),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'css'), 45),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'scss'), 75),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'js'), 65),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'ts'), 45),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'java'), 90),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'python'), 10),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'mysql'), 60),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'freemarker'), 90),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'magnolia'), 100),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'jcr'), 85),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'docker'), 10),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'schema'), 15),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'graphql'), 10),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'regex'), 25),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'web-accessibility'), 30),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'seo'), 40),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'teamwork'), 30),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'independence'), 70),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'logic'), 80),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'criticism'), 30),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'learning'), 90),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'communication'), 55),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'organization'), 60),
+    ((SELECT career_id FROM career WHERE name = 'inteco'), (SELECT skill_id FROM skill WHERE identifier = 'patience'), 40);
+
+INSERT INTO career_skill (career_id, skill_id, percent) VALUES 
+    ((SELECT career_id FROM career WHERE name = 'ernestovargas'), (SELECT skill_id FROM skill WHERE identifier = 'excel'), 65),
+    ((SELECT career_id FROM career WHERE name = 'ernestovargas'), (SELECT skill_id FROM skill WHERE identifier = 'independence'), 90),
+    ((SELECT career_id FROM career WHERE name = 'ernestovargas'), (SELECT skill_id FROM skill WHERE identifier = 'learning'), 95),
+    ((SELECT career_id FROM career WHERE name = 'ernestovargas'), (SELECT skill_id FROM skill WHERE identifier = 'selenium'), 80),
+    ((SELECT career_id FROM career WHERE name = 'ernestovargas'), (SELECT skill_id FROM skill WHERE identifier = 'python'), 75),
+    ((SELECT career_id FROM career WHERE name = 'ernestovargas'), (SELECT skill_id FROM skill WHERE identifier = 'communication'), 50),
+    ((SELECT career_id FROM career WHERE name = 'ernestovargas'), (SELECT skill_id FROM skill WHERE identifier = 'photoshop'), 60);
+
+INSERT INTO career_skill (career_id, skill_id, percent) VALUES 
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'unity'), 5),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'react'), 10),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'swing'), 20),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'glassfish'), 15),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'word'), 35),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'powerpoint'), 35),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'html'), 50),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'css'), 45),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'js'), 40),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'php'), 45),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'java'), 85),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'mysql'), 65),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'csharp'), 10),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'bash'), 15),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'blender'), 5),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'regex'), 10),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'teamwork'), 40),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'independence'), 60),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'criticism'), 65),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'learning'), 90),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'organization'), 95),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'patience'), 100),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'logic'), 80),
+    ((SELECT career_id FROM career WHERE name = 'bzz'), (SELECT skill_id FROM skill WHERE identifier = 'ts'), 10);
+
+INSERT INTO career_skill (career_id, skill_id, percent) VALUES 
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'math'), 20),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'drawing'), 70),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'history'), 15),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'politics'), 5),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'geography'), 5),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'biology'), 5),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'chemistry'), 5),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'physics'), 5),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'independence'), 75),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'teamwork'), 25),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'logic'), 50),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'criticism'), 85),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'communication'), 50),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'learning'), 65),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'organization'), 30),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'german'), 10),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'english'), 10),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'french'), 10),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'word'), 25),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'powerpoint'), 25),
+    ((SELECT career_id FROM career WHERE name = 'ims'), (SELECT skill_id FROM skill WHERE identifier = 'excel'), 10);
+
+INSERT INTO career_skill (career_id, skill_id, percent) VALUES 
+    ((SELECT career_id FROM career WHERE name = 'sek'), (SELECT skill_id FROM skill WHERE identifier = 'patience'), 90),
+    ((SELECT career_id FROM career WHERE name = 'sek'), (SELECT skill_id FROM skill WHERE identifier = 'empathy'), 40),
+    ((SELECT career_id FROM career WHERE name = 'sek'), (SELECT skill_id FROM skill WHERE identifier = 'communication'), 30),
+    ((SELECT career_id FROM career WHERE name = 'sek'), (SELECT skill_id FROM skill WHERE identifier = 'criticism'), 85),
+    ((SELECT career_id FROM career WHERE name = 'sek'), (SELECT skill_id FROM skill WHERE identifier = 'independence'), 75),
+    ((SELECT career_id FROM career WHERE name = 'sek'), (SELECT skill_id FROM skill WHERE identifier = 'nursery'), 60),
+    ((SELECT career_id FROM career WHERE name = 'sek'), (SELECT skill_id FROM skill WHERE identifier = 'drawing'), 40),
+    ((SELECT career_id FROM career WHERE name = 'sek'), (SELECT skill_id FROM skill WHERE identifier = 'biology'), 5),
+    ((SELECT career_id FROM career WHERE name = 'sek'), (SELECT skill_id FROM skill WHERE identifier = 'chemistry'), 5),
+    ((SELECT career_id FROM career WHERE name = 'sek'), (SELECT skill_id FROM skill WHERE identifier = 'physics'), 5);
+
+INSERT INTO career_skill (career_id, skill_id, percent) VALUES 
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'latin'), 10),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'math'), 35),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'drawing'), 50),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'history'), 10),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'geography'), 20),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'biology'), 35),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'chemistry'), 25),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'physics'), 25),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'independence'), 30),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'teamwork'), 60),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'criticism'), 25),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'communication'), 50),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'learning'), 75),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'organization'), 55),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'patience'), 45),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'german'), 15),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'english'), 15),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'french'), 15),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'word'), 5),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'powerpoint'), 10),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'creativity'), 15),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'photoshop'), 5),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'housekeeping'), 5),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'empathy'), 25),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'woodwork'), 5),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'sewing'), 5),
+    ((SELECT career_id FROM career WHERE name = 'hopro'), (SELECT skill_id FROM skill WHERE identifier = 'volleyball'), 10);
+
+INSERT INTO career_skill (career_id, skill_id, percent) VALUES 
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'math'), 35),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'drawing'), 25),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'geography'), 15),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'independence'), 40),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'teamwork'), 40),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'learning'), 60),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'german'), 10),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'english'), 10),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'french'), 25),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'creativity'), 20),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'empathy'), 5),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'tabletennis'), 30),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'woodwork'), 20),
+    ((SELECT career_id FROM career WHERE name = 'probstei'), (SELECT skill_id FROM skill WHERE identifier = 'sewing'), 40);
 
 INSERT INTO personCategory (name, description) VALUES 
     ('me', NULL),

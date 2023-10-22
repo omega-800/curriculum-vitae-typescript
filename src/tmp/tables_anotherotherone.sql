@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS career CASCADE;
+DROP TABLE IF EXISTS career_skill CASCADE;
 DROP TABLE IF EXISTS project_skill CASCADE;
 DROP TABLE IF EXISTS project_author CASCADE;
 DROP TABLE IF EXISTS skill CASCADE;
@@ -272,6 +273,13 @@ CREATE TABLE IF NOT EXISTS career (
     document VARCHAR,
     workplace_id UUID REFERENCES workplace(workplace_id),
     school_id UUID REFERENCES school(school_id)
+);
+
+CREATE TABLE IF NOT EXISTS career_skill (
+    career_skill_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    skill_id UUID NOT NULL REFERENCES skill(skill_id),
+    career_id UUID NOT NULL REFERENCES career(career_id),
+    percent SMALLINT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS personCategory (
